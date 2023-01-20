@@ -48,15 +48,10 @@ logs.features.forEach(function (log, i) {
 })
 
 map.on('load', () => {
-  /* Add the data to your map as a layer */
-  map.addLayer({
-    id: 'locations',
-    type: 'circle',
-    /* Add a GeoJSON source containing place coordinates and information. */
-    source: {
-      type: 'geojson',
-      data: logs,
-    },
+  /* Add the data to your map as a source  */
+  map.addSource('locations', {
+    type: 'geojson',
+    data: logs,
   })
 
   buildLogsList(logs)
@@ -66,6 +61,9 @@ map.on('load', () => {
 
   // Add home marker
   new mapboxgl.Marker(map).setLngLat([-111.891, 40.7608]).addTo(map)
+
+  // Add location markers
+  addMarkers()
 })
 
 map.on('click', (event) => {
@@ -79,8 +77,7 @@ map.on('click', (event) => {
 
   const clickedPoint = features[0]
 
-  /* Fly to the point */
-  flyToStore(clickedPoint)
+  flyToLocation(clickedPoint)
 
   /* Highlight listing in sidebar (and remove highlight for all other listings) */
   const activeItem = document.getElementsByClassName('active')
@@ -119,7 +116,7 @@ function buildLogsList(logs) {
     link.addEventListener('click', function () {
       for (const feature of logs.features) {
         if (this.id === `link-${feature.properties.id}`) {
-          flyToStore(feature)
+          flyToLocation(feature)
         }
       }
       const activeItem = document.getElementsByClassName('active')
@@ -131,7 +128,16 @@ function buildLogsList(logs) {
   }
 }
 
-function flyToStore(currentFeature) {
+function addMarkers() {
+  /* For each feature in the GeoJSON object above: */
+  for (const marker of logs.features) {
+    new mapboxgl.Marker({ color: '#c53058' })
+      .setLngLat(marker.geometry.coordinates)
+      .addTo(map)
+  }
+}
+
+function flyToLocation(currentFeature) {
   map.flyTo({
     center: currentFeature.geometry.coordinates,
     zoom: 15,
