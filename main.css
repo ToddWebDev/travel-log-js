@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran&family=Nunito+Sans:wght@700&family=Vujahday+Script&display=swap');
+
+:root {
+  --primary-one: #c53058;
+  --primary-two: #aa284b;
+  --base-one: #1c1917;
+  --base-two: #292524;
+  --base-three: #404040;
+  --base-four: #a8a29e;
+  --base-five: #d4d4d4;
+  --base-six: #f5f5f5;
+  --black: var(--base-one);
+  --white: #fff;
+
+  --bg: var(--base-six);
+
+  --text-color-strong: var(--primary-one);
+  --text-color-medium: var(--base-two);
+  --text-color-light: var(--base-three);
+  --text-color-deemphasized: var(--base-four);
+
+  --text-shadow-dark: 1px 1px 2px rgba(0, 0, 0, 0.2);
+
+  --border-width: 1px;
+  --border-radius: 8px;
+
+  --base-font-size: 18px;
+
+  --screen-sm: 600px;
+  --screen-md: 768px;
+  --screen-lg: 992px;
+  --screen-xl: 1200px;
+
+  --transition: all 0.2s ease-in-out;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --base-one: #f5f5f5;
+    --base-two: #d4d4d4;
+    --base-three: #a8a29e;
+    --base-four: #404040;
+    --base-five: #292524;
+    --base-six: #1c1917;
+    --white: var(--base-five);
+
+    --text-color-strong: var(--base-one);
+    --text-color-medium: var(--base-two);
+    --text-color-light: #fff;
+    --text-color-deemphasized: #374a57;
+  }
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+  font-weight: 300;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text-color-medium);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--text-color-strong);
+  font-family: Futura PT, 'Nunito Sans', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.text-color-deemphasized {
+  color: var(--text-color-deemphasized);
+}
+
+a {
+  color: var(--primary-one);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-two);
+}
+
+button {
+  background: var(--primary-one);
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  padding: 1em;
+  font-size: 14px;
+  text-shadow: var(--text-shadow-dark);
+  outline: 0;
+  transition: var(--transition);
+  box-shadow: 2px 2px 2px transparent;
+}
+
+button:hover {
+  cursor: pointer;
+  background: var(--primary-two);
+}
+
+button:focus {
+  box-shadow: 0 0 0 3px rgba(197, 48, 88, 0.75);
+}
