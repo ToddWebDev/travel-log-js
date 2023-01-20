@@ -61,6 +61,9 @@ map.on('load', () => {
 
   buildLogsList(logs)
 
+  // Add navigation control (the +/- zoom buttons)
+  map.addControl(new mapboxgl.NavigationControl(), 'bottom-right')
+
   // Add home marker
   new mapboxgl.Marker(map).setLngLat([-111.891, 40.7608]).addTo(map)
 })
