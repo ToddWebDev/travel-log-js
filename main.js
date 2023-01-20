@@ -77,7 +77,8 @@ map.on('click', (event) => {
 
   const clickedPoint = features[0]
 
-  flyToLocation(clickedPoint)
+  flyToCoordinates(clickedPoint)
+  createPopUp(clickedPoint)
 
   /* Highlight listing in sidebar (and remove highlight for all other listings) */
   const activeItem = document.getElementsByClassName('active')
@@ -116,7 +117,8 @@ function buildLogsList(logs) {
     link.addEventListener('click', function () {
       for (const feature of logs.features) {
         if (this.id === `link-${feature.properties.id}`) {
-          flyToLocation(feature)
+          flyToCoordinates(feature)
+          createPopUp(feature)
         }
       }
       const activeItem = document.getElementsByClassName('active')
@@ -137,9 +139,22 @@ function addMarkers() {
   }
 }
 
-function flyToLocation(currentFeature) {
+function flyToCoordinates(currentFeature) {
   map.flyTo({
     center: currentFeature.geometry.coordinates,
     zoom: 15,
   })
+}
+
+function createPopUp(currentFeature) {
+  const popUps = document.getElementsByClassName('mapboxgl-popup')
+  /** Check if there is already a popup on the map and if so, remove it */
+  if (popUps[0]) popUps[0].remove()
+
+  const popup = new mapboxgl.Popup({ closeOnClick: false })
+    .setLngLat(currentFeature.geometry.coordinates)
+    .setHTML(
+      `<h3>${currentFeature.properties.destination}, ${currentFeature.properties.state}</h3><p>${currentFeature.properties.type}</p><p>${currentFeature.properties.month} ${currentFeature.properties.year}</p>`
+    )
+    .addTo(map)
 }

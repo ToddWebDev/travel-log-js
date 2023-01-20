@@ -23,7 +23,9 @@
 
   --border-width: 1px;
   --border-radius: 8px;
-  --padding: 15px;
+  --grid-md: 15px;
+  --grid-sm: 10px;
+  --grid-xs: 5px;
 
   --base-font-size: 18px;
 
@@ -132,7 +134,7 @@ aside {
 }
 
 aside h1 {
-  padding: var(--padding);
+  padding: var(--grid-md);
 }
 
 .logs {
@@ -143,7 +145,7 @@ aside h1 {
 
 .logs .item {
   border-bottom: var(--border-width) solid var(--base-five);
-  padding: var(--padding);
+  padding: var(--grid-md);
   text-decoration: none;
 }
 
@@ -195,4 +197,36 @@ aside h1 {
   width: 75%;
   top: 0;
   bottom: 0;
+}
+
+.mapboxgl-popup {
+  top: -40px;
+}
+
+.mapboxgl-popup-close-button {
+  display: none;
+}
+
+.mapboxgl-popup-content {
+  padding: 0;
+  width: auto;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.mapboxgl-popup-content h3 {
+  background: var(--primary-one);
+  color: #fff;
+  margin: 0;
+  padding: var(--grid-sm);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: -15px;
+  text-shadow: var(--text-shadow-dark);
+}
+
+.mapboxgl-popup-content p {
+  margin: var(--grid-sm);
+  color: #292524;
+  font-size: 16px;
 }
