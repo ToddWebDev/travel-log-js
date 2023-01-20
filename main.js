@@ -60,6 +60,9 @@ map.on('load', () => {
   })
 
   buildLogsList(logs)
+
+  // Add home marker
+  new mapboxgl.Marker(map).setLngLat([-111.891, 40.7608]).addTo(map)
 })
 
 map.on('click', (event) => {
