@@ -5,12 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel Log</title>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="main.css" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js"></script>
   </head>
   <body>
     <main>
-      <h1>Travel Log</h1>
-      <section><p>Hello World</p></section>
+      <aside>
+        <h1>Travel Log</h1>
+        <ul id="logs" class="logs"></ul>
+      </aside>
+      <div id="map" class="map"></div>
     </main>
     <script src="main.js" defer></script>
   </body>
