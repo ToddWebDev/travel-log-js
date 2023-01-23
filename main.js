@@ -44,8 +44,8 @@ const logs = {
         zoom: 11,
       },
       pan: {
-        coordinates: [-110.6818, 43.7904],
-        zoom: 9,
+        coordinates: [-111.30093632213028, 42.27718688306124],
+        zoom: 6.75,
       },
       properties: {
         type: 'auto',
@@ -85,6 +85,13 @@ const point = {
       },
     },
   ],
+}
+
+function resetMap() {
+  if (map.getLayer('route')) map.removeLayer('route')
+  if (map.getSource('route')) map.removeSource('route')
+  if (map.getLayer('point')) map.removeLayer('point')
+  if (map.getSource('point')) map.removeSource('point')
 }
 
 logs.features.forEach(function (log, i) {
@@ -133,15 +140,16 @@ function buildLogsList(logs) {
 
     /* Add event listeners */
     link.addEventListener('click', function () {
-      for (const [i, feature] of logs.features.entries()) {
+      resetMap()
+      for (const feature of logs.features) {
         if (this.id === `link-${feature.properties.id}`) {
           flyToCoordinates(feature)
           createPopUp(feature)
           if (feature.properties.type === 'auto') {
-            console.log('get directions and display')
+            addRoute(feature.geometry.coordinates)
           }
           if (feature.properties.type === 'flight') {
-            addRoute(feature.geometry.coordinates)
+            addFlight(feature.geometry.coordinates)
           }
         }
       }
@@ -163,7 +171,49 @@ function addLogMarkers() {
   }
 }
 
-function addRoute(destination) {
+async function addRoute(destination) {
+  const query = await fetch(
+    `https://api.mapbox.com/directions/v5/mapbox/cycling/${origin[0]},${origin[1]};${destination[0]},${destination[1]}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`,
+    { method: 'GET' }
+  )
+  const json = await query.json()
+  const data = json.routes[0]
+  const route = data.geometry.coordinates
+  const geojson = {
+    type: 'Feature',
+    properties: {},
+    geometry: {
+      type: 'LineString',
+      coordinates: route,
+    },
+  }
+  // if the route already exists on the map, we'll reset it using setData
+  if (map.getSource('route')) {
+    map.getSource('route').setData(geojson)
+  }
+  // otherwise, we'll make a new request
+  else {
+    map.addLayer({
+      id: 'route',
+      type: 'line',
+      source: {
+        type: 'geojson',
+        data: geojson,
+      },
+      layout: {
+        'line-join': 'round',
+        'line-cap': 'round',
+      },
+      paint: {
+        'line-color': '#007cbf',
+        'line-width': 4,
+        'line-opacity': 0.75,
+      },
+    })
+  }
+}
+
+function addFlight(destination) {
   route.features[0].geometry.coordinates = [origin, destination]
   // Calculate the distance in kilometers between route start/end point.
   const lineDistance = turf.length(route.features[0])
@@ -188,9 +238,14 @@ function addRoute(destination) {
     id: 'route',
     source: 'route',
     type: 'line',
+    layout: {
+      'line-join': 'round',
+      'line-cap': 'round',
+    },
     paint: {
       'line-width': 4,
       'line-color': '#007cbf',
+      'line-opacity': 0.75,
     },
   })
 
@@ -227,7 +282,13 @@ function addRoute(destination) {
       route.features[0].geometry.coordinates[
         counter >= steps ? counter : counter + 1
       ]
-    if (!start || !end) return
+    if (!start) return
+    if (!end) {
+      setTimeout(() => {
+        map.removeLayer('point')
+        return
+      }, 1000)
+    }
 
     // Update point geometry to a new position based on counter denoting
     // the index to access the arc
@@ -275,7 +336,6 @@ function createPopUp(currentFeature) {
     .addTo(map)
 
   popup.on('close', function (e) {
-    if (map.getLayer('route')) map.removeLayer('route')
-    if (map.getLayer('point')) map.removeLayer('point')
+    resetMap()
   })
 }
