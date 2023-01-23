@@ -41,7 +41,6 @@ const logs = {
       geometry: {
         type: 'Point',
         coordinates: [-110.6818, 43.7904],
-        zoom: 11,
       },
       pan: {
         coordinates: [-111.30093632213028, 42.27718688306124],
@@ -53,6 +52,78 @@ const logs = {
         year: '2021',
         destination: 'Grand Teton National Park',
         state: 'Wyoming',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-109.9025, 38.2136],
+      },
+      pan: {
+        coordinates: [-110.87853505263796, 39.491432526194124],
+        zoom: 7.25,
+      },
+      properties: {
+        type: 'auto',
+        month: 'August',
+        year: '2021',
+        destination: 'Canyonlands National Park',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-112.0581, 36.2135],
+      },
+      pan: {
+        coordinates: [-111.97718743064257, 38.48717964533905],
+        zoom: 6.75,
+      },
+      properties: {
+        type: 'auto',
+        month: 'August',
+        year: '2021',
+        destination: 'Grand Canyon National Park',
+        state: 'Arizona',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-113.0263, 37.2982],
+      },
+      pan: {
+        coordinates: [-112.47255923068407, 39.03087475830939],
+        zoom: 7,
+      },
+      properties: {
+        type: 'auto',
+        month: 'May',
+        year: '2022',
+        destination: 'Zion National Park',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-117.6126, 33.4274],
+      },
+      pan: {
+        coordinates: [-114.87913045491008, 37.14307504778424],
+        zoom: 6,
+      },
+      properties: {
+        type: 'auto',
+        month: 'June',
+        year: '2022',
+        destination: 'San Clemente',
+        state: 'California',
       },
     },
   ],
@@ -228,7 +299,7 @@ function addFlight(destination) {
 
   // Update the route with calculated arc coordinates
   route.features[0].geometry.coordinates = arc
-
+  console.log(arc)
   map.addSource('route', {
     type: 'geojson',
     data: route,
