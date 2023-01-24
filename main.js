@@ -21,15 +21,18 @@ const logs = {
     {
       type: 'Feature',
       geometry: {
-        type: 'Point',
+        mode: 'Point',
         coordinates: [-117.1611, 32.7157],
       },
       pan: {
         coordinates: [-114.66446033065944, 36.76722997619034],
         zoom: 6,
       },
+      start: {
+        coordinates: origin,
+      },
       properties: {
-        type: 'flight',
+        mode: 'flight',
         month: 'May',
         year: '2021',
         destination: 'San Diego',
@@ -46,8 +49,11 @@ const logs = {
         coordinates: [-111.30093632213028, 42.27718688306124],
         zoom: 6.75,
       },
+      start: {
+        coordinates: origin,
+      },
       properties: {
-        type: 'auto',
+        mode: 'auto',
         month: 'June',
         year: '2021',
         destination: 'Grand Teton National Park',
@@ -58,14 +64,17 @@ const logs = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-109.9025, 38.2136],
+        coordinates: [-109.821, 38.4598],
       },
       pan: {
         coordinates: [-110.87853505263796, 39.491432526194124],
         zoom: 7.25,
       },
+      start: {
+        coordinates: origin,
+      },
       properties: {
-        type: 'auto',
+        mode: 'auto',
         month: 'August',
         year: '2021',
         destination: 'Canyonlands National Park',
@@ -76,18 +85,63 @@ const logs = {
       type: 'Feature',
       geometry: {
         type: 'Point',
+        coordinates: [-111.3743, 36.8619],
+      },
+      pan: {
+        coordinates: [-110.60290325287792, 37.666591739885924],
+        zoom: 8,
+      },
+      start: {
+        coordinates: [-109.821, 38.4598],
+      },
+      properties: {
+        mode: 'auto',
+        month: 'August',
+        year: '2021',
+        destination: 'Antelope Canyon',
+        state: 'Arizona',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
         coordinates: [-112.0581, 36.2135],
       },
       pan: {
-        coordinates: [-111.97718743064257, 38.48717964533905],
-        zoom: 6.75,
+        coordinates: [-111.71626593622823, 36.53948476316447],
+        zoom: 9,
+      },
+      start: {
+        coordinates: [-111.3743, 36.8619],
       },
       properties: {
-        type: 'auto',
+        mode: 'auto',
         month: 'August',
         year: '2021',
         destination: 'Grand Canyon National Park',
         state: 'Arizona',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-112.1871, 37.593],
+      },
+      pan: {
+        coordinates: [-112.12175894986007, 36.90050842961888],
+        zoom: 8.25,
+      },
+      start: {
+        coordinates: [-112.0581, 36.2135],
+      },
+      properties: {
+        mode: 'auto',
+        month: 'August',
+        year: '2021',
+        destination: 'Bryce Canyon National Park',
+        state: 'Utah',
       },
     },
     {
@@ -100,8 +154,11 @@ const logs = {
         coordinates: [-112.47255923068407, 39.03087475830939],
         zoom: 7,
       },
+      start: {
+        coordinates: origin,
+      },
       properties: {
-        type: 'auto',
+        mode: 'auto',
         month: 'May',
         year: '2022',
         destination: 'Zion National Park',
@@ -118,12 +175,309 @@ const logs = {
         coordinates: [-114.87913045491008, 37.14307504778424],
         zoom: 6,
       },
+      start: {
+        coordinates: origin,
+      },
       properties: {
-        type: 'auto',
+        mode: 'auto',
         month: 'June',
         year: '2022',
         destination: 'San Clemente',
         state: 'California',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-116.6141, 33.8371],
+      },
+      pan: {
+        coordinates: [-117.11653439312553, 33.63243363757619],
+        zoom: 9,
+      },
+      start: {
+        coordinates: [-117.6126, 33.4274],
+      },
+      properties: {
+        mode: 'auto',
+        month: 'June',
+        year: '2022',
+        destination: 'Palm Springs',
+        state: 'California',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-115.901, 33.8734],
+      },
+      pan: {
+        coordinates: [-116.25905197457654, 33.855690648706684],
+        zoom: 8,
+      },
+      start: {
+        coordinates: [-116.6141, 33.8371],
+      },
+      properties: {
+        mode: 'auto',
+        month: 'June',
+        year: '2022',
+        destination: 'Joshua Tree National Park',
+        state: 'California',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.1355, 38.0877],
+      },
+      pan: {
+        coordinates: [-113.59145742554648, 35.99566512012293],
+        zoom: 6.5,
+      },
+      start: {
+        coordinates: [-115.901, 33.8734],
+      },
+      properties: {
+        mode: 'auto',
+        month: 'June',
+        year: '2022',
+        destination: 'Capital Reef National Park',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-121.7817, 42.2249],
+      },
+      pan: {
+        coordinates: [-116.76052177075833, 41.59596822261041],
+        zoom: 6,
+      },
+      start: {
+        coordinates: origin,
+      },
+      properties: {
+        mode: 'auto',
+        month: 'August',
+        year: '2022',
+        destination: 'Klamath Falls',
+        state: 'Oregon',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-122.1279, 42.9295],
+      },
+      pan: {
+        coordinates: [-121.95312968571488, 42.575921063512325],
+        zoom: 9,
+      },
+      start: {
+        coordinates: [-121.7817, 42.2249],
+      },
+      properties: {
+        mode: 'auto',
+        month: 'August',
+        year: '2022',
+        destination: 'Crater Lake National Park',
+        state: 'Oregon',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-122.39, 43.2415],
+      },
+      pan: {
+        coordinates: [-122.2580920791247, 43.08495076622465],
+        zoom: 10,
+      },
+      start: {
+        coordinates: [-122.1279, 42.9295],
+      },
+      properties: {
+        mode: 'auto',
+        month: 'August',
+        year: '2022',
+        destination: 'Watson Falls',
+        state: 'Oregon',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-122.6784, 45.5152],
+      },
+      pan: {
+        coordinates: [-122.53082340266808, 44.37389326296227],
+        zoom: 7.75,
+      },
+      start: {
+        coordinates: [-122.39, 43.2415],
+      },
+      properties: {
+        mode: 'auto',
+        month: 'August',
+        year: '2022',
+        destination: 'Portland',
+        state: 'Oregon',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-122.1158, 45.5762],
+      },
+      pan: {
+        coordinates: [-122.39837782601055, 45.54592320050154],
+        zoom: 9.25,
+      },
+      start: {
+        coordinates: [-122.6784, 45.5152],
+      },
+      properties: {
+        mode: 'auto',
+        month: 'August',
+        year: '2022',
+        destination: 'Multnomah Falls',
+        state: 'Oregon',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-114.401, 42.5937],
+      },
+      pan: {
+        coordinates: [-118.17641931751784, 44.155823935637954],
+        zoom: 6.5,
+      },
+      start: {
+        coordinates: [-122.1158, 45.5762],
+      },
+      properties: {
+        mode: 'auto',
+        month: 'August',
+        year: '2022',
+        destination: 'Shoshone Falls',
+        state: 'Idaho',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-109.5925, 38.7331],
+      },
+      pan: {
+        coordinates: [-110.72943057013381, 39.756671417162394],
+        zoom: 7.5,
+      },
+      start: {
+        coordinates: origin,
+      },
+      properties: {
+        mode: 'auto',
+        month: 'November',
+        year: '2022',
+        destination: 'Arches National Park',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [139.7563, 35.6648],
+      },
+      pan: {
+        coordinates: [191.36606983230297, 53.39446500917633],
+        zoom: 2.5,
+      },
+      start: {
+        coordinates: origin,
+      },
+      properties: {
+        mode: 'flight',
+        month: 'April',
+        year: '2023',
+        destination: 'Tokyo',
+        state: 'Japan',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [139.1069, 35.2324],
+      },
+      pan: {
+        coordinates: [139.37893748535635, 35.45549198809632],
+        zoom: 9,
+      },
+      start: {
+        coordinates: [139.7563, 35.6648],
+      },
+      properties: {
+        mode: 'auto',
+        month: 'April',
+        year: '2023',
+        destination: 'Hakone',
+        state: 'Japan',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.7681, 35.0116],
+      },
+      pan: {
+        coordinates: [137.44191503720106, 35.13388833198617],
+        zoom: 7.5,
+      },
+      start: {
+        coordinates: [139.1069, 35.2324],
+      },
+      properties: {
+        mode: 'auto',
+        month: 'April',
+        year: '2023',
+        destination: 'Kyoto',
+        state: 'Japan',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.5023, 34.6937],
+      },
+      pan: {
+        coordinates: [135.63547485005572, 34.8533580821886],
+        zoom: 9,
+      },
+      start: {
+        coordinates: [135.7681, 35.0116],
+      },
+      properties: {
+        mode: 'auto',
+        month: 'April',
+        year: '2023',
+        destination: 'Osaka',
+        state: 'Japan',
       },
     },
   ],
@@ -216,11 +570,22 @@ function buildLogsList(logs) {
         if (this.id === `link-${feature.properties.id}`) {
           flyToCoordinates(feature)
           createPopUp(feature)
-          if (feature.properties.type === 'auto') {
-            addRoute(feature.geometry.coordinates)
+          if (feature.properties.mode === 'auto') {
+            addRoute(
+              'driving',
+              feature.start.coordinates,
+              feature.geometry.coordinates
+            )
           }
-          if (feature.properties.type === 'flight') {
-            addFlight(feature.geometry.coordinates)
+          if (feature.properties.mode === 'train') {
+            addRoute(
+              'train',
+              feature.start.coordinates,
+              feature.geometry.coordinates
+            )
+          }
+          if (feature.properties.mode === 'flight') {
+            addFlight(feature.start.coordinates, feature.geometry.coordinates)
           }
         }
       }
@@ -242,9 +607,9 @@ function addLogMarkers() {
   }
 }
 
-async function addRoute(destination) {
+async function addRoute(mode, start, destination) {
   const query = await fetch(
-    `https://api.mapbox.com/directions/v5/mapbox/cycling/${origin[0]},${origin[1]};${destination[0]},${destination[1]}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`,
+    `https://api.mapbox.com/directions/v5/mapbox/${mode}/${start[0]},${start[1]};${destination[0]},${destination[1]}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`,
     { method: 'GET' }
   )
   const json = await query.json()
@@ -258,40 +623,33 @@ async function addRoute(destination) {
       coordinates: route,
     },
   }
-  // if the route already exists on the map, we'll reset it using setData
-  if (map.getSource('route')) {
-    map.getSource('route').setData(geojson)
-  }
-  // otherwise, we'll make a new request
-  else {
-    map.addLayer({
-      id: 'route',
-      type: 'line',
-      source: {
-        type: 'geojson',
-        data: geojson,
-      },
-      layout: {
-        'line-join': 'round',
-        'line-cap': 'round',
-      },
-      paint: {
-        'line-color': '#007cbf',
-        'line-width': 4,
-        'line-opacity': 0.75,
-      },
-    })
-  }
+  map.addLayer({
+    id: 'route',
+    type: 'line',
+    source: {
+      type: 'geojson',
+      data: geojson,
+    },
+    layout: {
+      'line-join': 'round',
+      'line-cap': 'round',
+    },
+    paint: {
+      'line-color': '#007cbf',
+      'line-width': 4,
+      'line-opacity': 0.75,
+    },
+  })
 }
 
-function addFlight(destination) {
-  route.features[0].geometry.coordinates = [origin, destination]
+function addFlight(start, destination) {
+  route.features[0].geometry.coordinates = [start, destination]
   // Calculate the distance in kilometers between route start/end point.
   const lineDistance = turf.length(route.features[0])
 
   const arc = []
 
-  // Draw an arc between the `origin` & `destination` of the two points
+  // Draw an arc between the `start` & `destination` of the two points
   for (let i = 0; i < lineDistance; i += lineDistance / steps) {
     const segment = turf.along(route.features[0], i)
     arc.push(segment.geometry.coordinates)
@@ -402,7 +760,7 @@ function createPopUp(currentFeature) {
   const popup = new mapboxgl.Popup({ closeOnClick: false })
     .setLngLat(currentFeature.geometry.coordinates)
     .setHTML(
-      `<h3>${currentFeature.properties.destination}, ${currentFeature.properties.state}</h3><p>${currentFeature.properties.type}</p><p>${currentFeature.properties.month} ${currentFeature.properties.year}</p>`
+      `<h3>${currentFeature.properties.destination}, ${currentFeature.properties.state}</h3><p>${currentFeature.properties.mode}</p><p>${currentFeature.properties.month} ${currentFeature.properties.year}</p>`
     )
     .addTo(map)
 
