@@ -21,7 +21,7 @@ const logs = {
     {
       type: 'Feature',
       geometry: {
-        mode: 'Point',
+        type: 'Point',
         coordinates: [-106.1497, 39.5022],
       },
       pan: {
@@ -42,7 +42,7 @@ const logs = {
     {
       type: 'Feature',
       geometry: {
-        mode: 'Point',
+        type: 'Point',
         coordinates: origin,
       },
       pan: {
@@ -63,7 +63,7 @@ const logs = {
     {
       type: 'Feature',
       geometry: {
-        mode: 'Point',
+        type: 'Point',
         coordinates: [-122.3321, 47.6062],
       },
       pan: {
@@ -84,12 +84,12 @@ const logs = {
     {
       type: 'Feature',
       geometry: {
-        mode: 'Point',
+        type: 'Point',
         coordinates: [-123.8313, 46.1879],
       },
       pan: {
         coordinates: [-123.0886165508648, 46.90233274137791],
-        zoom: 6.5,
+        zoom: 7.5,
       },
       start: {
         coordinates: [-122.3321, 47.6062],
@@ -105,7 +105,7 @@ const logs = {
     {
       type: 'Feature',
       geometry: {
-        mode: 'Point',
+        type: 'Point',
         coordinates: [-124.0046, 41.2132],
       },
       pan: {
@@ -126,7 +126,7 @@ const logs = {
     {
       type: 'Feature',
       geometry: {
-        mode: 'Point',
+        type: 'Point',
         coordinates: [-122.4194, 37.7749],
       },
       pan: {
@@ -147,7 +147,7 @@ const logs = {
     {
       type: 'Feature',
       geometry: {
-        mode: 'Point',
+        type: 'Point',
         coordinates: [-119.5383, 37.8651],
       },
       pan: {
@@ -295,7 +295,7 @@ const logs = {
     {
       type: 'Feature',
       geometry: {
-        mode: 'Point',
+        type: 'Point',
         coordinates: [-117.1611, 32.7157],
       },
       pan: {
