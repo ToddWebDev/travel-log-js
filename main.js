@@ -22,6 +22,280 @@ const logs = {
       type: 'Feature',
       geometry: {
         mode: 'Point',
+        coordinates: [-106.1497, 39.5022],
+      },
+      pan: {
+        coordinates: [-97.88087290778638, 40.9865935022212],
+        zoom: 5,
+      },
+      start: {
+        coordinates: [-84.2333, 39.5523],
+      },
+      properties: {
+        mode: 'driving',
+        month: 'January',
+        year: '2019',
+        destination: 'Copper Mountain',
+        state: 'Colorado',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        mode: 'Point',
+        coordinates: origin,
+      },
+      pan: {
+        coordinates: [-108.98226210889429, 40.16443441485319],
+        zoom: 7,
+      },
+      start: {
+        coordinates: [-106.1497, 39.5022],
+      },
+      properties: {
+        mode: 'driving',
+        month: 'January',
+        year: '2019',
+        destination: 'Salt Lake City',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        mode: 'Point',
+        coordinates: [-122.3321, 47.6062],
+      },
+      pan: {
+        coordinates: [-116.78644177555437, 44.2884079320018],
+        zoom: 5,
+      },
+      start: {
+        coordinates: origin,
+      },
+      properties: {
+        mode: 'driving',
+        month: 'May',
+        year: '2019',
+        destination: 'Seattle',
+        state: 'Washington',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        mode: 'Point',
+        coordinates: [-123.8313, 46.1879],
+      },
+      pan: {
+        coordinates: [-123.0886165508648, 46.90233274137791],
+        zoom: 6.5,
+      },
+      start: {
+        coordinates: [-122.3321, 47.6062],
+      },
+      properties: {
+        mode: 'driving',
+        month: 'May',
+        year: '2019',
+        destination: 'Astoria',
+        state: 'Oregon',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        mode: 'Point',
+        coordinates: [-124.0046, 41.2132],
+      },
+      pan: {
+        coordinates: [-123.92154707949429, 43.7005826707189],
+        zoom: 6.25,
+      },
+      start: {
+        coordinates: [-123.8313, 46.1879],
+      },
+      properties: {
+        mode: 'driving',
+        month: 'May',
+        year: '2019',
+        destination: 'Redwood National Park',
+        state: 'California',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        mode: 'Point',
+        coordinates: [-122.4194, 37.7749],
+      },
+      pan: {
+        coordinates: [-123.19556069262748, 39.50361605084848],
+        zoom: 7,
+      },
+      start: {
+        coordinates: [-124.0046, 41.2132],
+      },
+      properties: {
+        mode: 'driving',
+        month: 'June',
+        year: '2019',
+        destination: 'San Francisco',
+        state: 'California',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        mode: 'Point',
+        coordinates: [-119.5383, 37.8651],
+      },
+      pan: {
+        coordinates: [-120.98549301726592, 37.828592490655986],
+        zoom: 7.5,
+      },
+      start: {
+        coordinates: [-122.4194, 37.7749],
+      },
+      properties: {
+        mode: 'driving',
+        month: 'July',
+        year: '2019',
+        destination: 'Yosemite National Park',
+        state: 'California',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-121.9486, 36.5725],
+      },
+      pan: {
+        coordinates: [-120.74895706125952, 37.227490516885304],
+        zoom: 7.5,
+      },
+      start: {
+        coordinates: [-119.5383, 37.8651],
+      },
+      properties: {
+        mode: 'driving',
+        month: 'August',
+        year: '2019',
+        destination: 'Pebble Beach',
+        state: 'California',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-117.6126, 33.4274],
+      },
+      pan: {
+        coordinates: [-119.74757369808816, 35.02551397492231],
+        zoom: 6,
+      },
+      start: {
+        coordinates: [-121.9486, 36.5725],
+      },
+      properties: {
+        mode: 'driving',
+        month: 'August',
+        year: '2019',
+        destination: 'San Clemente',
+        state: 'California',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-114.7377, 36.0161],
+      },
+      pan: {
+        coordinates: [-116.20340957805965, 34.72501255520023],
+        zoom: 7,
+      },
+      start: {
+        coordinates: [-117.6126, 33.4274],
+      },
+      properties: {
+        mode: 'driving',
+        month: 'October',
+        year: '2019',
+        destination: 'Hoover Dam',
+        state: 'Nevada',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-112.1076, 36.0604],
+      },
+      pan: {
+        coordinates: [-113.4282804608597, 36.045341726061366],
+        zoom: 7.5,
+      },
+      start: {
+        coordinates: [-114.7377, 36.0161],
+      },
+      properties: {
+        mode: 'driving',
+        month: 'October',
+        year: '2019',
+        destination: 'Grand Canyon National Park',
+        state: 'Arizona',
+        description: 'South Rim',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.5104, 36.8791],
+      },
+      pan: {
+        coordinates: [-111.81177121913402, 36.468484496277185],
+        zoom: 8.25,
+      },
+      start: {
+        coordinates: [-112.1076, 36.0604],
+      },
+      properties: {
+        mode: 'driving',
+        month: 'November',
+        year: '2019',
+        destination: 'Horseshoe Bend',
+        state: 'Arizona',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-113.0263, 37.2982],
+      },
+      pan: {
+        coordinates: [-112.26322243059343, 37.09022349960718],
+        zoom: 7.5,
+      },
+      start: {
+        coordinates: [-111.5104, 36.8791],
+      },
+      properties: {
+        mode: 'driving',
+        month: 'November',
+        year: '2019',
+        destination: 'Zion National Park',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        mode: 'Point',
         coordinates: [-117.1611, 32.7157],
       },
       pan: {
@@ -654,7 +928,7 @@ function addFlight(start, destination) {
 
   // Update the route with calculated arc coordinates
   route.features[0].geometry.coordinates = arc
-
+  console.log(arc)
   map.addSource('route', {
     type: 'geojson',
     data: route,
