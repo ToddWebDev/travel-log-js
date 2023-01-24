@@ -53,7 +53,7 @@ const logs = {
         coordinates: origin,
       },
       properties: {
-        mode: 'auto',
+        mode: 'driving',
         month: 'June',
         year: '2021',
         destination: 'Grand Teton National Park',
@@ -74,7 +74,7 @@ const logs = {
         coordinates: origin,
       },
       properties: {
-        mode: 'auto',
+        mode: 'driving',
         month: 'August',
         year: '2021',
         destination: 'Canyonlands National Park',
@@ -95,7 +95,7 @@ const logs = {
         coordinates: [-109.821, 38.4598],
       },
       properties: {
-        mode: 'auto',
+        mode: 'driving',
         month: 'August',
         year: '2021',
         destination: 'Antelope Canyon',
@@ -116,7 +116,7 @@ const logs = {
         coordinates: [-111.3743, 36.8619],
       },
       properties: {
-        mode: 'auto',
+        mode: 'driving',
         month: 'August',
         year: '2021',
         destination: 'Grand Canyon National Park',
@@ -137,7 +137,7 @@ const logs = {
         coordinates: [-112.0581, 36.2135],
       },
       properties: {
-        mode: 'auto',
+        mode: 'driving',
         month: 'August',
         year: '2021',
         destination: 'Bryce Canyon National Park',
@@ -158,7 +158,7 @@ const logs = {
         coordinates: origin,
       },
       properties: {
-        mode: 'auto',
+        mode: 'driving',
         month: 'May',
         year: '2022',
         destination: 'Zion National Park',
@@ -179,7 +179,7 @@ const logs = {
         coordinates: origin,
       },
       properties: {
-        mode: 'auto',
+        mode: 'driving',
         month: 'June',
         year: '2022',
         destination: 'San Clemente',
@@ -200,7 +200,7 @@ const logs = {
         coordinates: [-117.6126, 33.4274],
       },
       properties: {
-        mode: 'auto',
+        mode: 'driving',
         month: 'June',
         year: '2022',
         destination: 'Palm Springs',
@@ -221,7 +221,7 @@ const logs = {
         coordinates: [-116.6141, 33.8371],
       },
       properties: {
-        mode: 'auto',
+        mode: 'driving',
         month: 'June',
         year: '2022',
         destination: 'Joshua Tree National Park',
@@ -242,7 +242,7 @@ const logs = {
         coordinates: [-115.901, 33.8734],
       },
       properties: {
-        mode: 'auto',
+        mode: 'driving',
         month: 'June',
         year: '2022',
         destination: 'Capital Reef National Park',
@@ -263,7 +263,7 @@ const logs = {
         coordinates: origin,
       },
       properties: {
-        mode: 'auto',
+        mode: 'driving',
         month: 'August',
         year: '2022',
         destination: 'Klamath Falls',
@@ -284,7 +284,7 @@ const logs = {
         coordinates: [-121.7817, 42.2249],
       },
       properties: {
-        mode: 'auto',
+        mode: 'driving',
         month: 'August',
         year: '2022',
         destination: 'Crater Lake National Park',
@@ -305,7 +305,7 @@ const logs = {
         coordinates: [-122.1279, 42.9295],
       },
       properties: {
-        mode: 'auto',
+        mode: 'driving',
         month: 'August',
         year: '2022',
         destination: 'Watson Falls',
@@ -326,7 +326,7 @@ const logs = {
         coordinates: [-122.39, 43.2415],
       },
       properties: {
-        mode: 'auto',
+        mode: 'driving',
         month: 'August',
         year: '2022',
         destination: 'Portland',
@@ -347,7 +347,7 @@ const logs = {
         coordinates: [-122.6784, 45.5152],
       },
       properties: {
-        mode: 'auto',
+        mode: 'driving',
         month: 'August',
         year: '2022',
         destination: 'Multnomah Falls',
@@ -368,7 +368,7 @@ const logs = {
         coordinates: [-122.1158, 45.5762],
       },
       properties: {
-        mode: 'auto',
+        mode: 'driving',
         month: 'August',
         year: '2022',
         destination: 'Shoshone Falls',
@@ -389,7 +389,7 @@ const logs = {
         coordinates: origin,
       },
       properties: {
-        mode: 'auto',
+        mode: 'driving',
         month: 'November',
         year: '2022',
         destination: 'Arches National Park',
@@ -407,7 +407,7 @@ const logs = {
         zoom: 2.5,
       },
       start: {
-        coordinates: origin,
+        coordinates: [-122.4194, 37.7749],
       },
       properties: {
         mode: 'flight',
@@ -431,7 +431,7 @@ const logs = {
         coordinates: [139.7563, 35.6648],
       },
       properties: {
-        mode: 'auto',
+        mode: 'driving',
         month: 'April',
         year: '2023',
         destination: 'Hakone',
@@ -452,7 +452,7 @@ const logs = {
         coordinates: [139.1069, 35.2324],
       },
       properties: {
-        mode: 'auto',
+        mode: 'driving',
         month: 'April',
         year: '2023',
         destination: 'Kyoto',
@@ -473,7 +473,7 @@ const logs = {
         coordinates: [135.7681, 35.0116],
       },
       properties: {
-        mode: 'auto',
+        mode: 'driving',
         month: 'April',
         year: '2023',
         destination: 'Osaka',
@@ -570,12 +570,8 @@ function buildLogsList(logs) {
         if (this.id === `link-${feature.properties.id}`) {
           flyToCoordinates(feature)
           createPopUp(feature)
-          if (feature.properties.mode === 'auto') {
-            addRoute(
-              'driving',
-              feature.start.coordinates,
-              feature.geometry.coordinates
-            )
+          if (feature.properties.mode === 'driving') {
+            addRoute(feature.start.coordinates, feature.geometry.coordinates)
           }
           if (feature.properties.mode === 'train') {
             addRoute(
@@ -607,14 +603,15 @@ function addLogMarkers() {
   }
 }
 
-async function addRoute(mode, start, destination) {
+async function addRoute(start, destination) {
   const query = await fetch(
-    `https://api.mapbox.com/directions/v5/mapbox/${mode}/${start[0]},${start[1]};${destination[0]},${destination[1]}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`,
+    `https://api.mapbox.com/directions/v5/mapbox/driving/${start[0]},${start[1]};${destination[0]},${destination[1]}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`,
     { method: 'GET' }
   )
   const json = await query.json()
   const data = json.routes[0]
   const route = data.geometry.coordinates
+
   const geojson = {
     type: 'Feature',
     properties: {},
@@ -657,7 +654,7 @@ function addFlight(start, destination) {
 
   // Update the route with calculated arc coordinates
   route.features[0].geometry.coordinates = arc
-  console.log(arc)
+
   map.addSource('route', {
     type: 'geojson',
     data: route,
