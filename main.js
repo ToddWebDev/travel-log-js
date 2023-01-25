@@ -1,7 +1,7 @@
 mapboxgl.accessToken =
   'pk.eyJ1IjoidG9kZHdlYmRldiIsImEiOiJjanlidjVoMHQwYjBqM2RvY2poMGFwc3l0In0.sLNe9kgTJ5pAwrzTc9_5cQ'
 
-const origin = [-111.891, 40.7608]
+const origin = [-111.8999, 40.6111]
 
 let steps = 500
 let counter = 0
@@ -15,51 +15,28 @@ const map = new mapboxgl.Map({
   pitch: 0,
 })
 
+const home = {
+  type: 'Feature',
+  geometry: {
+    type: 'Point',
+    coordinates: origin,
+  },
+  pan: {
+    coordinates: origin,
+    zoom: 10,
+  },
+  properties: {
+    mode: 'home',
+    month: 'January',
+    year: '2019',
+    destination: 'Salt Lake City',
+    state: 'Utah',
+  },
+}
+
 const logs = {
   type: 'FeatureCollection',
   features: [
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [-106.1497, 39.5022],
-      },
-      pan: {
-        coordinates: [-97.88087290778638, 40.9865935022212],
-        zoom: 5,
-      },
-      start: {
-        coordinates: [-84.2333, 39.5523],
-      },
-      properties: {
-        mode: 'driving',
-        month: 'January',
-        year: '2019',
-        destination: 'Copper Mountain',
-        state: 'Colorado',
-      },
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: origin,
-      },
-      pan: {
-        coordinates: [-108.98226210889429, 40.16443441485319],
-        zoom: 7,
-      },
-      start: {
-        coordinates: [-106.1497, 39.5022],
-      },
-      properties: {
-        mode: 'driving',
-        month: 'January',
-        year: '2019',
-        destination: 'Salt Lake City',
-        state: 'Utah',
-      },
-    },
     {
       type: 'Feature',
       geometry: {
@@ -296,6 +273,67 @@ const logs = {
       type: 'Feature',
       geometry: {
         type: 'Point',
+        coordinates: origin,
+      },
+      pan: {
+        coordinates: origin,
+        zoom: 10,
+      },
+      properties: {
+        mode: 'home',
+        month: 'March',
+        year: '2020',
+        destination: 'Salt Lake City',
+        state: 'Utah',
+        description: 'Est. 2020',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-117.6126, 33.4274],
+      },
+      pan: {
+        coordinates: [-114.87913045491008, 37.14307504778424],
+        zoom: 6,
+      },
+      start: {
+        coordinates: origin,
+      },
+      properties: {
+        mode: 'flight',
+        month: 'July',
+        year: '2020',
+        destination: 'San Clemente',
+        state: 'California',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-84.2333, 39.5523],
+      },
+      pan: {
+        coordinates: [-97.99241754854586, 40.99151566036469],
+        zoom: 5,
+      },
+      start: {
+        coordinates: origin,
+      },
+      properties: {
+        mode: 'flight',
+        month: 'November',
+        year: '2020',
+        destination: 'Springboro',
+        state: 'Ohio',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
         coordinates: [-117.1611, 32.7157],
       },
       pan: {
@@ -359,14 +397,35 @@ const logs = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-111.3743, 36.8619],
+        coordinates: [-110.0986, 36.9969],
       },
       pan: {
-        coordinates: [-110.60290325287792, 37.666591739885924],
+        coordinates: [-109.96061585882612, 37.73135716373229],
         zoom: 8,
       },
       start: {
         coordinates: [-109.821, 38.4598],
+      },
+      properties: {
+        mode: 'driving',
+        month: 'August',
+        year: '2021',
+        destination: 'Monument Valley',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.3743, 36.8619],
+      },
+      pan: {
+        coordinates: [-110.73446338699108, 36.93137527991146],
+        zoom: 8,
+      },
+      start: {
+        coordinates: [-110.0986, 36.9969],
       },
       properties: {
         mode: 'driving',
@@ -395,6 +454,7 @@ const logs = {
         year: '2021',
         destination: 'Grand Canyon National Park',
         state: 'Arizona',
+        description: 'North Rim',
       },
     },
     {
@@ -741,7 +801,7 @@ const logs = {
       },
       pan: {
         coordinates: [135.63547485005572, 34.8533580821886],
-        zoom: 9,
+        zoom: 10,
       },
       start: {
         coordinates: [135.7681, 35.0116],
@@ -771,7 +831,7 @@ const route = {
   ],
 }
 
-// A single point that animates along a flight route
+// A single point that animates along a route
 const point = {
   type: 'FeatureCollection',
   features: [
@@ -804,16 +864,44 @@ map.on('load', () => {
     data: logs,
   })
 
+  addHomeListing()
   buildLogsList(logs)
 
   // Add navigation control (the +/- zoom buttons)
   map.addControl(new mapboxgl.NavigationControl(), 'bottom-right')
 
-  // Add home marker
-  new mapboxgl.Marker(map).setLngLat([-111.891, 40.7608]).addTo(map)
-
-  addLogMarkers()
+  addMarkers()
 })
+
+function addHomeListing() {
+  /* Add a new home section to the sidebar. */
+  const listing = document.getElementById('home')
+  listing.className = 'item'
+  /* Add details to the individual listing. */
+  const label = listing.appendChild(document.createElement('p'))
+  label.className = 'label'
+  label.innerHTML = 'home'
+
+  /* Add the link to the individual listing created above. */
+  const link = listing.appendChild(document.createElement('a'))
+  link.href = '#'
+  link.className = 'title'
+  link.id = `link-home`
+  link.innerHTML = 'Salt Lake City'
+
+  /* Add event listener */
+  link.addEventListener('click', function () {
+    resetMap()
+    flyToCoordinates(home)
+    createPopUp(home)
+
+    const activeItem = document.getElementsByClassName('active')
+    if (activeItem[0]) {
+      activeItem[0].classList.remove('active')
+    }
+    this.parentNode.classList.add('active')
+  })
+}
 
 function buildLogsList(logs) {
   for (const log of logs.features) {
@@ -826,9 +914,12 @@ function buildLogsList(logs) {
     listing.className = 'item'
 
     /* Add details to the individual listing. */
-    const date = listing.appendChild(document.createElement('p'))
-    date.className = 'date'
-    date.innerHTML = `${log.properties.month} ${log.properties.year}`
+    const label = listing.appendChild(document.createElement('p'))
+    label.className = 'label'
+    label.innerHTML =
+      log.properties.mode === 'home'
+        ? 'home'
+        : log.properties.month + ', ' + log.properties.year
 
     /* Add the link to the individual listing created above. */
     const link = listing.appendChild(document.createElement('a'))
@@ -847,13 +938,6 @@ function buildLogsList(logs) {
           if (feature.properties.mode === 'driving') {
             addRoute(feature.start.coordinates, feature.geometry.coordinates)
           }
-          if (feature.properties.mode === 'train') {
-            addRoute(
-              'train',
-              feature.start.coordinates,
-              feature.geometry.coordinates
-            )
-          }
           if (feature.properties.mode === 'flight') {
             addFlight(feature.start.coordinates, feature.geometry.coordinates)
           }
@@ -868,10 +952,12 @@ function buildLogsList(logs) {
   }
 }
 
-function addLogMarkers() {
+function addMarkers() {
   /* For each feature in the GeoJSON object above: */
   for (const feature of logs.features) {
-    new mapboxgl.Marker({ color: '#c53058' })
+    new mapboxgl.Marker({
+      color: `${feature.properties.mode === 'home' ? '#249369' : '#c53058'}`,
+    })
       .setLngLat(feature.geometry.coordinates)
       .addTo(map)
   }
@@ -1031,7 +1117,15 @@ function createPopUp(currentFeature) {
   const popup = new mapboxgl.Popup({ closeOnClick: false })
     .setLngLat(currentFeature.geometry.coordinates)
     .setHTML(
-      `<h3>${currentFeature.properties.destination}, ${currentFeature.properties.state}</h3><p>${currentFeature.properties.mode}</p><p>${currentFeature.properties.month} ${currentFeature.properties.year}</p>`
+      `<h3>${currentFeature.properties.destination}, ${
+        currentFeature.properties.state
+      }</h3>${
+        currentFeature.properties.description
+          ? `<p>${currentFeature.properties.description}</p>`
+          : ''
+      }<p>${currentFeature.properties.mode}</p><p>${
+        currentFeature.properties.month
+      } ${currentFeature.properties.year}</p>`
     )
     .addTo(map)
 

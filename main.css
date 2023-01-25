@@ -3,6 +3,8 @@
 :root {
   --primary-one: #c53058;
   --primary-two: #aa284b;
+  --accent-one: #249369;
+  --accent-two: #107b53;
   --base-one: #1c1917;
   --base-two: #292524;
   --base-three: #404040;
@@ -98,6 +100,7 @@ a {
 
 a:hover {
   color: var(--primary-two);
+  text-decoration: underline;
 }
 
 button {
@@ -137,23 +140,23 @@ aside h1 {
   padding: var(--grid-md);
 }
 
+.item {
+  padding: var(--grid-md);
+  border-bottom: var(--border-width) solid var(--base-five);
+  text-decoration: none;
+}
+
 .logs {
   height: 100%;
   overflow: auto;
   padding-bottom: 60px;
 }
 
-.logs .item {
-  border-bottom: var(--border-width) solid var(--base-five);
-  padding: var(--grid-md);
-  text-decoration: none;
-}
-
 .logs .item:last-child {
   border-bottom: none;
 }
 
-.logs .item .title {
+.item .title {
   display: block;
   font-size: 1.2em;
   font-weight: 700;
@@ -164,7 +167,7 @@ aside h1 {
   color: var(--primary-two);
 }
 
-.logs .item .date {
+.label {
   font-size: 0.8em;
   font-weight: 700;
   text-transform: uppercase;
