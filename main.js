@@ -56,6 +56,7 @@ const logs = {
         year: '2019',
         destination: 'Seattle',
         state: 'Washington',
+        distance: 851,
       },
     },
     {
@@ -77,6 +78,7 @@ const logs = {
         year: '2019',
         destination: 'Astoria',
         state: 'Oregon',
+        distance: 177,
       },
     },
     {
@@ -98,6 +100,7 @@ const logs = {
         year: '2019',
         destination: 'Redwood National Park',
         state: 'California',
+        distance: 417,
       },
     },
     {
@@ -119,6 +122,7 @@ const logs = {
         year: '2019',
         destination: 'San Francisco',
         state: 'California',
+        distance: 327,
       },
     },
     {
@@ -140,6 +144,7 @@ const logs = {
         year: '2019',
         destination: 'Yosemite National Park',
         state: 'California',
+        distance: 192,
       },
     },
     {
@@ -161,6 +166,7 @@ const logs = {
         year: '2019',
         destination: 'Pebble Beach',
         state: 'California',
+        distance: 225,
       },
     },
     {
@@ -182,6 +188,7 @@ const logs = {
         year: '2019',
         destination: 'San Clemente',
         state: 'California',
+        distance: 391,
       },
     },
     {
@@ -203,6 +210,7 @@ const logs = {
         year: '2019',
         destination: 'Hoover Dam',
         state: 'Nevada',
+        distance: 307,
       },
     },
     {
@@ -225,6 +233,7 @@ const logs = {
         destination: 'Grand Canyon National Park',
         state: 'Arizona',
         description: 'South Rim',
+        distance: 249,
       },
     },
     {
@@ -246,6 +255,7 @@ const logs = {
         year: '2019',
         destination: 'Horseshoe Bend',
         state: 'Arizona',
+        distance: 133,
       },
     },
     {
@@ -267,25 +277,7 @@ const logs = {
         year: '2019',
         destination: 'Zion National Park',
         state: 'Utah',
-      },
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: origin,
-      },
-      pan: {
-        coordinates: origin,
-        zoom: 10,
-      },
-      properties: {
-        mode: 'home',
-        month: 'March',
-        year: '2020',
-        destination: 'Salt Lake City',
-        state: 'Utah',
-        description: 'Est. 2020',
+        distance: 157,
       },
     },
     {
@@ -370,6 +362,7 @@ const logs = {
         year: '2021',
         destination: 'Grand Teton National Park',
         state: 'Wyoming',
+        distance: 300,
       },
     },
     {
@@ -391,6 +384,7 @@ const logs = {
         year: '2021',
         destination: 'Canyonlands National Park',
         state: 'Utah',
+        distance: 233,
       },
     },
     {
@@ -412,6 +406,7 @@ const logs = {
         year: '2021',
         destination: 'Monument Valley',
         state: 'Utah',
+        distance: 182,
       },
     },
     {
@@ -433,6 +428,7 @@ const logs = {
         year: '2021',
         destination: 'Antelope Canyon',
         state: 'Arizona',
+        distance: 119,
       },
     },
     {
@@ -455,6 +451,7 @@ const logs = {
         destination: 'Grand Canyon National Park',
         state: 'Arizona',
         description: 'North Rim',
+        distance: 128,
       },
     },
     {
@@ -465,7 +462,7 @@ const logs = {
       },
       pan: {
         coordinates: [-112.12175894986007, 36.90050842961888],
-        zoom: 8.25,
+        zoom: 8,
       },
       start: {
         coordinates: [-112.0581, 36.2135],
@@ -476,6 +473,7 @@ const logs = {
         year: '2021',
         destination: 'Bryce Canyon National Park',
         state: 'Utah',
+        distance: 160,
       },
     },
     {
@@ -497,6 +495,7 @@ const logs = {
         year: '2022',
         destination: 'Zion National Park',
         state: 'Utah',
+        distance: 293,
       },
     },
     {
@@ -518,6 +517,7 @@ const logs = {
         year: '2022',
         destination: 'San Clemente',
         state: 'California',
+        distance: 697,
       },
     },
     {
@@ -539,6 +539,7 @@ const logs = {
         year: '2022',
         destination: 'Palm Springs',
         state: 'California',
+        distance: 113,
       },
     },
     {
@@ -560,6 +561,7 @@ const logs = {
         year: '2022',
         destination: 'Joshua Tree National Park',
         state: 'California',
+        distance: 79,
       },
     },
     {
@@ -581,6 +583,7 @@ const logs = {
         year: '2022',
         destination: 'Capital Reef National Park',
         state: 'Utah',
+        distance: 594,
       },
     },
     {
@@ -602,6 +605,7 @@ const logs = {
         year: '2022',
         destination: 'Klamath Falls',
         state: 'Oregon',
+        distance: 779,
       },
     },
     {
@@ -623,6 +627,7 @@ const logs = {
         year: '2022',
         destination: 'Crater Lake National Park',
         state: 'Oregon',
+        distance: 61,
       },
     },
     {
@@ -644,6 +649,7 @@ const logs = {
         year: '2022',
         destination: 'Watson Falls',
         state: 'Oregon',
+        distance: 40,
       },
     },
     {
@@ -665,6 +671,7 @@ const logs = {
         year: '2022',
         destination: 'Portland',
         state: 'Oregon',
+        distance: 233,
       },
     },
     {
@@ -686,6 +693,7 @@ const logs = {
         year: '2022',
         destination: 'Multnomah Falls',
         state: 'Oregon',
+        distance: 30,
       },
     },
     {
@@ -707,6 +715,7 @@ const logs = {
         year: '2022',
         destination: 'Shoshone Falls',
         state: 'Idaho',
+        distance: 528,
       },
     },
     {
@@ -728,6 +737,7 @@ const logs = {
         year: '2022',
         destination: 'Arches National Park',
         state: 'Utah',
+        distance: 233,
       },
     },
     {
@@ -770,6 +780,7 @@ const logs = {
         year: '2023',
         destination: 'Hakone',
         state: 'Japan',
+        distance: 53,
       },
     },
     {
@@ -791,6 +802,7 @@ const logs = {
         year: '2023',
         destination: 'Kyoto',
         state: 'Japan',
+        distance: 233,
       },
     },
     {
@@ -812,6 +824,7 @@ const logs = {
         year: '2023',
         destination: 'Osaka',
         state: 'Japan',
+        distance: 35,
       },
     },
   ],
@@ -972,6 +985,8 @@ async function addRoute(start, destination) {
   const data = json.routes[0]
   const route = data.geometry.coordinates
 
+  console.log('Miles: ', data.distance * 0.000621371192)
+
   const geojson = {
     type: 'Feature',
     properties: {},
@@ -1123,9 +1138,13 @@ function createPopUp(currentFeature) {
         currentFeature.properties.description
           ? `<p>${currentFeature.properties.description}</p>`
           : ''
-      }<p>${currentFeature.properties.mode}</p><p>${
-        currentFeature.properties.month
-      } ${currentFeature.properties.year}</p>`
+      }<p>${currentFeature.properties.mode}${
+        currentFeature.properties.mode === 'driving'
+          ? ': ' + currentFeature.properties.distance + ' miles'
+          : ''
+      }</p><p>${currentFeature.properties.month} ${
+        currentFeature.properties.year
+      }</p>`
     )
     .addTo(map)
 
