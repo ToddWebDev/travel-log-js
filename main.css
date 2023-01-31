@@ -177,6 +177,15 @@ aside h1 {
   background-color: var(--base-five);
 }
 
+.header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+  background: var(--base-six);
+  padding: var(--grid-sm) var(--grid-md);
+  border-bottom: var(--border-width) solid var(--base-five);
+}
+
 ::-webkit-scrollbar {
   width: 3px;
   height: 3px;
