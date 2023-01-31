@@ -829,7 +829,7 @@ const logs = [
           month: 'April',
           year: '2023',
           destination: 'Tokyo',
-          state: 'Japan',
+          country: 'Japan',
         },
       },
       {
@@ -850,7 +850,7 @@ const logs = [
           month: 'April',
           year: '2023',
           destination: 'Hakone',
-          state: 'Japan',
+          country: 'Japan',
           distance: 53,
         },
       },
@@ -872,7 +872,7 @@ const logs = [
           month: 'April',
           year: '2023',
           destination: 'Kyoto',
-          state: 'Japan',
+          country: 'Japan',
           distance: 233,
         },
       },
@@ -894,7 +894,7 @@ const logs = [
           month: 'April',
           year: '2023',
           destination: 'Osaka',
-          state: 'Japan',
+          country: 'Japan',
           distance: 35,
         },
       },
@@ -1221,6 +1221,8 @@ function createPopUp(currentFeature) {
     .setHTML(
       `<h3>${currentFeature.properties.destination}, ${
         currentFeature.properties.state
+          ? currentFeature.properties.state
+          : currentFeature.properties.country
       }</h3>${
         currentFeature.properties.description
           ? `<p>${currentFeature.properties.description}</p>`
