@@ -771,6 +771,50 @@ const logs = [
         type: 'Feature',
         geometry: {
           type: 'Point',
+          coordinates: [-110.7624, 43.4799],
+        },
+        pan: {
+          coordinates: [-111.34626733205232, 42.04116544286456],
+          zoom: 6.75,
+        },
+        start: {
+          coordinates: origin,
+        },
+        properties: {
+          mode: 'driving',
+          month: 'January',
+          year: '2023',
+          destination: 'Jackson',
+          state: 'Wyoming',
+          distance: 275,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-106.8317, 40.485],
+        },
+        pan: {
+          coordinates: [-109.37355192725386, 40.575995139013344],
+          zoom: 6.75,
+        },
+        start: {
+          coordinates: origin,
+        },
+        properties: {
+          mode: 'driving',
+          month: 'February',
+          year: '2023',
+          destination: 'Steamboat Springs',
+          state: 'Colorado',
+          distance: 337,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
           coordinates: [139.7563, 35.6648],
         },
         pan: {
