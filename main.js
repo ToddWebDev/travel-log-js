@@ -491,6 +491,28 @@ const logs = [
           distance: 160,
         },
       },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-115.1391, 36.1716],
+        },
+        pan: {
+          coordinates: [-113.56278442879626, 38.4113646516437],
+          zoom: 7,
+        },
+        start: {
+          coordinates: origin,
+        },
+        properties: {
+          mode: 'driving',
+          month: 'October',
+          year: '2021',
+          destination: 'Las Vegas',
+          state: 'Nevada',
+          distance: 411,
+        },
+      },
     ],
   },
   {
@@ -809,6 +831,28 @@ const logs = [
           destination: 'Steamboat Springs',
           state: 'Colorado',
           distance: 337,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-114.3517, 43.6971],
+        },
+        pan: {
+          coordinates: [-113.09100173310834, 42.154448698837676],
+          zoom: 6.75,
+        },
+        start: {
+          coordinates: origin,
+        },
+        properties: {
+          mode: 'driving',
+          month: 'February',
+          year: '2023',
+          destination: 'Sun Valley',
+          state: 'Idaho',
+          distance: 304,
         },
       },
       {
