@@ -1063,7 +1063,9 @@ function buildLogsList(year) {
     link.href = '#'
     link.className = 'title'
     link.id = `link-${log.properties.id}`
-    link.innerHTML = `${log.properties.destination}`
+    link.innerHTML = `${log.properties.destination}, ${
+      log.properties.country ? log.properties.country : log.properties.state
+    }`
 
     /* Add event listeners */
     link.addEventListener('click', function () {
