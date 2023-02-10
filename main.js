@@ -1,7 +1,8 @@
 mapboxgl.accessToken =
   'pk.eyJ1IjoidG9kZHdlYmRldiIsImEiOiJjanlidjVoMHQwYjBqM2RvY2poMGFwc3l0In0.sLNe9kgTJ5pAwrzTc9_5cQ'
 
-const origin = [-111.8999, 40.6111]
+const origin = [-111.8999, 40.6111] //SLC
+// const origin = [-82.9988, 39.9612] //Ohio
 
 let steps = 500
 let counter = 0
@@ -946,6 +947,170 @@ const logs = [
   },
 ]
 
+const golf_courses = {
+  type: 'FeatureCollection',
+  features: [
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-82.899985, 40.267854],
+      },
+      properties: {
+        mode: 'golf',
+        destination: 'Bent Tree Golf Club',
+        city: 'Sunbury',
+        state: 'Ohio',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-82.8933, 40.2138],
+      },
+      properties: {
+        mode: 'golf',
+        destination: 'Black Hawk Golf Club',
+        city: 'Delaware',
+        state: 'Ohio',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-82.9417, 40.0495],
+      },
+      properties: {
+        mode: 'golf',
+        destination: 'Champions Golf Course',
+        city: 'Columbus',
+        state: 'Ohio',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-82.9866, 39.6923],
+      },
+      properties: {
+        mode: 'golf',
+        destination: 'Cooks Creek Golf Club',
+        city: 'South Bloomfield',
+        state: 'Ohio',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-82.036779, 39.897971],
+      },
+      properties: {
+        mode: 'golf',
+        destination: 'Eaglesticks Golf Club',
+        city: 'Zanesville',
+        state: 'Ohio',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-84.232040, 39.5377876],
+      },
+      properties: {
+        mode: 'golf',
+        destination: 'Heatherwoode Golf Club',
+        city: 'Springboro',
+        state: 'Ohio',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-82.79, 40.1012],
+      },
+      properties: {
+        mode: 'golf',
+        destination: 'New Albany Links',
+        city: 'New Albany',
+        state: 'Ohio',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-84.1975035, 39.5992446],
+      },
+      properties: {
+        mode: 'golf',
+        destination: 'The Golf Club at Yankee Trace',
+        city: 'Centerville',
+        state: 'Ohio',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-83.05017, 39.775342],
+      },
+      properties: {
+        mode: 'golf',
+        destination: 'The Players Club at Foxfire',
+        city: 'Lockbourne',
+        state: 'Ohio',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-82.8267801, 40.181293],
+      },
+      properties: {
+        mode: 'golf',
+        destination: 'Royal American Links',
+        city: 'Galena',
+        state: 'Ohio',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-83.16167, 40.154805],
+      },
+      properties: {
+        mode: 'golf',
+        destination: 'The Club at Tartan Fields',
+        city: 'Dublin',
+        state: 'Ohio',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-82.2341751, 40.0891644],
+      },
+      properties: {
+        mode: 'golf',
+        destination: 'Longaberger Golf Club',
+        city: 'Nashport',
+        state: 'Ohio',
+      },
+    },
+  ],
+}
+
+const national_parks = {}
+
 // A simple line from origin to destination.
 const route = {
   type: 'FeatureCollection',
@@ -997,11 +1162,7 @@ map.on('load', () => {
   map.addControl(new mapboxgl.NavigationControl(), 'bottom-right')
 
   // Add origin/home marker
-  new mapboxgl.Marker({
-    color: '#249369',
-  })
-    .setLngLat(origin)
-    .addTo(map)
+  addMarker(origin, '#0096FF')
 
   addMarkers()
 })
@@ -1093,19 +1254,24 @@ function buildLogsList(year) {
 
 function buildAllLogs() {
   logs.forEach((year) => {
-    addMarkers(year.features)
+    addMarkers(year.features, '#c53058')
     buildLogsList(year)
   })
+  addMarkers(golf_courses.features, '#249369')
 }
 
-function addMarkers(features) {
+function addMarker(coordinates, color) {
+  new mapboxgl.Marker({
+    color: color,
+  })
+    .setLngLat(coordinates)
+    .addTo(map)
+}
+
+function addMarkers(features, color) {
   /* For each feature in the GeoJSON object above: */
   for (const feature of features) {
-    new mapboxgl.Marker({
-      color: `${feature.properties.mode === 'home' ? '#249369' : '#c53058'}`,
-    })
-      .setLngLat(feature.geometry.coordinates)
-      .addTo(map)
+    addMarker(feature.geometry.coordinates, color)
   }
 }
 
