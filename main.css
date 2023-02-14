@@ -245,3 +245,15 @@ aside h1 {
   color: #292524;
   font-size: 16px;
 }
+
+.marker {
+  border: none;
+  cursor: pointer;
+  height: 32px;
+  width: 20px;
+  background-image: url('./marker-icons/mapbox-marker-icon-red.svg');
+}
+
+.marker-green {
+  background-image: url('./marker-icons/mapbox-marker-icon-green.svg');
+}

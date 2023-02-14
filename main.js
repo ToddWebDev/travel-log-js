@@ -1164,7 +1164,6 @@ map.on('load', () => {
   // Add origin/home marker
   addMarker(origin, '#0096FF')
 
-  addMarkers()
 })
 
 function addHomeListing() {
@@ -1186,7 +1185,7 @@ function addHomeListing() {
   /* Add event listener */
   link.addEventListener('click', function () {
     resetMap()
-    flyToCoordinates(home)
+    flyToCoordinates(home.pan.coordinates, home.pan.zoom)
     createPopUp(home)
 
     const activeItem = document.getElementsByClassName('active')
@@ -1233,7 +1232,7 @@ function buildLogsList(year) {
       resetMap()
       for (const feature of year.features) {
         if (this.id === `link-${feature.properties.id}`) {
-          flyToCoordinates(feature)
+          flyToCoordinates(feature.pan.coordinates, feature.pan.zoom)
           createPopUp(feature)
           if (feature.properties.mode === 'driving') {
             addRoute(feature.start.coordinates, feature.geometry.coordinates)
@@ -1254,10 +1253,60 @@ function buildLogsList(year) {
 
 function buildAllLogs() {
   logs.forEach((year) => {
-    addMarkers(year.features, '#c53058')
+    // addMarkers(year.features, '#c53058')
+    addCustomMarkers(year.features)
     buildLogsList(year)
   })
-  addMarkers(golf_courses.features, '#249369')
+  // addMarkers(golf_courses.features, '#249369')
+  addCustomMarkers(golf_courses.features, 'green')
+}
+
+function addCustomMarkers(features, color) {
+  /* For each feature in the GeoJSON object above: */
+  for (const marker of features) {
+    /* Create a div element for the marker. */
+    const el = document.createElement('div')
+    /* Assign a unique `id` to the marker. */
+    el.id = `marker-${marker.properties.id}`
+    /* Assign the `marker` class to each marker for styling. */
+    el.className = color === 'green' ? 'marker marker-green' : 'marker'
+
+    /**
+     * Create a marker using the div element
+     * defined above and add it to the map.
+     **/
+    new mapboxgl.Marker(el, { offset: [0, -15] })
+      .setLngLat(marker.geometry.coordinates)
+      .addTo(map)
+
+    el.addEventListener('click', (e) => {
+      resetMap()
+      /* Fly to the point */
+      if (marker.properties.mode !== 'golf') {
+      flyToCoordinates(marker.pan.coordinates, marker.pan.zoom);
+      } else {
+        flyToCoordinates(marker.geometry.coordinates, 14)
+      }
+      /* Close all other popups and display popup for clicked store */
+      createPopUp(marker);
+      if (marker.properties.mode === 'driving') {
+        addRoute(marker.start.coordinates, marker.geometry.coordinates)
+      }
+      if (marker.properties.mode === 'flight') {
+        addFlight(marker.start.coordinates, marker.geometry.coordinates)
+      }
+      if (marker.properties.mode !== 'golf') {  
+        /* Highlight listing in sidebar */
+        const activeItem = document.getElementsByClassName('active');
+        e.stopPropagation();
+        if (activeItem[0]) {
+          activeItem[0].classList.remove('active');
+        }
+        const listing = document.getElementById(`listing-${marker.properties.id}`);
+        listing.classList.add('active');
+      }
+    });
+  }
 }
 
 function addMarker(coordinates, color) {
@@ -1416,10 +1465,10 @@ function addFlight(start, destination) {
   animate(counter)
 }
 
-function flyToCoordinates(currentFeature) {
+function flyToCoordinates(coordinates, zoom) {
   map.flyTo({
-    center: currentFeature.pan.coordinates,
-    zoom: currentFeature.pan.zoom,
+    center: coordinates,
+    zoom: zoom,
   })
 }
 
