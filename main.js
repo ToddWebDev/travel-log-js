@@ -429,7 +429,7 @@ const logs = [
         type: 'Feature',
         geometry: {
           type: 'Point',
-          coordinates: [-111.3743, 36.8619],
+          coordinates: [-111.374330, 36.861910],
         },
         pan: {
           coordinates: [-110.73446338699108, 36.93137527991146],
@@ -612,7 +612,7 @@ const logs = [
         type: 'Feature',
         geometry: {
           type: 'Point',
-          coordinates: [-111.1355, 38.0877],
+          coordinates: [-111.2468, 38.2855],
         },
         pan: {
           coordinates: [-113.59145742554648, 35.99566512012293],
@@ -1254,14 +1254,14 @@ function buildLogsList(year) {
 function buildAllLogs() {
   logs.forEach((year) => {
     // addMarkers(year.features, '#c53058')
-    addCustomMarkers(year.features)
+    addHTMLMarkers(year.features)
     buildLogsList(year)
   })
   // addMarkers(golf_courses.features, '#249369')
-  addCustomMarkers(golf_courses.features, 'green')
+  addHTMLMarkers(golf_courses.features, 'green')
 }
 
-function addCustomMarkers(features, color) {
+function addHTMLMarkers(features, color) {
   /* For each feature in the GeoJSON object above: */
   for (const marker of features) {
     /* Create a div element for the marker. */
@@ -1275,7 +1275,7 @@ function addCustomMarkers(features, color) {
      * Create a marker using the div element
      * defined above and add it to the map.
      **/
-    new mapboxgl.Marker(el, { offset: [0, -15] })
+    new mapboxgl.Marker(el, { offset: [0, -25] })
       .setLngLat(marker.geometry.coordinates)
       .addTo(map)
 

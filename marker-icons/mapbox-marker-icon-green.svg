@@ -1,5 +1,5 @@
 <!-- Create a custom map style: https://studio.mapbox.com -->
-<svg id="marker" data-name="marker" xmlns="http://www.w3.org/2000/svg" width="20" height="48" viewBox="0 0 20 48">
+<svg id="marker" data-name="marker" xmlns="http://www.w3.org/2000/svg" width="25" height="60" viewBox="0 0 20 48">
   <g id="mapbox-marker-icon">
     <g id="icon">
       <ellipse id="shadow" cx="10" cy="27" rx="9" ry="5" fill="#c4c4c4" opacity="0.3" style="isolation: isolate"/>
