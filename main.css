@@ -128,15 +128,18 @@ button:focus {
 /* Layout */
 aside {
   position: absolute;
-  width: 25%;
+  width: 0px;
   height: 100%;
   top: 0;
   left: 0;
   overflow: hidden;
   border-right: 1px solid rgba(0, 0, 0, 0.25);
+  @media (min-width: 600px) {
+    width: 25%;
+  }
 }
 
-aside h1 {
+aside header {
   padding: var(--grid-md);
 }
 
@@ -186,6 +189,11 @@ aside h1 {
   border-bottom: var(--border-width) solid var(--base-five);
 }
 
+.description {
+  display: flex;
+  justify-content: space-between;
+}
+
 ::-webkit-scrollbar {
   width: 3px;
   height: 3px;
@@ -203,12 +211,16 @@ aside h1 {
 }
 
 /* Map Styles */
-.map {
+#map {
   position: absolute;
-  left: 25%;
-  width: 75%;
+  left: 0;
+  width: 100%;
   top: 0;
   bottom: 0;
+  @media (min-width: 600px) {
+    left: 25%;
+    width: 75%;
+  }
 }
 
 .mapboxgl-popup {
