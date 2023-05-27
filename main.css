@@ -245,6 +245,7 @@ aside header {
   color: #fff;
   margin: 0;
   padding: var(--grid-sm);
+  padding-right: 45px;
   border-radius: var(--border-radius) var(--border-radius) 0 0;
   font-weight: 700;
   font-size: 24px;
@@ -256,6 +257,15 @@ aside header {
   margin: var(--grid-sm);
   color: #292524;
   font-size: 16px;
+}
+
+.mapboxgl-popup-content p.description,
+.mapboxgl-popup-content p.date {
+  color: #626262;
+}
+
+.mapboxgl-popup-content i {
+  color: var(--primary-one);
 }
 
 .marker {
