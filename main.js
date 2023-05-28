@@ -30,7 +30,7 @@ const home = {
   properties: {
     mode: 'home',
     month: 'January',
-    year: '2019',
+    year: 2019,
     destination: 'Salt Lake City',
     state: 'Utah',
   },
@@ -40,7 +40,8 @@ const home = {
 const logs = [
   {
     type: 'FeatureCollection',
-    year: '2019',
+    year: 2019,
+    description: 'Remote Year',
     features: [
       {
         type: 'Feature',
@@ -58,7 +59,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'May',
-          year: '2019',
+          year: 2019,
+          date: '2019-05-01',
           departure: 'Salt Lake City',
           destination: 'Seattle',
           state: 'Washington',
@@ -69,11 +71,11 @@ const logs = [
         type: 'Feature',
         geometry: {
           type: 'Point',
-          coordinates: [-123.8313, 46.1879],
+          coordinates: [-123.8157, 46.9754],
         },
         pan: {
-          coordinates: [-123.0886165508648, 46.90233274137791],
-          zoom: calcViewportZoom(7.5),
+          coordinates: [-123.07535682017608, 47.294454930337174],
+          zoom: calcViewportZoom(8.5),
         },
         start: {
           coordinates: [-122.3321, 47.6062],
@@ -81,11 +83,109 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'May',
-          year: '2019',
+          year: 2019,
+          date: '2019-05-27',
           departure: 'Seattle',
+          destination: 'Aberdeen',
+          state: 'Oregon',
+          distance: 109,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-123.8313, 46.1879],
+        },
+        pan: {
+          coordinates: [-123.82352544980225, 46.58322526505187],
+          zoom: calcViewportZoom(8.5),
+        },
+        start: {
+          coordinates: [-123.8157, 46.9754],
+        },
+        properties: {
+          mode: 'driving',
+          month: 'May',
+          year: 2019,
+          date: '2019-05-28',
+          departure: 'Aberdeen',
           destination: 'Astoria',
           state: 'Oregon',
-          distance: 177,
+          distance: 88,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-123.9682, 45.8845],
+        },
+        pan: {
+          coordinates: [-123.89966410948887, 46.03682723037097],
+          zoom: calcViewportZoom(10.5),
+        },
+        start: {
+          coordinates: [-123.8313, 46.1879],
+        },
+        properties: {
+          mode: 'driving',
+          month: 'May',
+          year: 2019,
+          date: '2019-05-28 00:00:0000',
+          departure: 'Astoria',
+          destination: 'Haystack Rock',
+          state: 'Oregon',
+          distance: 26,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-124.0795, 44.6768],
+        },
+        pan: {
+          coordinates: [-124.02421972495421, 45.28307891124361],
+          zoom: calcViewportZoom(8),
+        },
+        start: {
+          coordinates: [-123.9682, 45.8845],
+        },
+        properties: {
+          mode: 'driving',
+          month: 'May',
+          year: 2019,
+          date: '2019-05-29 00:00:0000',
+          departure: 'Haystack Rock',
+          destination: 'Newport',
+          description: 'Yaquina Head Lighthouse',
+          state: 'Oregon',
+          distance: 134,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-124.2840, 42.0526],
+        },
+        pan: {
+          coordinates: [-124.18437067494794, 43.35949711708747],
+          zoom: calcViewportZoom(7.25),
+        },
+        start: {
+          coordinates: [-124.0795, 44.6768],
+        },
+        properties: {
+          mode: 'driving',
+          month: 'May',
+          year: 2019,
+          date: '2019-05-30 00:00:0000',
+          departure: 'Newport',
+          destination: 'Brookings',
+          state: 'Oregon',
+          distance: 209,
         },
       },
       {
@@ -95,20 +195,21 @@ const logs = [
           coordinates: [-124.0046, 41.2132],
         },
         pan: {
-          coordinates: [-123.92154707949429, 43.7005826707189],
-          zoom: calcViewportZoom(6.25),
+          coordinates: [-124.14394916326553, 41.6346633658],
+          zoom: calcViewportZoom(9),
         },
         start: {
-          coordinates: [-123.8313, 46.1879],
+          coordinates: [-124.2840, 42.0526],
         },
         properties: {
           mode: 'driving',
-          month: 'May',
-          year: '2019',
-          departure: 'Astoria',
+          month: 'June',
+          year: 2019,
+          date: '2019-06-01',
+          departure: 'Brookings',
           destination: 'Redwood National Park',
           state: 'California',
-          distance: 417,
+          distance: 78,
         },
       },
       {
@@ -127,11 +228,37 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'June',
-          year: '2019',
+          year: 2019,
+          date: '2019-06-04',
           departure: 'Redwood National Park',
           destination: 'San Francisco',
           state: 'California',
           distance: 327,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-121.9486, 36.5725],
+        },
+        pan: {
+          coordinates: [-122.17034054754755, 37.167747885377445],
+          zoom: calcViewportZoom(8.5),
+        },
+        start: {
+          coordinates: [-122.4194, 37.7749],
+        },
+        properties: {
+          mode: 'driving',
+          month: 'June',
+          year: 2019,
+          date: '2019-06-13',
+          departure: 'San Francisco',
+          destination: 'Pebble Beach',
+          description: 'U.S. Open',
+          state: 'California',
+          distance: 119,
         },
       },
       {
@@ -150,7 +277,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'July',
-          year: '2019',
+          year: 2019,
+          date: '2019-07-04',
           departure: 'San Francisco',
           destination: 'Yosemite National Park',
           state: 'California',
@@ -161,23 +289,72 @@ const logs = [
         type: 'Feature',
         geometry: {
           type: 'Point',
-          coordinates: [-121.9486, 36.5725],
+          coordinates: [-121.9233, 36.5552],
         },
         pan: {
-          coordinates: [-120.74895706125952, 37.227490516885304],
-          zoom: calcViewportZoom(7.5),
+          coordinates: [-122.17034054754755, 37.167747885377445],
+          zoom: calcViewportZoom(8.5),
         },
         start: {
-          coordinates: [-119.5383, 37.8651],
+          coordinates: [-122.4194, 37.7749],
         },
         properties: {
           mode: 'driving',
           month: 'August',
-          year: '2019',
-          departure: 'Yosemite National Park',
-          destination: 'Pebble Beach',
+          year: 2019,
+          date: '2019-08-17',
+          departure: 'San Francisco',
+          destination: 'Carmel by the Sea',
           state: 'California',
-          distance: 225,
+          distance: 119,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-121.8081, 36.2704],
+        },
+        pan: {
+          coordinates: [-121.86582480706683, 36.41338343085843],
+          zoom: calcViewportZoom(10.5),
+        },
+        start: {
+          coordinates: [-121.9233, 36.5552],
+        },
+        properties: {
+          mode: 'driving',
+          month: 'August',
+          year: 2019,
+          date: '2019-08-17 00:00:0000',
+          departure: 'Carmel by the Sea',
+          destination: 'Big Sur',
+          state: 'California',
+          distance: 26,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-119.6982, 34.4208],
+        },
+        pan: {
+          coordinates: [-120.74529014881557, 35.353882138870475],
+          zoom: calcViewportZoom(7.5),
+        },
+        start: {
+          coordinates: [-121.8081, 36.2704],
+        },
+        properties: {
+          mode: 'driving',
+          month: 'August',
+          year: 2019,
+          date: '2019-08-18',
+          departure: 'Big Sur',
+          destination: 'Santa Barbara',
+          state: 'California',
+          distance: 200,
         },
       },
       {
@@ -187,20 +364,21 @@ const logs = [
           coordinates: [-117.6126, 33.4274],
         },
         pan: {
-          coordinates: [-119.74757369808816, 35.02551397492231],
-          zoom: calcViewportZoom(6),
+          coordinates: [-118.6534901641224, 33.93048173077998],
+          zoom: calcViewportZoom(8),
         },
         start: {
-          coordinates: [-121.9486, 36.5725],
+          coordinates: [-119.6982, 34.4208]
         },
         properties: {
           mode: 'driving',
           month: 'August',
-          year: '2019',
-          departure: 'Pebble Beach',
+          year: 2019,
+          date: '2019-08-20',
+          departure: 'Santa Barbara',
           destination: 'San Clemente',
           state: 'California',
-          distance: 391,
+          distance: 159,
         },
       },
       {
@@ -219,7 +397,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'October',
-          year: '2019',
+          year: 2019,
+          date: '2019-10-01',
           departure: 'San Clemente',
           destination: 'Hoover Dam',
           state: 'Nevada',
@@ -242,7 +421,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'October',
-          year: '2019',
+          year: 2019,
+          date: '2019-10-15',
           departure: 'Hoover Dam',
           destination: 'Grand Canyon National Park',
           state: 'Arizona',
@@ -266,7 +446,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'November',
-          year: '2019',
+          year: 2019,
+          date: '2019-11-01',
           departure: 'Grand Canyon National Park',
           destination: 'Horseshoe Bend',
           state: 'Arizona',
@@ -289,7 +470,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'November',
-          year: '2019',
+          year: 2019,
+          date: '2019-11-05',
           departure: 'Horseshoe Bend',
           destination: 'Zion National Park',
           state: 'Utah',
@@ -300,7 +482,7 @@ const logs = [
   },
   {
     type: 'FeatureCollection',
-    year: '2020',
+    year: 2020,
     features: [
       {
         type: 'Feature',
@@ -318,7 +500,8 @@ const logs = [
         properties: {
           mode: 'flight',
           month: 'July',
-          year: '2020',
+          year: 2020,
+          date: '2020-07-15',
           departure: 'Salt Lake City',
           destination: 'San Clemente',
           state: 'California',
@@ -341,7 +524,8 @@ const logs = [
         properties: {
           mode: 'flight',
           month: 'November',
-          year: '2020',
+          year: 2020,
+          date: '2020-11-15',
           departure: 'Salt Lake City',
           destination: 'Springboro',
           state: 'Ohio',
@@ -352,7 +536,7 @@ const logs = [
   },
   {
     type: 'FeatureCollection',
-    year: '2021',
+    year: 2021,
     features: [
       {
         type: 'Feature',
@@ -370,7 +554,8 @@ const logs = [
         properties: {
           mode: 'flight',
           month: 'May',
-          year: '2021',
+          year: 2021,
+          date: '2021-05-15',
           departure: 'Salt Lake City',
           destination: 'San Diego',
           state: 'California',
@@ -393,7 +578,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'June',
-          year: '2021',
+          year: 2021,
+          date: '2021-06-15',
           departure: 'Salt Lake City',
           destination: 'Grand Teton National Park',
           state: 'Wyoming',
@@ -416,7 +602,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'August',
-          year: '2021',
+          year: 2021,
+          date: '2021-08-15',
           departure: 'Salt Lake City',
           destination: 'Canyonlands National Park',
           state: 'Utah',
@@ -439,7 +626,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'August',
-          year: '2021',
+          year: 2021,
+          date: '2021-08-17',
           departure: 'Canyonlands National Park',
           destination: 'Monument Valley',
           state: 'Utah',
@@ -462,7 +650,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'August',
-          year: '2021',
+          year: 2021,
+          date: '2021-08-19',
           departure: 'Monument Valley',
           destination: 'Antelope Canyon',
           state: 'Arizona',
@@ -485,7 +674,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'August',
-          year: '2021',
+          year: 2021,
+          date: '2021-08-20',
           departure: 'Antelope Canyon',
           destination: 'Grand Canyon National Park',
           state: 'Arizona',
@@ -509,7 +699,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'August',
-          year: '2021',
+          year: 2021,
+          date: '2021-08-22',
           departure: 'Grand Canyon National Park',
           destination: 'Bryce Canyon National Park',
           state: 'Utah',
@@ -532,7 +723,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'October',
-          year: '2021',
+          year: 2021,
+          date: '2021-10-05',
           departure: 'Salt Lake City',
           destination: 'Las Vegas',
           state: 'Nevada',
@@ -543,7 +735,7 @@ const logs = [
   },
   {
     type: 'FeatureCollection',
-    year: '2022',
+    year: 2022,
     features: [
       {
         type: 'Feature',
@@ -561,7 +753,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'May',
-          year: '2022',
+          year: 2022,
+          date: '2022-05-20',
           departure: 'Salt Lake City',
           destination: 'Zion National Park',
           state: 'Utah',
@@ -584,7 +777,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'June',
-          year: '2022',
+          year: 2022,
+          date: '2022-06-20',
           departure: 'Salt Lake City',
           destination: 'San Clemente',
           state: 'California',
@@ -607,7 +801,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'June',
-          year: '2022',
+          year: 2022,
+          date: '2022-06-29',
           destination: 'San Clemente',
           destination: 'Palm Springs',
           state: 'California',
@@ -630,7 +825,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'June',
-          year: '2022',
+          year: 2022,
+          date: '2022-06-30',
           departure: 'Palm Springs',
           destination: 'Joshua Tree National Park',
           state: 'California',
@@ -652,8 +848,9 @@ const logs = [
         },
         properties: {
           mode: 'driving',
-          month: 'June',
-          year: '2022',
+          month: 'July',
+          year: 2022,
+          date: '2022-07-01',
           departure: 'Joshua Tree National Park',
           destination: 'Capital Reef National Park',
           state: 'Utah',
@@ -676,7 +873,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'August',
-          year: '2022',
+          year: 2022,
+          date: '2022-08-17',
           departure: 'Salt Lake City',
           destination: 'Klamath Falls',
           state: 'Oregon',
@@ -699,7 +897,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'August',
-          year: '2022',
+          year: 2022,
+          date: '2022-08-19',
           departure: 'Klamath Falls',
           destination: 'Crater Lake National Park',
           state: 'Oregon',
@@ -722,7 +921,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'August',
-          year: '2022',
+          year: 2022,
+          date: '2022-08-20',
           departure: 'Crater Lake National Park',
           destination: 'Watson Falls',
           state: 'Oregon',
@@ -745,7 +945,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'August',
-          year: '2022',
+          year: 2022,
+          date: '2022-08-21',
           departure: 'Watson Falls',
           destination: 'Portland',
           state: 'Oregon',
@@ -768,7 +969,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'August',
-          year: '2022',
+          year: 2022,
+          date: '2022-08-22',
           departure: 'Portland',
           destination: 'Multnomah Falls',
           state: 'Oregon',
@@ -791,7 +993,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'August',
-          year: '2022',
+          year: 2022,
+          date: '2022-08-23',
           departure: 'Multnomah Falls',
           destination: 'Shoshone Falls',
           state: 'Idaho',
@@ -814,7 +1017,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'November',
-          year: '2022',
+          year: 2022,
+          date: '2022-11-12',
           departure: 'Salt Lake City',
           destination: 'Arches National Park',
           state: 'Utah',
@@ -825,7 +1029,7 @@ const logs = [
   },
   {
     type: 'FeatureCollection',
-    year: '2023',
+    year: 2023,
     features: [
       {
         type: 'Feature',
@@ -843,7 +1047,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'January',
-          year: '2023',
+          year: 2023,
+          date: '2023-01-15',
           departure: 'Salt Lake City',
           destination: 'Jackson Hole',
           description: 'Alpine Skiing',
@@ -867,7 +1072,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'February',
-          year: '2023',
+          year: 2023,
+          date: '2023-02-04',
           departure: 'Salt Lake City',
           destination: 'Steamboat Springs',
           description: 'Alpine Skiing',
@@ -890,8 +1096,9 @@ const logs = [
         },
         properties: {
           mode: 'driving',
-          month: 'February',
-          year: '2023',
+          month: 'March',
+          year: 2023,
+          date: '2023-03-11',
           departure: 'Salt Lake City',
           destination: 'Sun Valley',
           description: 'Alpine Skiing',
@@ -915,7 +1122,8 @@ const logs = [
         properties: {
           mode: 'flight',
           month: 'April',
-          year: '2023',
+          year: 2023,
+          date: '2023-04-08',
           departure: 'Salt Lake City',
           destination: 'Tokyo',
           country: 'Japan',
@@ -938,7 +1146,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'April',
-          year: '2023',
+          year: 2023,
+          date: '2023-04-11',
           departure: 'Tokyo',
           destination: 'Hakone',
           country: 'Japan',
@@ -961,7 +1170,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'April',
-          year: '2023',
+          year: 2023,
+          date: '2023-04-12',
           departure: 'Hakone',
           destination: 'Kyoto',
           country: 'Japan',
@@ -984,7 +1194,8 @@ const logs = [
         properties: {
           mode: 'driving',
           month: 'April',
-          year: '2023',
+          year: 2023,
+          date: '2023-04-15',
           departure: 'Kyoto',
           destination: 'Osaka',
           country: 'Japan',
@@ -1303,7 +1514,14 @@ function buildLogsList(year) {
 }
 
 function buildAllLogs() {
-  logs.forEach((year) => {
+  let sortedLogs = logs.sort((a, b) => b.year - a.year)
+  sortedLogs.forEach((log) => {
+    sortedFeatures = log.features.sort(
+      (a, b) => new Date(b.properties.date) - new Date(a.properties.date)
+    )
+    return sortedFeatures
+  })
+  sortedLogs.forEach((year) => {
     // addMarkers(year.features, '#c53058')
     addHTMLMarkers(year.features)
     buildLogsList(year)
@@ -1528,6 +1746,7 @@ function flyToCoordinates(coordinates, zoom) {
 }
 
 function showTravelProperties(properties) {
+  const date = new Date(properties.date)
   return `<h2>${properties.destination}, ${
     properties.state ? properties.state : properties.country
   }</h2>
@@ -1545,7 +1764,9 @@ function showTravelProperties(properties) {
       ? `<p><i class="fas fa-location-pin"></i> ${properties.departure}</p>`
       : ''
   }
-  <p class="date">${properties.month} ${properties.year}</p>`
+  <p class="date">${date.toLocaleString('en-US', {
+    dateStyle: 'long'
+  })}</p>`
 }
 
 function showGolfProperties(properties) {

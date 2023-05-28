@@ -150,7 +150,7 @@ aside header {
 .logs {
   height: 100%;
   overflow: auto;
-  padding-bottom: 60px;
+  padding-bottom: 110px;
 }
 
 .logs .item:last-child {
