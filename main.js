@@ -6,6 +6,7 @@ const origin = [-111.8999, 40.6111] //SLC
 
 let steps = 500
 let counter = 0
+const viewportWidth = window.innerWidth
 
 const map = new mapboxgl.Map({
   container: 'map', // container ID
@@ -49,7 +50,7 @@ const logs = [
         },
         pan: {
           coordinates: [-116.78644177555437, 44.2884079320018],
-          zoom: 5,
+          zoom: calcViewportZoom(5),
         },
         start: {
           coordinates: origin,
@@ -72,7 +73,7 @@ const logs = [
         },
         pan: {
           coordinates: [-123.0886165508648, 46.90233274137791],
-          zoom: 7.5,
+          zoom: calcViewportZoom(7.5),
         },
         start: {
           coordinates: [-122.3321, 47.6062],
@@ -95,7 +96,7 @@ const logs = [
         },
         pan: {
           coordinates: [-123.92154707949429, 43.7005826707189],
-          zoom: 6.25,
+          zoom: calcViewportZoom(6.25),
         },
         start: {
           coordinates: [-123.8313, 46.1879],
@@ -118,7 +119,7 @@ const logs = [
         },
         pan: {
           coordinates: [-123.19556069262748, 39.50361605084848],
-          zoom: 7,
+          zoom: calcViewportZoom(7),
         },
         start: {
           coordinates: [-124.0046, 41.2132],
@@ -141,7 +142,7 @@ const logs = [
         },
         pan: {
           coordinates: [-120.98549301726592, 37.828592490655986],
-          zoom: 7.5,
+          zoom: calcViewportZoom(7.5),
         },
         start: {
           coordinates: [-122.4194, 37.7749],
@@ -164,7 +165,7 @@ const logs = [
         },
         pan: {
           coordinates: [-120.74895706125952, 37.227490516885304],
-          zoom: 7.5,
+          zoom: calcViewportZoom(7.5),
         },
         start: {
           coordinates: [-119.5383, 37.8651],
@@ -187,7 +188,7 @@ const logs = [
         },
         pan: {
           coordinates: [-119.74757369808816, 35.02551397492231],
-          zoom: 6,
+          zoom: calcViewportZoom(6),
         },
         start: {
           coordinates: [-121.9486, 36.5725],
@@ -210,7 +211,7 @@ const logs = [
         },
         pan: {
           coordinates: [-116.20340957805965, 34.72501255520023],
-          zoom: 7,
+          zoom: calcViewportZoom(7),
         },
         start: {
           coordinates: [-117.6126, 33.4274],
@@ -233,7 +234,7 @@ const logs = [
         },
         pan: {
           coordinates: [-113.4282804608597, 36.045341726061366],
-          zoom: 7.5,
+          zoom: calcViewportZoom(7.5),
         },
         start: {
           coordinates: [-114.7377, 36.0161],
@@ -257,7 +258,7 @@ const logs = [
         },
         pan: {
           coordinates: [-111.81177121913402, 36.468484496277185],
-          zoom: 8.25,
+          zoom: calcViewportZoom(8.25),
         },
         start: {
           coordinates: [-112.1076, 36.0604],
@@ -280,7 +281,7 @@ const logs = [
         },
         pan: {
           coordinates: [-112.26322243059343, 37.09022349960718],
-          zoom: 7.5,
+          zoom: calcViewportZoom(7.5),
         },
         start: {
           coordinates: [-111.5104, 36.8791],
@@ -309,7 +310,7 @@ const logs = [
         },
         pan: {
           coordinates: [-114.87913045491008, 37.14307504778424],
-          zoom: 6,
+          zoom: calcViewportZoom(6),
         },
         start: {
           coordinates: origin,
@@ -332,7 +333,7 @@ const logs = [
         },
         pan: {
           coordinates: [-97.99241754854586, 40.99151566036469],
-          zoom: 5,
+          zoom: calcViewportZoom(5),
         },
         start: {
           coordinates: origin,
@@ -361,7 +362,7 @@ const logs = [
         },
         pan: {
           coordinates: [-114.66446033065944, 36.76722997619034],
-          zoom: 6,
+          zoom: calcViewportZoom(6),
         },
         start: {
           coordinates: origin,
@@ -384,7 +385,7 @@ const logs = [
         },
         pan: {
           coordinates: [-111.30093632213028, 42.27718688306124],
-          zoom: 6.75,
+          zoom: calcViewportZoom(6.75),
         },
         start: {
           coordinates: origin,
@@ -407,7 +408,7 @@ const logs = [
         },
         pan: {
           coordinates: [-110.87853505263796, 39.491432526194124],
-          zoom: 7.25,
+          zoom: calcViewportZoom(7.25),
         },
         start: {
           coordinates: origin,
@@ -430,7 +431,7 @@ const logs = [
         },
         pan: {
           coordinates: [-109.96061585882612, 37.73135716373229],
-          zoom: 8,
+          zoom: calcViewportZoom(8),
         },
         start: {
           coordinates: [-109.821, 38.4598],
@@ -453,7 +454,7 @@ const logs = [
         },
         pan: {
           coordinates: [-110.73446338699108, 36.93137527991146],
-          zoom: 8,
+          zoom: calcViewportZoom(8),
         },
         start: {
           coordinates: [-110.0986, 36.9969],
@@ -476,7 +477,7 @@ const logs = [
         },
         pan: {
           coordinates: [-111.71626593622823, 36.53948476316447],
-          zoom: 9,
+          zoom: calcViewportZoom(9),
         },
         start: {
           coordinates: [-111.3743, 36.8619],
@@ -500,7 +501,7 @@ const logs = [
         },
         pan: {
           coordinates: [-112.12175894986007, 36.90050842961888],
-          zoom: 8,
+          zoom: calcViewportZoom(8),
         },
         start: {
           coordinates: [-112.0581, 36.2135],
@@ -523,7 +524,7 @@ const logs = [
         },
         pan: {
           coordinates: [-113.56278442879626, 38.4113646516437],
-          zoom: 7,
+          zoom: calcViewportZoom(7),
         },
         start: {
           coordinates: origin,
@@ -552,7 +553,7 @@ const logs = [
         },
         pan: {
           coordinates: [-112.47255923068407, 39.03087475830939],
-          zoom: 7,
+          zoom: calcViewportZoom(7),
         },
         start: {
           coordinates: origin,
@@ -575,7 +576,7 @@ const logs = [
         },
         pan: {
           coordinates: [-114.87913045491008, 37.14307504778424],
-          zoom: 6,
+          zoom: calcViewportZoom(6),
         },
         start: {
           coordinates: origin,
@@ -598,7 +599,7 @@ const logs = [
         },
         pan: {
           coordinates: [-117.11653439312553, 33.63243363757619],
-          zoom: 9,
+          zoom: calcViewportZoom(9),
         },
         start: {
           coordinates: [-117.6126, 33.4274],
@@ -621,7 +622,7 @@ const logs = [
         },
         pan: {
           coordinates: [-116.25905197457654, 33.855690648706684],
-          zoom: 8,
+          zoom: calcViewportZoom(8),
         },
         start: {
           coordinates: [-116.6141, 33.8371],
@@ -644,7 +645,7 @@ const logs = [
         },
         pan: {
           coordinates: [-113.59145742554648, 35.99566512012293],
-          zoom: 6.5,
+          zoom: calcViewportZoom(6.5),
         },
         start: {
           coordinates: [-115.901, 33.8734],
@@ -667,7 +668,7 @@ const logs = [
         },
         pan: {
           coordinates: [-116.76052177075833, 41.59596822261041],
-          zoom: 6,
+          zoom: calcViewportZoom(6),
         },
         start: {
           coordinates: origin,
@@ -690,7 +691,7 @@ const logs = [
         },
         pan: {
           coordinates: [-121.95312968571488, 42.575921063512325],
-          zoom: 9,
+          zoom: calcViewportZoom(9),
         },
         start: {
           coordinates: [-121.7817, 42.2249],
@@ -713,7 +714,7 @@ const logs = [
         },
         pan: {
           coordinates: [-122.2580920791247, 43.08495076622465],
-          zoom: 10,
+          zoom: calcViewportZoom(10),
         },
         start: {
           coordinates: [-122.1279, 42.9295],
@@ -736,7 +737,7 @@ const logs = [
         },
         pan: {
           coordinates: [-122.53082340266808, 44.37389326296227],
-          zoom: 7.75,
+          zoom: calcViewportZoom(7.75),
         },
         start: {
           coordinates: [-122.39, 43.2415],
@@ -759,7 +760,7 @@ const logs = [
         },
         pan: {
           coordinates: [-122.39837782601055, 45.54592320050154],
-          zoom: 9.25,
+          zoom: calcViewportZoom(9.25),
         },
         start: {
           coordinates: [-122.6784, 45.5152],
@@ -782,7 +783,7 @@ const logs = [
         },
         pan: {
           coordinates: [-118.17641931751784, 44.155823935637954],
-          zoom: 6.5,
+          zoom: calcViewportZoom(6.5),
         },
         start: {
           coordinates: [-122.1158, 45.5762],
@@ -805,7 +806,7 @@ const logs = [
         },
         pan: {
           coordinates: [-110.72943057013381, 39.756671417162394],
-          zoom: 7.5,
+          zoom: calcViewportZoom(7.5),
         },
         start: {
           coordinates: origin,
@@ -834,7 +835,7 @@ const logs = [
         },
         pan: {
           coordinates: [-111.34626733205232, 42.04116544286456],
-          zoom: 6.75,
+          zoom: calcViewportZoom(6.75),
         },
         start: {
           coordinates: origin,
@@ -858,7 +859,7 @@ const logs = [
         },
         pan: {
           coordinates: [-109.37355192725386, 40.575995139013344],
-          zoom: 6.75,
+          zoom: calcViewportZoom(6.75),
         },
         start: {
           coordinates: origin,
@@ -882,7 +883,7 @@ const logs = [
         },
         pan: {
           coordinates: [-113.09100173310834, 42.154448698837676],
-          zoom: 6.75,
+          zoom: calcViewportZoom(6.75),
         },
         start: {
           coordinates: origin,
@@ -906,7 +907,7 @@ const logs = [
         },
         pan: {
           coordinates: [191.36606983230297, 53.39446500917633],
-          zoom: 2.5,
+          zoom: calcViewportZoom(2.5),
         },
         start: {
           coordinates: [-122.4194, 37.7749],
@@ -929,7 +930,7 @@ const logs = [
         },
         pan: {
           coordinates: [139.37893748535635, 35.45549198809632],
-          zoom: 9,
+          zoom: calcViewportZoom(9),
         },
         start: {
           coordinates: [139.7563, 35.6648],
@@ -952,7 +953,7 @@ const logs = [
         },
         pan: {
           coordinates: [137.44191503720106, 35.13388833198617],
-          zoom: 7.5,
+          zoom: calcViewportZoom(7.5),
         },
         start: {
           coordinates: [139.1069, 35.2324],
@@ -975,7 +976,7 @@ const logs = [
         },
         pan: {
           coordinates: [135.63547485005572, 34.8533580821886],
-          zoom: 10,
+          zoom: calcViewportZoom(10),
         },
         start: {
           coordinates: [135.7681, 35.0116],
@@ -1185,6 +1186,10 @@ const point = {
       },
     },
   ],
+}
+
+function calcViewportZoom(zoom) {
+  return viewportWidth < 600 ? zoom - 1.5 : zoom
 }
 
 function resetMap() {
@@ -1522,6 +1527,32 @@ function flyToCoordinates(coordinates, zoom) {
   })
 }
 
+function showTravelProperties(properties) {
+  return `<h2>${properties.destination}, ${
+    properties.state ? properties.state : properties.country
+  }</h2>
+  ${
+    properties.description
+      ? `<p class="description">${properties.description}</p>`
+      : ''
+  }<p>${
+    properties.mode === 'driving'
+      ? `<i class="fas fa-car"></i>`
+      : `<i class="fas fa-plane"></i>`
+  } ${properties.distance + ' miles'}</p>
+  ${
+    properties.departure
+      ? `<p><i class="fas fa-location-pin"></i> ${properties.departure}</p>`
+      : ''
+  }
+  <p class="date">${properties.month} ${properties.year}</p>`
+}
+
+function showGolfProperties(properties) {
+  return `<h2>${properties.destination}</h2><p>${properties.city}, ${properties.state}</p>
+    `
+}
+
 function createPopUp(currentFeature) {
   const popUps = document.getElementsByClassName('mapboxgl-popup')
   /** Check if there is already a popup on the map and if so, remove it */
@@ -1530,30 +1561,15 @@ function createPopUp(currentFeature) {
   const popup = new mapboxgl.Popup({ closeOnClick: false })
     .setLngLat(currentFeature.geometry.coordinates)
     .setHTML(
-      `<h2>${currentFeature.properties.destination}, ${
-        currentFeature.properties.state
-          ? currentFeature.properties.state
-          : currentFeature.properties.country
-      }</h2>
-      ${
-        currentFeature.properties.description
-          ? `<p class="description">${currentFeature.properties.description}</p>`
-          : ''
-      }<p>${
-        currentFeature.properties.mode === 'driving'
-          ? `<i class="fas fa-car"></i>`
-          : `<i class="fas fa-plane"></i>`
-      } ${currentFeature.properties.distance + ' miles'}</p>
-      ${
-        currentFeature.properties.departure
-          ? `<p><i class="fas fa-location-pin"></i> ${currentFeature.properties.departure}</p>`
-          : ''
-      }
-      <p class="date">${currentFeature.properties.month} ${
-        currentFeature.properties.year
-      }</p>`
+      `${
+        currentFeature.properties.mode === 'golf'
+          ? showGolfProperties(currentFeature.properties)
+          : showTravelProperties(currentFeature.properties)
+      }`
     )
     .addTo(map)
+
+  document.activeElement.blur()
 
   popup.on('close', function (e) {
     resetMap()

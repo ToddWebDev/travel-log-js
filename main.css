@@ -83,9 +83,17 @@ h2,
 h3,
 h4,
 h5 {
-  color: var(--text-color-strong);
+  color: var(--text-color-medium);
   font-family: Futura PT, 'Nunito Sans', Roboto, Oxygen, Ubuntu, Cantarell,
     'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+  color: var(--text-color-strong);
+}
+
+.mono {
+  font-family: monospace;
 }
 
 .text-color-deemphasized {
@@ -109,6 +117,10 @@ buton:hover {
 
 button:focus {
   box-shadow: 0 0 0 3px rgba(197, 48, 88, 0.75);
+}
+
+button:focus-visible {
+  outline: 0;
 }
 
 /* Layout */
