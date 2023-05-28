@@ -1530,11 +1530,12 @@ function createPopUp(currentFeature) {
   const popup = new mapboxgl.Popup({ closeOnClick: false })
     .setLngLat(currentFeature.geometry.coordinates)
     .setHTML(
-      `<h3>${currentFeature.properties.destination}, ${
+      `<h2>${currentFeature.properties.destination}, ${
         currentFeature.properties.state
           ? currentFeature.properties.state
           : currentFeature.properties.country
-      }</h3>${
+      }</h2>
+      ${
         currentFeature.properties.description
           ? `<p class="description">${currentFeature.properties.description}</p>`
           : ''

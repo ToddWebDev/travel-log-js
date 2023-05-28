@@ -103,22 +103,8 @@ a:hover {
   text-decoration: underline;
 }
 
-button {
-  background: var(--primary-one);
-  color: #fff;
-  border-radius: 4px;
-  border: none;
-  padding: 1em;
-  font-size: 14px;
-  text-shadow: var(--text-shadow-dark);
-  outline: 0;
-  transition: var(--transition);
-  box-shadow: 2px 2px 2px transparent;
-}
-
-button:hover {
+buton:hover {
   cursor: pointer;
-  background: var(--primary-two);
 }
 
 button:focus {
@@ -228,29 +214,22 @@ aside header {
 }
 
 .mapboxgl-popup-close-button {
-  font-size: 24px;
+  font-size: 18px;
   padding: var(--grid-sm);
-  top: -15px;
   border-top-right-radius: var(--border-radius);
 }
 
 .mapboxgl-popup-content {
   padding: 0;
   width: auto;
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  border-radius: var(--border-radius);
 }
 
-.mapboxgl-popup-content h3 {
-  background: var(--primary-one);
-  color: #fff;
-  margin: 0;
-  padding: var(--grid-sm);
-  padding-right: 45px;
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
+.mapboxgl-popup-content h2 {
+  color: #333;
+  margin: 10px 38px 10px 10px;
   font-weight: 700;
-  font-size: 24px;
-  margin-top: -15px;
-  text-shadow: var(--text-shadow-dark);
+  font-size: 18px;
 }
 
 .mapboxgl-popup-content p {
