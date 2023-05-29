@@ -6,7 +6,7 @@ const origin = [-111.8999, 40.6111] //SLC
 
 let steps = 500
 let counter = 0
-const viewportWidth = window.innerWidth
+let viewportWidth = window.innerWidth
 
 const map = new mapboxgl.Map({
   container: 'map', // container ID
@@ -129,6 +129,7 @@ const logs = [
           coordinates: [-123.8313, 46.1879],
         },
         properties: {
+          type: 'scenic-point',
           mode: 'driving',
           month: 'May',
           year: 2019,
@@ -154,6 +155,7 @@ const logs = [
           coordinates: [-123.9682, 45.8845],
         },
         properties: {
+          type: 'scenic-point',
           mode: 'driving',
           month: 'May',
           year: 2019,
@@ -169,7 +171,7 @@ const logs = [
         type: 'Feature',
         geometry: {
           type: 'Point',
-          coordinates: [-124.2840, 42.0526],
+          coordinates: [-124.284, 42.0526],
         },
         pan: {
           coordinates: [-124.18437067494794, 43.35949711708747],
@@ -200,9 +202,10 @@ const logs = [
           zoom: calcViewportZoom(9),
         },
         start: {
-          coordinates: [-124.2840, 42.0526],
+          coordinates: [-124.284, 42.0526],
         },
         properties: {
+          type: 'national-park',
           mode: 'driving',
           month: 'June',
           year: 2019,
@@ -251,6 +254,7 @@ const logs = [
           coordinates: [-122.4194, 37.7749],
         },
         properties: {
+          type: 'golf-course',
           mode: 'driving',
           month: 'June',
           year: 2019,
@@ -276,6 +280,7 @@ const logs = [
           coordinates: [-122.4194, 37.7749],
         },
         properties: {
+          type: 'national-park',
           mode: 'driving',
           month: 'July',
           year: 2019,
@@ -324,6 +329,7 @@ const logs = [
           coordinates: [-121.9233, 36.5552],
         },
         properties: {
+          type: 'scenic-point',
           mode: 'driving',
           month: 'August',
           year: 2019,
@@ -369,7 +375,7 @@ const logs = [
           zoom: calcViewportZoom(8),
         },
         start: {
-          coordinates: [-119.6982, 34.4208]
+          coordinates: [-119.6982, 34.4208],
         },
         properties: {
           mode: 'driving',
@@ -396,6 +402,7 @@ const logs = [
           coordinates: [-117.6126, 33.4274],
         },
         properties: {
+          type: 'scenic-point',
           mode: 'driving',
           month: 'October',
           year: 2019,
@@ -420,6 +427,7 @@ const logs = [
           coordinates: [-114.7377, 36.0161],
         },
         properties: {
+          type: 'national-park',
           mode: 'driving',
           month: 'October',
           year: 2019,
@@ -445,6 +453,7 @@ const logs = [
           coordinates: [-112.1076, 36.0604],
         },
         properties: {
+          type: 'scenic-point',
           mode: 'driving',
           month: 'November',
           year: 2019,
@@ -469,6 +478,7 @@ const logs = [
           coordinates: [-111.5104, 36.8791],
         },
         properties: {
+          type: 'national-park',
           mode: 'driving',
           month: 'November',
           year: 2019,
@@ -577,6 +587,7 @@ const logs = [
           coordinates: origin,
         },
         properties: {
+          type: 'national-park',
           mode: 'driving',
           month: 'June',
           year: 2021,
@@ -601,6 +612,7 @@ const logs = [
           coordinates: origin,
         },
         properties: {
+          type: 'national-park',
           mode: 'driving',
           month: 'August',
           year: 2021,
@@ -625,6 +637,7 @@ const logs = [
           coordinates: [-109.821, 38.4598],
         },
         properties: {
+          type: 'scenic-point',
           mode: 'driving',
           month: 'August',
           year: 2021,
@@ -649,6 +662,7 @@ const logs = [
           coordinates: [-110.0986, 36.9969],
         },
         properties: {
+          type: 'scenic-point',
           mode: 'driving',
           month: 'August',
           year: 2021,
@@ -673,6 +687,7 @@ const logs = [
           coordinates: [-111.3743, 36.8619],
         },
         properties: {
+          type: 'national-park',
           mode: 'driving',
           month: 'August',
           year: 2021,
@@ -698,6 +713,7 @@ const logs = [
           coordinates: [-112.0581, 36.2135],
         },
         properties: {
+          type: 'national-park',
           mode: 'driving',
           month: 'August',
           year: 2021,
@@ -752,6 +768,7 @@ const logs = [
           coordinates: origin,
         },
         properties: {
+          type: 'national-park',
           mode: 'driving',
           month: 'May',
           year: 2022,
@@ -824,6 +841,7 @@ const logs = [
           coordinates: [-116.6141, 33.8371],
         },
         properties: {
+          type: 'national-park',
           mode: 'driving',
           month: 'June',
           year: 2022,
@@ -848,6 +866,7 @@ const logs = [
           coordinates: [-115.901, 33.8734],
         },
         properties: {
+          type: 'national-park',
           mode: 'driving',
           month: 'July',
           year: 2022,
@@ -896,6 +915,7 @@ const logs = [
           coordinates: [-121.7817, 42.2249],
         },
         properties: {
+          type: 'national-park',
           mode: 'driving',
           month: 'August',
           year: 2022,
@@ -920,6 +940,7 @@ const logs = [
           coordinates: [-122.1279, 42.9295],
         },
         properties: {
+          type: 'scenic-point',
           mode: 'driving',
           month: 'August',
           year: 2022,
@@ -968,6 +989,7 @@ const logs = [
           coordinates: [-122.6784, 45.5152],
         },
         properties: {
+          type: 'scenic-point',
           mode: 'driving',
           month: 'August',
           year: 2022,
@@ -992,6 +1014,7 @@ const logs = [
           coordinates: [-122.1158, 45.5762],
         },
         properties: {
+          type: 'scenic-point',
           mode: 'driving',
           month: 'August',
           year: 2022,
@@ -1016,6 +1039,7 @@ const logs = [
           coordinates: origin,
         },
         properties: {
+          type: 'national-park',
           mode: 'driving',
           month: 'November',
           year: 2022,
@@ -1046,6 +1070,7 @@ const logs = [
           coordinates: origin,
         },
         properties: {
+          type: 'alpine-skiing',
           mode: 'driving',
           month: 'January',
           year: 2023,
@@ -1071,6 +1096,7 @@ const logs = [
           coordinates: origin,
         },
         properties: {
+          type: 'alpine-skiing',
           mode: 'driving',
           month: 'February',
           year: 2023,
@@ -1096,6 +1122,7 @@ const logs = [
           coordinates: origin,
         },
         properties: {
+          type: 'alpine-skiing',
           mode: 'driving',
           month: 'March',
           year: 2023,
@@ -1217,6 +1244,7 @@ const golf_courses = {
         coordinates: [-82.899985, 40.267854],
       },
       properties: {
+        type: 'golf-course',
         mode: 'golf',
         destination: 'Bent Tree Golf Club',
         city: 'Sunbury',
@@ -1230,6 +1258,7 @@ const golf_courses = {
         coordinates: [-82.8933, 40.2138],
       },
       properties: {
+        type: 'golf-course',
         mode: 'golf',
         destination: 'Black Hawk Golf Club',
         city: 'Delaware',
@@ -1243,6 +1272,7 @@ const golf_courses = {
         coordinates: [-82.9417, 40.0495],
       },
       properties: {
+        type: 'golf-course',
         mode: 'golf',
         destination: 'Champions Golf Course',
         city: 'Columbus',
@@ -1256,6 +1286,7 @@ const golf_courses = {
         coordinates: [-82.9866, 39.6923],
       },
       properties: {
+        type: 'golf-course',
         mode: 'golf',
         destination: 'Cooks Creek Golf Club',
         city: 'South Bloomfield',
@@ -1269,6 +1300,7 @@ const golf_courses = {
         coordinates: [-82.036779, 39.897971],
       },
       properties: {
+        type: 'golf-course',
         mode: 'golf',
         destination: 'Eaglesticks Golf Club',
         city: 'Zanesville',
@@ -1282,6 +1314,7 @@ const golf_courses = {
         coordinates: [-84.23204, 39.5377876],
       },
       properties: {
+        type: 'golf-course',
         mode: 'golf',
         destination: 'Heatherwoode Golf Club',
         city: 'Springboro',
@@ -1295,6 +1328,7 @@ const golf_courses = {
         coordinates: [-82.79, 40.1012],
       },
       properties: {
+        type: 'golf-course',
         mode: 'golf',
         destination: 'New Albany Links',
         city: 'New Albany',
@@ -1308,6 +1342,7 @@ const golf_courses = {
         coordinates: [-84.1975035, 39.5992446],
       },
       properties: {
+        type: 'golf-course',
         mode: 'golf',
         destination: 'The Golf Club at Yankee Trace',
         city: 'Centerville',
@@ -1321,6 +1356,7 @@ const golf_courses = {
         coordinates: [-83.05017, 39.775342],
       },
       properties: {
+        type: 'golf-course',
         mode: 'golf',
         destination: 'The Players Club at Foxfire',
         city: 'Lockbourne',
@@ -1334,6 +1370,7 @@ const golf_courses = {
         coordinates: [-82.8267801, 40.181293],
       },
       properties: {
+        type: 'golf-course',
         mode: 'golf',
         destination: 'Royal American Links',
         city: 'Galena',
@@ -1347,6 +1384,7 @@ const golf_courses = {
         coordinates: [-83.16167, 40.154805],
       },
       properties: {
+        type: 'golf-course',
         mode: 'golf',
         destination: 'The Club at Tartan Fields',
         city: 'Dublin',
@@ -1360,6 +1398,7 @@ const golf_courses = {
         coordinates: [-82.2341751, 40.0891644],
       },
       properties: {
+        type: 'golf-course',
         mode: 'golf',
         destination: 'Longaberger Golf Club',
         city: 'Nashport',
@@ -1426,7 +1465,9 @@ map.on('load', () => {
   map.addControl(new mapboxgl.NavigationControl(), 'bottom-right')
 
   // Add origin/home marker
-  addMarker(origin, '#0096FF')
+  addMarker(origin, '#fcba03')
+
+  viewportWidth = window.innerWidth
 })
 
 function addHomeListing() {
@@ -1523,49 +1564,56 @@ function buildAllLogs() {
     return sortedFeatures
   })
   sortedLogs.forEach((year) => {
-    // addMarkers(year.features, '#c53058')
     addHTMLMarkers(year.features)
     buildLogsList(year)
   })
-  // addMarkers(golf_courses.features, '#249369')
-  addHTMLMarkers(golf_courses.features, 'green')
+  addHTMLMarkers(golf_courses.features)
 }
 
 function addHTMLMarkers(features, color) {
   /* For each feature in the GeoJSON object above: */
-  for (const marker of features) {
+  for (const feature of features) {
     /* Create a div element for the marker. */
     const el = document.createElement('div')
     /* Assign a unique `id` to the marker. */
-    el.id = `marker-${marker.properties.id}`
+    el.id = `marker-${feature.properties.id}`
     /* Assign the `marker` class to each marker for styling. */
-    el.className = color === 'green' ? 'marker marker-green' : 'marker'
+    el.className =
+      feature.properties.type === 'golf-course'
+        ? 'marker marker-golf-course'
+        : feature.properties.type === 'national-park'
+        ? 'marker marker-national-park'
+        : feature.properties.type === 'scenic-point'
+        ? 'marker marker-scenic-point'
+        : feature.properties.type === 'alpine-skiing'
+        ? 'marker marker-alpine-skiing'
+        : 'marker'
 
     /**
      * Create a marker using the div element
      * defined above and add it to the map.
      **/
     new mapboxgl.Marker(el, { offset: [0, -25] })
-      .setLngLat(marker.geometry.coordinates)
+      .setLngLat(feature.geometry.coordinates)
       .addTo(map)
 
     el.addEventListener('click', (e) => {
       resetMap()
       /* Fly to the point */
-      if (marker.properties.mode !== 'golf') {
-        flyToCoordinates(marker.pan.coordinates, marker.pan.zoom)
+      if (feature.properties.mode !== 'golf') {
+        flyToCoordinates(feature.pan.coordinates, feature.pan.zoom)
       } else {
-        flyToCoordinates(marker.geometry.coordinates, 14)
+        flyToCoordinates(feature.geometry.coordinates, 14)
       }
       /* Close all other popups and display popup for clicked store */
-      createPopUp(marker)
-      if (marker.properties.mode === 'driving') {
-        addRoute(marker.start.coordinates, marker.geometry.coordinates)
+      createPopUp(feature)
+      if (feature.properties.mode === 'driving') {
+        addRoute(feature.start.coordinates, feature.geometry.coordinates)
       }
-      if (marker.properties.mode === 'flight') {
-        addFlight(marker.start.coordinates, marker.geometry.coordinates)
+      if (feature.properties.mode === 'flight') {
+        addFlight(feature.start.coordinates, feature.geometry.coordinates)
       }
-      if (marker.properties.mode !== 'golf') {
+      if (feature.properties.mode !== 'golf') {
         /* Highlight listing in sidebar */
         const activeItem = document.getElementsByClassName('active')
         e.stopPropagation()
@@ -1573,7 +1621,7 @@ function addHTMLMarkers(features, color) {
           activeItem[0].classList.remove('active')
         }
         const listing = document.getElementById(
-          `listing-${marker.properties.id}`
+          `listing-${feature.properties.id}`
         )
         listing.classList.add('active')
       }
@@ -1766,7 +1814,7 @@ function showTravelProperties(properties) {
       : ''
   }
   <p class="date">${date.toLocaleString('en-US', {
-    dateStyle: 'long'
+    dateStyle: 'long',
   })}</p>`
 }
 

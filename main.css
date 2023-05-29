@@ -270,3 +270,32 @@ aside header {
 .marker-green {
   background-image: url('./marker-icons/mapbox-marker-icon-green.svg');
 }
+
+.marker-blue {
+  background-image: url('./marker-icons/mapbox-marker-icon-blue.svg');
+}
+
+.marker-national-park {
+  background-size: cover;
+  width: 28px;
+  height: 36px;
+  background-image: url('./marker-icons/mapbox-marker-icon-national-park.svg');
+}
+
+.marker-scenic-point {
+  background-image: url('./marker-icons/mapbox-marker-icon-red.svg');
+}
+
+.marker-alpine-skiing {
+  background-size: cover;
+  width: 35px;
+  height: 40px;
+  background-image: url('./marker-icons/mapbox-marker-icon-snow.png');
+}
+
+.marker-golf-course {
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  background-image: url('./marker-icons/mapbox-marker-icon-golf-course.png');
+}
