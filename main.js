@@ -1234,6 +1234,138 @@ const logs = [
   },
 ]
 
+const ski_resorts = {
+  type: 'FeatureCollection',
+  features: [
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.6556, 40.5829],
+      },
+      properties: {
+        type: 'alpine-skiing',
+        mode: 'recreation',
+        destination: 'Snowbird Ski Resort',
+        city: 'Snowbird',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.6240, 40.5777],
+      },
+      properties: {
+        type: 'alpine-skiing',
+        mode: 'recreation',
+        destination: 'Alta Ski Area',
+        city: 'Alta',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.5821, 40.6038],
+      },
+      properties: {
+        type: 'alpine-skiing',
+        mode: 'recreation',
+        destination: 'Brighton Ski Area',
+        city: 'Brighton',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.5951988, 40.625506],
+      },
+      properties: {
+        type: 'alpine-skiing',
+        mode: 'recreation',
+        destination: 'Solitude Ski Area',
+        city: 'Solitude',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.4870, 40.6203],
+      },
+      properties: {
+        type: 'alpine-skiing',
+        mode: 'recreation',
+        destination: 'Deer Valley Resort',
+        city: 'Park City',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.5563, 40.6856],
+      },
+      properties: {
+        type: 'alpine-skiing',
+        mode: 'recreation',
+        destination: 'Canyons Resort',
+        city: 'Park City',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.8614, 41.2006],
+      },
+      properties: {
+        type: 'alpine-skiing',
+        mode: 'recreation',
+        destination: 'Snowbasin Resort',
+        city: 'Huntsville',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-106.1516265, 39.501419],
+      },
+      properties: {
+        type: 'alpine-skiing',
+        mode: 'recreation',
+        destination: 'Copper Mountain',
+        city: 'Copper Mountain',
+        state: 'Colorado',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-107.8123, 37.9375],
+      },
+      properties: {
+        type: 'alpine-skiing',
+        mode: 'recreation',
+        destination: 'Telluride Ski Resort',
+        city: 'Telluride',
+        state: 'Colorado',
+      },
+    },
+  ],
+}
+
 const golf_courses = {
   type: 'FeatureCollection',
   features: [
@@ -1245,7 +1377,7 @@ const golf_courses = {
       },
       properties: {
         type: 'golf-course',
-        mode: 'golf',
+        mode: 'recreation',
         destination: 'Bent Tree Golf Club',
         city: 'Sunbury',
         state: 'Ohio',
@@ -1259,7 +1391,7 @@ const golf_courses = {
       },
       properties: {
         type: 'golf-course',
-        mode: 'golf',
+        mode: 'recreation',
         destination: 'Black Hawk Golf Club',
         city: 'Delaware',
         state: 'Ohio',
@@ -1273,7 +1405,7 @@ const golf_courses = {
       },
       properties: {
         type: 'golf-course',
-        mode: 'golf',
+        mode: 'recreation',
         destination: 'Champions Golf Course',
         city: 'Columbus',
         state: 'Ohio',
@@ -1287,7 +1419,7 @@ const golf_courses = {
       },
       properties: {
         type: 'golf-course',
-        mode: 'golf',
+        mode: 'recreation',
         destination: 'Cooks Creek Golf Club',
         city: 'South Bloomfield',
         state: 'Ohio',
@@ -1301,7 +1433,7 @@ const golf_courses = {
       },
       properties: {
         type: 'golf-course',
-        mode: 'golf',
+        mode: 'recreation',
         destination: 'Eaglesticks Golf Club',
         city: 'Zanesville',
         state: 'Ohio',
@@ -1315,7 +1447,7 @@ const golf_courses = {
       },
       properties: {
         type: 'golf-course',
-        mode: 'golf',
+        mode: 'recreation',
         destination: 'Heatherwoode Golf Club',
         city: 'Springboro',
         state: 'Ohio',
@@ -1329,7 +1461,7 @@ const golf_courses = {
       },
       properties: {
         type: 'golf-course',
-        mode: 'golf',
+        mode: 'recreation',
         destination: 'New Albany Links',
         city: 'New Albany',
         state: 'Ohio',
@@ -1343,7 +1475,7 @@ const golf_courses = {
       },
       properties: {
         type: 'golf-course',
-        mode: 'golf',
+        mode: 'recreation',
         destination: 'The Golf Club at Yankee Trace',
         city: 'Centerville',
         state: 'Ohio',
@@ -1357,7 +1489,7 @@ const golf_courses = {
       },
       properties: {
         type: 'golf-course',
-        mode: 'golf',
+        mode: 'recreation',
         destination: 'The Players Club at Foxfire',
         city: 'Lockbourne',
         state: 'Ohio',
@@ -1371,7 +1503,7 @@ const golf_courses = {
       },
       properties: {
         type: 'golf-course',
-        mode: 'golf',
+        mode: 'recreation',
         destination: 'Royal American Links',
         city: 'Galena',
         state: 'Ohio',
@@ -1385,7 +1517,7 @@ const golf_courses = {
       },
       properties: {
         type: 'golf-course',
-        mode: 'golf',
+        mode: 'recreation',
         destination: 'The Club at Tartan Fields',
         city: 'Dublin',
         state: 'Ohio',
@@ -1399,7 +1531,7 @@ const golf_courses = {
       },
       properties: {
         type: 'golf-course',
-        mode: 'golf',
+        mode: 'recreation',
         destination: 'Longaberger Golf Club',
         city: 'Nashport',
         state: 'Ohio',
@@ -1567,6 +1699,7 @@ function buildAllLogs() {
     addHTMLMarkers(year.features)
     buildLogsList(year)
   })
+  addHTMLMarkers(ski_resorts.features)
   addHTMLMarkers(golf_courses.features)
 }
 
@@ -1600,7 +1733,7 @@ function addHTMLMarkers(features, color) {
     el.addEventListener('click', (e) => {
       resetMap()
       /* Fly to the point */
-      if (feature.properties.mode !== 'golf') {
+      if (feature.properties.mode !== 'recreation') {
         flyToCoordinates(feature.pan.coordinates, feature.pan.zoom)
       } else {
         flyToCoordinates(feature.geometry.coordinates, 14)
@@ -1613,7 +1746,7 @@ function addHTMLMarkers(features, color) {
       if (feature.properties.mode === 'flight') {
         addFlight(feature.start.coordinates, feature.geometry.coordinates)
       }
-      if (feature.properties.mode !== 'golf') {
+      if (feature.properties.mode !== 'recreation') {
         /* Highlight listing in sidebar */
         const activeItem = document.getElementsByClassName('active')
         e.stopPropagation()
@@ -1818,7 +1951,7 @@ function showTravelProperties(properties) {
   })}</p>`
 }
 
-function showGolfProperties(properties) {
+function showRecreationProperties(properties) {
   return `<h2>${properties.destination}</h2><p>${properties.city}, ${properties.state}</p>
     `
 }
@@ -1832,8 +1965,8 @@ function createPopUp(currentFeature) {
     .setLngLat(currentFeature.geometry.coordinates)
     .setHTML(
       `${
-        currentFeature.properties.mode === 'golf'
-          ? showGolfProperties(currentFeature.properties)
+        currentFeature.properties.mode === 'recreation'
+          ? showRecreationProperties(currentFeature.properties)
           : showTravelProperties(currentFeature.properties)
       }`
     )
