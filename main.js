@@ -1858,7 +1858,7 @@ function addHTMLMarkers(features, color) {
       }
       /* Close all other popups and display popup for clicked store */
       createPopUp(feature)
-      if (feature.properties.mode === 'driving') {
+      if (feature.properties.mode === 'driving' || feature.properties.mode === 'train') {
         addRoute(feature.start.coordinates, feature.geometry.coordinates)
       }
       if (feature.properties.mode === 'flight') {
