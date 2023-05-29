@@ -40,6 +40,109 @@ const home = {
 const logs = [
   {
     type: 'FeatureCollection',
+    year: 2017,
+    description: 'Remote Year',
+    features: [
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [12.4964, 41.9028],
+        },
+        pan: {
+          coordinates: [-35.49729937098084, 53.39852953638376],
+          zoom: calcViewportZoom(3),
+        },
+        start: {
+          coordinates: [-83.3525, 42.2132],
+        },
+        properties: {
+          mode: 'flight',
+          month: 'June',
+          year: 2017,
+          date: '2017-06-01',
+          departure: 'Detroit',
+          destination: 'Rome',
+          country: 'Italy',
+          distance: 4604,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [11.2558, 43.7696],
+        },
+        pan: {
+          coordinates: [11.88795093207377, 42.834139985543274],
+          zoom: calcViewportZoom(7.5),
+        },
+        start: {
+          coordinates: [12.4964, 41.9028],
+        },
+        properties: {
+          mode: 'train',
+          month: 'June',
+          year: 2017,
+          date: '2017-06-03 00:00:0000',
+          departure: 'Rome',
+          destination: 'Florence',
+          country: 'Italy',
+          distance: 168,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [12.3155, 45.4408],
+        },
+        pan: {
+          coordinates: [11.775908970171603, 44.60308209762107],
+          zoom: calcViewportZoom(7.5),
+        },
+        start: {
+          coordinates: [11.2558, 43.7696],
+        },
+        properties: {
+          mode: 'train',
+          month: 'June',
+          year: 2017,
+          date: '2017-06-05 00:00:0000',
+          departure: 'Florence',
+          destination: 'Venice',
+          country: 'Italy',
+          distance: 167,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [11.5903, 45.7676],
+        },
+        pan: {
+          coordinates: [11.955406523792833, 45.604119937575604],
+          zoom: calcViewportZoom(7.5),
+        },
+        start: {
+          coordinates: [12.3155, 45.4408],
+        },
+        properties: {
+          mode: 'driving',
+          month: 'June',
+          year: 2017,
+          date: '2017-06-06',
+          departure: 'Venice',
+          destination: 'Laverda',
+          country: 'Italy',
+          distance: 67,
+        },
+      },
+    ],
+  },
+  {
+    type: 'FeatureCollection',
     year: 2019,
     description: 'Remote Year',
     features: [
@@ -105,6 +208,7 @@ const logs = [
           coordinates: [-123.8157, 46.9754],
         },
         properties: {
+          type: 'scenic-point',
           mode: 'driving',
           month: 'May',
           year: 2019,
@@ -181,6 +285,7 @@ const logs = [
           coordinates: [-124.0795, 44.6768],
         },
         properties: {
+          type: 'scenic-point',
           mode: 'driving',
           month: 'May',
           year: 2019,
@@ -817,6 +922,7 @@ const logs = [
           coordinates: [-117.6126, 33.4274],
         },
         properties: {
+          type: 'scenic-point',
           mode: 'driving',
           month: 'June',
           year: 2022,
@@ -1141,8 +1247,8 @@ const logs = [
           coordinates: [139.7563, 35.6648],
         },
         pan: {
-          coordinates: [191.36606983230297, 53.39446500917633],
-          zoom: calcViewportZoom(2.5),
+          coordinates: [187.9906990777383, 48.61895788751915],
+          zoom: calcViewportZoom(3),
         },
         start: {
           coordinates: [-122.4194, 37.7749],
@@ -1152,10 +1258,10 @@ const logs = [
           month: 'April',
           year: 2023,
           date: '2023-04-08',
-          departure: 'Salt Lake City',
+          departure: 'San Francisco',
           destination: 'Tokyo',
           country: 'Japan',
-          distance: 8267,
+          distance: 5139,
         },
       },
       {
@@ -1172,7 +1278,7 @@ const logs = [
           coordinates: [139.7563, 35.6648],
         },
         properties: {
-          mode: 'driving',
+          mode: 'train',
           month: 'April',
           year: 2023,
           date: '2023-04-11',
@@ -1196,7 +1302,7 @@ const logs = [
           coordinates: [139.1069, 35.2324],
         },
         properties: {
-          mode: 'driving',
+          mode: 'train',
           month: 'April',
           year: 2023,
           date: '2023-04-12',
@@ -1220,7 +1326,7 @@ const logs = [
           coordinates: [135.7681, 35.0116],
         },
         properties: {
-          mode: 'driving',
+          mode: 'train',
           month: 'April',
           year: 2023,
           date: '2023-04-15',
@@ -1246,6 +1352,7 @@ const ski_resorts = {
       properties: {
         type: 'alpine-skiing',
         mode: 'recreation',
+        description: '165+ days',
         destination: 'Snowbird Ski Resort',
         city: 'Snowbird',
         state: 'Utah',
@@ -1255,11 +1362,12 @@ const ski_resorts = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-111.6240, 40.5777],
+        coordinates: [-111.624, 40.5777],
       },
       properties: {
         type: 'alpine-skiing',
         mode: 'recreation',
+        description: '10+ days',
         destination: 'Alta Ski Area',
         city: 'Alta',
         state: 'Utah',
@@ -1274,6 +1382,7 @@ const ski_resorts = {
       properties: {
         type: 'alpine-skiing',
         mode: 'recreation',
+        description: '10+ days',
         destination: 'Brighton Ski Area',
         city: 'Brighton',
         state: 'Utah',
@@ -1288,6 +1397,7 @@ const ski_resorts = {
       properties: {
         type: 'alpine-skiing',
         mode: 'recreation',
+        description: '10+ days',
         destination: 'Solitude Ski Area',
         city: 'Solitude',
         state: 'Utah',
@@ -1297,11 +1407,12 @@ const ski_resorts = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-111.4870, 40.6203],
+        coordinates: [-111.487, 40.6203],
       },
       properties: {
         type: 'alpine-skiing',
         mode: 'recreation',
+        description: '10+ days',
         destination: 'Deer Valley Resort',
         city: 'Park City',
         state: 'Utah',
@@ -1316,6 +1427,7 @@ const ski_resorts = {
       properties: {
         type: 'alpine-skiing',
         mode: 'recreation',
+        date: '2019-04-15',
         destination: 'Canyons Resort',
         city: 'Park City',
         state: 'Utah',
@@ -1330,6 +1442,7 @@ const ski_resorts = {
       properties: {
         type: 'alpine-skiing',
         mode: 'recreation',
+        description: '7 days',
         destination: 'Snowbasin Resort',
         city: 'Huntsville',
         state: 'Utah',
@@ -1344,6 +1457,7 @@ const ski_resorts = {
       properties: {
         type: 'alpine-skiing',
         mode: 'recreation',
+        date: '2019-01-04',
         destination: 'Copper Mountain',
         city: 'Copper Mountain',
         state: 'Colorado',
@@ -1358,6 +1472,7 @@ const ski_resorts = {
       properties: {
         type: 'alpine-skiing',
         mode: 'recreation',
+        date: '1999-01-21',
         destination: 'Telluride Ski Resort',
         city: 'Telluride',
         state: 'Colorado',
@@ -1670,7 +1785,10 @@ function buildLogsList(year) {
         if (this.id === `link-${feature.properties.id}`) {
           flyToCoordinates(feature.pan.coordinates, feature.pan.zoom)
           createPopUp(feature)
-          if (feature.properties.mode === 'driving') {
+          if (
+            feature.properties.mode === 'driving' ||
+            feature.properties.mode === 'train'
+          ) {
             addRoute(feature.start.coordinates, feature.geometry.coordinates)
           }
           if (feature.properties.mode === 'flight') {
@@ -1939,6 +2057,8 @@ function showTravelProperties(properties) {
   }<p>${
     properties.mode === 'driving'
       ? `<i class="fas fa-car"></i>`
+      : properties.mode === 'train'
+      ? `<i class="fas fa-train"></i>`
       : `<i class="fas fa-plane"></i>`
   } ${properties.distance + ' miles'}</p>
   ${
@@ -1952,8 +2072,22 @@ function showTravelProperties(properties) {
 }
 
 function showRecreationProperties(properties) {
-  return `<h2>${properties.destination}</h2><p>${properties.city}, ${properties.state}</p>
-    `
+  const date = properties.date ? new Date(properties.date) : null
+  return `<h2>${properties.destination}</h2><p>${properties.city}, ${
+    properties.state
+  }</p>
+  ${
+    properties.description
+      ? `<p class="description">${properties.description}</p>`
+      : ''
+  }
+  ${
+    date !== null
+      ? `<p class="date">${date.toLocaleString('en-US', {
+          dateStyle: 'long',
+        })}</p>`
+      : ''
+  }`
 }
 
 function createPopUp(currentFeature) {

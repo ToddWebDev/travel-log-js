@@ -264,15 +264,7 @@ aside header {
   cursor: pointer;
   height: 40px;
   width: 25px;
-  background-image: url('./marker-icons/mapbox-marker-icon-red.svg');
-}
-
-.marker-green {
   background-image: url('./marker-icons/mapbox-marker-icon-green.svg');
-}
-
-.marker-blue {
-  background-image: url('./marker-icons/mapbox-marker-icon-blue.svg');
 }
 
 .marker-national-park {
@@ -283,7 +275,7 @@ aside header {
 }
 
 .marker-scenic-point {
-  background-image: url('./marker-icons/mapbox-marker-icon-red.svg');
+  background-image: url('./marker-icons/mapbox-marker-icon-green.svg');
 }
 
 .marker-alpine-skiing {
