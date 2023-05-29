@@ -134,7 +134,8 @@ const logs = [
           year: 2019,
           date: '2019-05-28 00:00:0000',
           departure: 'Astoria',
-          destination: 'Haystack Rock',
+          destination: 'Cannon Beach',
+          description: 'Haystack Rock',
           state: 'Oregon',
           distance: 26,
         },
@@ -559,7 +560,7 @@ const logs = [
           departure: 'Salt Lake City',
           destination: 'San Diego',
           state: 'California',
-          distance: 994,
+          distance: 742,
         },
       },
       {

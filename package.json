@@ -1,0 +1,25 @@
+{
+  "name": "travel-log-js",
+  "version": "1.0.0",
+  "description": "An interactive travel log built with javascript and the Mapbox api",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ToddWebDev/travel-log-js.git"
+  },
+  "keywords": [
+    "travel",
+    "log",
+    "api",
+    "Mapbox"
+  ],
+  "author": "Todd WebDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ToddWebDev/travel-log-js/issues"
+  },
+  "homepage": "https://github.com/ToddWebDev/travel-log-js#readme"
+}
