@@ -1336,6 +1336,57 @@ const logs = [
           distance: 35,
         },
       },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-114.2634, 38.93],
+        },
+        pan: {
+          coordinates: [-113.09135592718418, 39.77990446782528],
+          zoom: calcViewportZoom(8),
+        },
+        start: {
+          coordinates: origin,
+        },
+        properties: {
+          type: 'national-park',
+          mode: 'driving',
+          month: 'July',
+          year: 2023,
+          date: '2023-07-15',
+          departure: 'Salt Lake City',
+          destination: 'Great Basin National Park',
+          description: 'Upcoming Trip',
+          state: 'Nevada',
+          distance: 275,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-110.5885, 44.428],
+        },
+        pan: {
+          coordinates: [-111.26685427785301, 42.51378310329112],
+          zoom: calcViewportZoom(6.5),
+        },
+        start: {
+          coordinates: origin,
+        },
+        properties: {
+          type: 'national-park',
+          mode: 'driving',
+          month: 'August',
+          date: '2023-08-25',
+          departure: 'Salt Lake City',
+          destination: 'Yellowstone National Park',
+          description: 'Upcoming Trip',
+          state: 'Wyoming',
+          distance: 380,
+        },
+      },
     ],
   },
 ]
@@ -1652,6 +1703,218 @@ const golf_courses = {
         state: 'Ohio',
       },
     },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-122.14361020731539, 47.53560839792493],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'The Golf Club at Newcastle',
+        description: 'Coal Creek',
+        city: 'Newcastle',
+        state: 'Washington',
+        date: '2019-05-13',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-124.02702287003653, 44.88781184097749],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Salishan Golf Links',
+        city: 'Gleneden Beach',
+        state: 'Oregon',
+        date: '2019-06-04',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-124.4133744754334, 43.03807153000964],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Bandon Crossings Golf Course',
+        city: 'Bandon',
+        state: 'Oregon',
+        date: '2019-06-31',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-119.87469516567933, 34.54731283946107],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Rancho San Marcos Golf Course',
+        city: 'Santa Barbara',
+        state: 'California',
+        date: '2019-08-25',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-120.37187694553384, 37.9368023079623],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Teleli Golf Club',
+        city: 'Sonora',
+        state: 'California',
+        date: '2019-07-02',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-122.49405956394239, 37.78246300234429],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Lincoln Park Golf Course',
+        city: 'San Francisco',
+        state: 'California',
+        date: '2019-06-05',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-122.43992578114643, 37.43497468294327],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Half Moon Bay Golf Links',
+        description: 'Ocean Course',
+        city: 'Half Moon Bay',
+        state: 'California',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-117.59603184262244, 33.46340288942921],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Talega Golf Club',
+        city: 'San Clemente',
+        state: 'California',
+        date: '2019-09-20',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-117.74805656542621, 33.51356714817912],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'The Ranch at Laguna Beach',
+        description: 'Ben Browns Golf Course',
+        city: 'Laguna Beach',
+        state: 'California',
+        date: '2021-07-30',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-117.71893531246944, 33.48347053643888],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Monarch Beach Golf Links',
+        city: 'Dana Point',
+        state: 'California',
+        date: '2018-10-02',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-115.33728090207842, 36.12086510387712],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Bears Best Golf Club',
+        city: 'Las Vegas',
+        state: 'Nevada',
+        date: '2019-10-15',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-114.85797640249818, 35.96122845192432],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Boulder Creek Golf Club',
+        city: 'Boulder City',
+        state: 'Nevada',
+        date: '2019-10-23',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-113.33751806430196, 37.19107776212936],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Sky Mountain Golf Course',
+        city: 'Hurricane',
+        state: 'Utah',
+        date: '2019-11-01',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.46936365787786, 36.921890807913925],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Lake Powell National Golf Course',
+        city: 'Page',
+        state: 'Arizona',
+        date: '2019-11-05',
+      },
+    },
   ],
 }
 
@@ -1858,7 +2121,10 @@ function addHTMLMarkers(features, color) {
       }
       /* Close all other popups and display popup for clicked store */
       createPopUp(feature)
-      if (feature.properties.mode === 'driving' || feature.properties.mode === 'train') {
+      if (
+        feature.properties.mode === 'driving' ||
+        feature.properties.mode === 'train'
+      ) {
         addRoute(feature.start.coordinates, feature.geometry.coordinates)
       }
       if (feature.properties.mode === 'flight') {
