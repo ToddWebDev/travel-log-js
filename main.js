@@ -292,6 +292,7 @@ const logs = [
           date: '2019-05-30 00:00:0000',
           departure: 'Newport',
           destination: 'Brookings',
+          description: 'Crater Lake Zip Line',
           state: 'Oregon',
           distance: 209,
         },
@@ -1559,6 +1560,7 @@ const golf_courses = {
         type: 'golf-course',
         mode: 'recreation',
         destination: 'Black Hawk Golf Club',
+        description: 'Permanently Closed',
         city: 'Delaware',
         state: 'Ohio',
       },
@@ -1574,6 +1576,21 @@ const golf_courses = {
         mode: 'recreation',
         destination: 'Champions Golf Course',
         city: 'Columbus',
+        state: 'Ohio',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-83.029203, 39.889655],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Phoenix Golf Course',
+        description: 'Permanently Closed',
+        city: 'Grove City',
         state: 'Ohio',
       },
     },
@@ -1623,12 +1640,40 @@ const golf_courses = {
       type: 'Feature',
       geometry: {
         type: 'Point',
+        coordinates: [-84.25369080013269, 39.615032924657754],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Pipestone Golf Club',
+        city: 'Miamisburg',
+        state: 'Ohio',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
         coordinates: [-82.79, 40.1012],
       },
       properties: {
         type: 'golf-course',
         mode: 'recreation',
         destination: 'New Albany Links',
+        city: 'New Albany',
+        state: 'Ohio',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-82.8295, 40.0684],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'New Albany Country Club',
         city: 'New Albany',
         state: 'Ohio',
       },
@@ -1700,6 +1745,62 @@ const golf_courses = {
         mode: 'recreation',
         destination: 'Longaberger Golf Club',
         city: 'Nashport',
+        state: 'Ohio',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-82.53740785977, 40.64844347672],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Deer Ridge Golf Club',
+        city: 'Bellville',
+        state: 'Ohio',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-83.0531, 40.0319],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Ohio State University Golf Club',
+        city: 'Columbus',
+        state: 'Ohio',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-83.102242, 39.992174],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Raymond Memorial Golf Course',
+        city: 'Columbus',
+        state: 'Ohio',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-82.8679, 39.9957],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Airport Golf Course',
+        city: 'Columbus',
         state: 'Ohio',
       },
     },
@@ -1913,6 +2014,90 @@ const golf_courses = {
         city: 'Page',
         state: 'Arizona',
         date: '2019-11-05',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-86.84268888095501, 36.14047543404344],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'McCabe Golf Course',
+        city: 'Nashville',
+        state: 'Tennessee',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-86.82454487039637, 36.18545681864267],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Ted Rhodes Golf Course',
+        city: 'Nashville',
+        state: 'Tennessee',
+      },
+    },
+     {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-86.330954, 30.37823],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Sandestin Golf and Beach Resort',
+        city: 'Old Hickory',
+        state: 'Tennessee',
+      },
+    },
+     {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-87.33696708673581, 36.08865602319955],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Greystone Golf Club',
+        city: 'Dickson',
+        state: 'Tennessee',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-86.63746332800129, 36.23499549257354],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Hermitage Golf Course',
+        city: 'Miramar Beach',
+        state: 'Florida',
+      },
+    },
+     {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-86.45947338687341, 30.394236498208215],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Indian Bayou Golf & Country Club',
+        city: 'Destin',
+        state: 'Florida',
       },
     },
   ],
