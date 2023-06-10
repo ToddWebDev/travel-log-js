@@ -622,7 +622,7 @@ const logs = [
           departure: 'Salt Lake City',
           destination: 'San Clemente',
           state: 'California',
-          distance: 945,
+          distance: 585,
         },
       },
       {
@@ -1388,6 +1388,30 @@ const logs = [
           distance: 380,
         },
       },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-117.6126, 33.4274],
+        },
+        pan: {
+          coordinates: [-114.87913045491008, 37.14307504778424],
+          zoom: calcViewportZoom(6),
+        },
+        start: {
+          coordinates: origin,
+        },
+        properties: {
+          mode: 'flight',
+          month: 'July',
+          year: 2020,
+          date: '2023-06-01',
+          departure: 'Salt Lake City',
+          destination: 'San Clemente',
+          state: 'California',
+          distance: 585,
+        },
+      }
     ],
   },
 ]
