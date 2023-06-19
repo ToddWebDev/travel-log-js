@@ -40,6 +40,169 @@ const home = {
 const logs = [
   {
     type: 'FeatureCollection',
+    year: 2011,
+    features: [
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-81.7800, 24.5551],
+        },
+        pan: {
+          coordinates: [-80.98665131800117, 25.16293086183768],
+          zoom: calcViewportZoom(8.5),
+        },
+        start: {
+          coordinates: [-80.1918, 25.7617],
+        },
+        properties: {
+          mode: 'driving',
+          month: 'July',
+          date: '2011-07-25',
+          departure: 'Miami',
+          destination: 'Key West',
+          state: 'Florida',
+          distance: 205,
+        },
+      },
+    ],
+  },
+  {
+    type: 'FeatureCollection',
+    year: 2012,
+    features: [
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-81.6557, 30.3322],
+        },
+        pan: {
+          coordinates: [-82.29009740272744, 35.16780476986607],
+          zoom: calcViewportZoom(5.5),
+        },
+        start: {
+          coordinates: [-82.9988, 39.9612],
+        },
+        properties: {
+          mode: 'driving',
+          month: 'May',
+          date: '2012-05-07',
+          departure: 'Columbus',
+          destination: 'Jacksonville',
+          state: 'Florida',
+          distance: 810,
+        },
+      },
+    ],
+  },
+  {
+    type: 'FeatureCollection',
+    year: 2013,
+    features: [
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-86.7816, 36.1627],
+        },
+        pan: {
+          coordinates: [-84.93176935810186, 38.08469649580659],
+          zoom: calcViewportZoom(6.5),
+        },
+        start: {
+          coordinates: [-82.9988, 39.9612],
+        },
+        properties: {
+          mode: 'driving',
+          month: 'August',
+          date: '2012-08-13',
+          departure: 'Columbus',
+          destination: 'Nashville',
+          state: 'Tennessee',
+          distance: 380,
+        },
+      },
+    ],
+  },
+  {
+    type: 'FeatureCollection',
+    year: 2016,
+    features: [
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-90.0490, 35.1495],
+        },
+        pan: {
+          coordinates: [-88.41913089291256, 35.669160084068785],
+          zoom: calcViewportZoom(8),
+        },
+        start: {
+          coordinates: [-86.7816, 36.1627],
+        },
+        properties: {
+          mode: 'driving',
+          month: 'May',
+          date: '2016-05-08',
+          departure: 'Nashville',
+          destination: 'Memphis',
+          state: 'Tennessee',
+          distance: 315,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-80.1373, 26.1224],
+        },
+        pan: {
+          coordinates: [-83.2961390890805, 31.205198984345444],
+          zoom: calcViewportZoom(6),
+        },
+        start: {
+          coordinates: [-86.7816, 36.1627],
+        },
+        properties: {
+          mode: 'flight',
+          month: 'June',
+          date: '2016-06-10',
+          departure: 'Nashville',
+          destination: 'Fort Lauderdale',
+          state: 'Florida',
+          distance: 793,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-86.4958, 30.3935],
+        },
+        pan: {
+          coordinates: [-86.63454465601197, 33.289720074203565],
+          zoom: calcViewportZoom(6.5),
+        },
+        start: {
+          coordinates: [-86.7816, 36.1627],
+        },
+        properties: {
+          mode: 'driving',
+          month: 'August',
+          date: '2016-08-13',
+          description: '2016 & 2017',
+          departure: 'Nashville',
+          destination: 'Destin',
+          state: 'Florida',
+          distance: 451,
+        },
+      },
+    ],
+  },
+  {
+    type: 'FeatureCollection',
     year: 2017,
     description: 'Remote Year',
     features: [
@@ -143,9 +306,85 @@ const logs = [
   },
   {
     type: 'FeatureCollection',
+    year: 2018,
+    features: [
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-121.8853, 37.3387],
+        },
+        pan: {
+          coordinates: [-104.12352835727609, 38.06615089474022],
+          zoom: calcViewportZoom(5),
+        },
+        start: {
+          coordinates: [-86.7816, 36.1627],
+        },
+        properties: {
+          mode: 'flight',
+          month: 'June',
+          date: '2018-06-16',
+          departure: 'Nashville',
+          destination: 'San Jose',
+          state: 'California',
+          distance: 1934,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-117.7854, 33.5427],
+        },
+        pan: {
+          coordinates: [-102.47406435594321, 35.8596814678772],
+          zoom: calcViewportZoom(5),
+        },
+        start: {
+          coordinates: [-86.7816, 36.1627],
+        },
+        properties: {
+          mode: 'flight',
+          month: 'September',
+          date: '2018-09-30',
+          departure: 'Nashville',
+          destination: 'Laguna Beach',
+          state: 'California',
+          distance: 1760,
+        },
+      },
+    ],
+  },
+  {
+    type: 'FeatureCollection',
     year: 2019,
     description: 'Remote Year',
     features: [
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: origin,
+        },
+        pan: {
+          coordinates: [-98.01268789361775, 40.91657654933087],
+          zoom: calcViewportZoom(5.25),
+        },
+        start: {
+          coordinates: [-84.2333, 39.5523],
+        },
+        properties: {
+          mode: 'driving',
+          month: 'January',
+          year: 2019,
+          date: '2019-01-01',
+          departure: 'Springboro',
+          destination: 'Salt Lake City',
+          state: 'Utah',
+          distance: 2347,
+        },
+      },
       {
         type: 'Feature',
         geometry: {
@@ -360,7 +599,7 @@ const logs = [
           coordinates: [-122.4194, 37.7749],
         },
         properties: {
-          type: 'golf-course',
+          type: 'pga-event',
           mode: 'driving',
           month: 'June',
           year: 2019,
@@ -889,6 +1128,31 @@ const logs = [
         type: 'Feature',
         geometry: {
           type: 'Point',
+          coordinates: [-84.6366, 39.7439],
+        },
+        pan: {
+          coordinates: [-97.99241754854586, 40.99151566036469],
+          zoom: calcViewportZoom(5),
+        },
+        start: {
+          coordinates: origin,
+        },
+        properties: {
+          mode: 'flight',
+          month: 'June',
+          year: 2020,
+          date: '2022-06-15',
+          departure: 'Salt Lake City',
+          destination: 'Eaton',
+          description: 'Conrad T. Rizzolo 1938-2022',
+          state: 'Ohio',
+          distance: 2308,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
           coordinates: [-117.6126, 33.4274],
         },
         pan: {
@@ -1411,7 +1675,7 @@ const logs = [
           state: 'California',
           distance: 585,
         },
-      }
+      },
     ],
   },
 ]
@@ -1762,6 +2026,22 @@ const golf_courses = {
       type: 'Feature',
       geometry: {
         type: 'Point',
+        coordinates: [-83.1407, 40.1352],
+      },
+      properties: {
+        type: 'pga-event',
+        mode: 'recreation',
+        description: 'PGA Tour Event',
+        destination: 'Muirfield Village Golf Club', 
+        city: 'Dublin',
+        state: 'Ohio',
+        date: '2010-05-29',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
         coordinates: [-82.2341751, 40.0891644],
       },
       properties: {
@@ -1962,7 +2242,6 @@ const golf_courses = {
         description: 'Ben Browns Golf Course',
         city: 'Laguna Beach',
         state: 'California',
-        date: '2021-07-30',
       },
     },
     {
@@ -1978,6 +2257,36 @@ const golf_courses = {
         city: 'Dana Point',
         state: 'California',
         date: '2018-10-02',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-117.5981, 33.4099],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'San Clemente Municipal Golf Course',
+        city: 'San Clemente',
+        state: 'California',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-115.3502, 36.1012],
+      },
+      properties: {
+        type: 'pga-event',
+        mode: 'recreation',
+        description: 'PGA Tour Event',
+        destination: 'Summit Golf Club',
+        city: 'Las Vegas',
+        state: 'Nevada',
+        date: '2021-10-6',
       },
     },
     {
@@ -2068,21 +2377,21 @@ const golf_courses = {
         state: 'Tennessee',
       },
     },
-     {
+    {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-86.330954, 30.37823],
+        coordinates: [-86.8852842, 36.0514133],
       },
       properties: {
         type: 'golf-course',
         mode: 'recreation',
-        destination: 'Sandestin Golf and Beach Resort',
-        city: 'Old Hickory',
+        destination: 'Harpeth Hills Golf Course',
+        city: 'Nashville',
         state: 'Tennessee',
       },
     },
-     {
+    {
       type: 'Feature',
       geometry: {
         type: 'Point',
@@ -2106,11 +2415,27 @@ const golf_courses = {
         type: 'golf-course',
         mode: 'recreation',
         destination: 'Hermitage Golf Course',
-        city: 'Miramar Beach',
-        state: 'Florida',
+        city: 'Dickson',
+        state: 'Tennessee',
       },
     },
-     {
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-81.3895, 30.1913],
+      },
+      properties: {
+        type: 'pga-event',
+        mode: 'recreation',
+        description: 'PGA Tour Event',
+        destination: 'The Players Club at TPC Sawgrass', 
+        city: 'Jacksonville',
+        state: 'Florida',
+        date: '2012-05-09'
+      },
+    },
+    {
       type: 'Feature',
       geometry: {
         type: 'Point',
@@ -2122,6 +2447,50 @@ const golf_courses = {
         destination: 'Indian Bayou Golf & Country Club',
         city: 'Destin',
         state: 'Florida',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-86.330954, 30.37823],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Sandestin Golf and Beach Resort',
+        city: 'Miramar Beach',
+        state: 'Florida',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-80.242424, 26.118767],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Plantation Preserve Golf Course & Club',
+        city: 'Plantation',
+        state: 'Florida',
+        date: '2016-06-16',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-80.1498342, 25.8647030],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Normandy Shores Golf Course',
+        city: 'Miami Beach',
+        state: 'Florida',
+        date: '2016-06-13',
       },
     },
   ],
@@ -2278,6 +2647,8 @@ function buildLogsList(year) {
 }
 
 function buildAllLogs() {
+  addHTMLMarkers(ski_resorts.features)
+  addHTMLMarkers(golf_courses.features)
   let sortedLogs = logs.sort((a, b) => b.year - a.year)
   sortedLogs.forEach((log) => {
     sortedFeatures = log.features.sort(
@@ -2289,8 +2660,6 @@ function buildAllLogs() {
     addHTMLMarkers(year.features)
     buildLogsList(year)
   })
-  addHTMLMarkers(ski_resorts.features)
-  addHTMLMarkers(golf_courses.features)
 }
 
 function addHTMLMarkers(features, color) {
@@ -2304,6 +2673,8 @@ function addHTMLMarkers(features, color) {
     el.className =
       feature.properties.type === 'golf-course'
         ? 'marker marker-golf-course'
+        : feature.properties.type === 'pga-event'
+        ? 'marker marker-pga'
         : feature.properties.type === 'national-park'
         ? 'marker marker-national-park'
         : feature.properties.type === 'scenic-point'
