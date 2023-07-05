@@ -1,5 +1,4 @@
-mapboxgl.accessToken =
-  'pk.eyJ1IjoidG9kZHdlYmRldiIsImEiOiJjanlidjVoMHQwYjBqM2RvY2poMGFwc3l0In0.sLNe9kgTJ5pAwrzTc9_5cQ'
+mapboxgl.accessToken = 'pk.eyJ1IjoidG9kZHdlYmRldiIsImEiOiJjanlidjVoMHQwYjBqM2RvY2poMGFwc3l0In0.sLNe9kgTJ5pAwrzTc9_5cQ'
 
 const origin = [-111.8999, 40.6111] //SLC
 // const origin = [-82.9988, 39.9612] //Ohio
@@ -46,7 +45,7 @@ const logs = [
         type: 'Feature',
         geometry: {
           type: 'Point',
-          coordinates: [-81.7800, 24.5551],
+          coordinates: [-81.78, 24.5551],
         },
         pan: {
           coordinates: [-80.98665131800117, 25.16293086183768],
@@ -133,7 +132,7 @@ const logs = [
         type: 'Feature',
         geometry: {
           type: 'Point',
-          coordinates: [-90.0490, 35.1495],
+          coordinates: [-90.049, 35.1495],
         },
         pan: {
           coordinates: [-88.41913089291256, 35.669160084068785],
@@ -2032,7 +2031,7 @@ const golf_courses = {
         type: 'pga-event',
         mode: 'recreation',
         description: 'PGA Tour Event',
-        destination: 'Muirfield Village Golf Club', 
+        destination: 'Muirfield Village Golf Club',
         city: 'Dublin',
         state: 'Ohio',
         date: '2010-05-29',
@@ -2429,10 +2428,10 @@ const golf_courses = {
         type: 'pga-event',
         mode: 'recreation',
         description: 'PGA Tour Event',
-        destination: 'The Players Club at TPC Sawgrass', 
+        destination: 'The Players Club at TPC Sawgrass',
         city: 'Jacksonville',
         state: 'Florida',
-        date: '2012-05-09'
+        date: '2012-05-09',
       },
     },
     {
@@ -2482,7 +2481,7 @@ const golf_courses = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-80.1498342, 25.8647030],
+        coordinates: [-80.1498342, 25.864703],
       },
       properties: {
         type: 'golf-course',
@@ -2491,6 +2490,162 @@ const golf_courses = {
         city: 'Miami Beach',
         state: 'Florida',
         date: '2016-06-13',
+      },
+    },
+  ],
+}
+
+const camp_sites = {
+  type: 'FeatureCollection',
+  features: [
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-110.61352640299253, 43.84144296660591],
+      },
+      properties: {
+        type: 'camping',
+        mode: 'recreation',
+        date: '2021-06-19',
+        destination: 'Signal Mountain Campground',
+        city: 'Moran',
+        state: 'Wyoming',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.40062706310238, 40.197789391243575],
+      },
+      properties: {
+        type: 'camping',
+        mode: 'recreation',
+        date: '2021-07-02',
+        destination: 'Balsam Campground',
+        city: 'Springville',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.61853344445933, 40.57769381880697],
+      },
+      properties: {
+        type: 'camping',
+        mode: 'recreation',
+        date: '2021-07-09',
+        destination: 'Albion Basin Campground',
+        city: 'Alta',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-109.41088910527918, 37.73568071407479],
+      },
+      properties: {
+        type: 'camping',
+        mode: 'recreation',
+        date: '2021-08-06',
+        destination: 'Devils Canyon Campground',
+        city: 'Monticello',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.59326469244432, 40.41345337075616],
+      },
+      properties: {
+        type: 'camping',
+        mode: 'recreation',
+        date: '2021-08-13',
+        destination: 'Mt Timpanogos Campground',
+        city: 'Provo',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-112.98714389512884, 37.19653901760028],
+      },
+      properties: {
+        type: 'camping',
+        mode: 'recreation',
+        date: '2022-05-20',
+        destination: 'Watchman Campground',
+        city: 'Springdale',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-112.57126673045542, 40.49530152916898],
+      },
+      properties: {
+        type: 'camping',
+        mode: 'recreation',
+        date: '2022-06-10',
+        destination: 'Boy Scout Campground',
+        city: 'Dugway',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.24854009732222, 38.28219310811831],
+      },
+      properties: {
+        type: 'camping',
+        mode: 'recreation',
+        date: '2022-07-01',
+        destination: 'Fruita Campground',
+        city: 'Torrey',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.10643900894918, 40.76905303371195],
+      },
+      properties: {
+        type: 'camping',
+        mode: 'recreation',
+        date: '2022-07-15',
+        destination: 'Smith & Morehouse Campground',
+        city: 'Kamas',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.17031526903718, 40.17815624705916],
+      },
+      properties: {
+        type: 'camping',
+        mode: 'recreation',
+        date: '2023-07-02',
+        destination: 'Strawberry Bay Campground',
+        city: 'Heber City',
+        state: 'Utah',
       },
     },
   ],
@@ -2608,8 +2763,7 @@ function buildLogsList(year) {
 
     const label = logLI.appendChild(document.createElement('p'))
     label.className = 'label'
-    label.innerHTML =
-      log.properties.mode === 'home' ? 'home' : log.properties.month
+    label.innerHTML = log.properties.mode === 'home' ? 'home' : log.properties.month
 
     const link = logLI.appendChild(document.createElement('a'))
     link.href = '#'
@@ -2626,10 +2780,7 @@ function buildLogsList(year) {
         if (this.id === `link-${feature.properties.id}`) {
           flyToCoordinates(feature.pan.coordinates, feature.pan.zoom)
           createPopUp(feature)
-          if (
-            feature.properties.mode === 'driving' ||
-            feature.properties.mode === 'train'
-          ) {
+          if (feature.properties.mode === 'driving' || feature.properties.mode === 'train') {
             addRoute(feature.start.coordinates, feature.geometry.coordinates)
           }
           if (feature.properties.mode === 'flight') {
@@ -2647,13 +2798,12 @@ function buildLogsList(year) {
 }
 
 function buildAllLogs() {
-  addHTMLMarkers(ski_resorts.features)
   addHTMLMarkers(golf_courses.features)
+  addHTMLMarkers(camp_sites.features)
+  addHTMLMarkers(ski_resorts.features)
   let sortedLogs = logs.sort((a, b) => b.year - a.year)
   sortedLogs.forEach((log) => {
-    sortedFeatures = log.features.sort(
-      (a, b) => new Date(b.properties.date) - new Date(a.properties.date)
-    )
+    sortedFeatures = log.features.sort((a, b) => new Date(b.properties.date) - new Date(a.properties.date))
     return sortedFeatures
   })
   sortedLogs.forEach((year) => {
@@ -2681,15 +2831,15 @@ function addHTMLMarkers(features, color) {
         ? 'marker marker-scenic-point'
         : feature.properties.type === 'alpine-skiing'
         ? 'marker marker-alpine-skiing'
+        : feature.properties.type === 'camping'
+        ? 'marker marker-camp-site'
         : 'marker'
 
     /**
      * Create a marker using the div element
      * defined above and add it to the map.
      **/
-    new mapboxgl.Marker(el, { offset: [0, -25] })
-      .setLngLat(feature.geometry.coordinates)
-      .addTo(map)
+    new mapboxgl.Marker(el, { offset: [0, -25] }).setLngLat(feature.geometry.coordinates).addTo(map)
 
     el.addEventListener('click', (e) => {
       resetMap()
@@ -2701,10 +2851,7 @@ function addHTMLMarkers(features, color) {
       }
       /* Close all other popups and display popup for clicked store */
       createPopUp(feature)
-      if (
-        feature.properties.mode === 'driving' ||
-        feature.properties.mode === 'train'
-      ) {
+      if (feature.properties.mode === 'driving' || feature.properties.mode === 'train') {
         addRoute(feature.start.coordinates, feature.geometry.coordinates)
       }
       if (feature.properties.mode === 'flight') {
@@ -2717,9 +2864,7 @@ function addHTMLMarkers(features, color) {
         if (activeItem[0]) {
           activeItem[0].classList.remove('active')
         }
-        const listing = document.getElementById(
-          `listing-${feature.properties.id}`
-        )
+        const listing = document.getElementById(`listing-${feature.properties.id}`)
         listing.classList.add('active')
       }
     })
@@ -2842,14 +2987,8 @@ function addFlight(start, destination) {
   })
 
   function animate() {
-    const start =
-      route.features[0].geometry.coordinates[
-        counter >= steps ? counter - 1 : counter
-      ]
-    const end =
-      route.features[0].geometry.coordinates[
-        counter >= steps ? counter : counter + 1
-      ]
+    const start = route.features[0].geometry.coordinates[counter >= steps ? counter - 1 : counter]
+    const end = route.features[0].geometry.coordinates[counter >= steps ? counter : counter + 1]
     if (!start) return
     if (!end) {
       setTimeout(() => {
@@ -2860,16 +2999,12 @@ function addFlight(start, destination) {
 
     // Update point geometry to a new position based on counter denoting
     // the index to access the arc
-    point.features[0].geometry.coordinates =
-      route.features[0].geometry.coordinates[counter]
+    point.features[0].geometry.coordinates = route.features[0].geometry.coordinates[counter]
 
     // Calculate the bearing to ensure the icon is rotated to match the route arc
     // The bearing is calculated between the current point and the next point, except
     // at the end of the arc, which uses the previous point and the current point
-    point.features[0].properties.bearing = turf.bearing(
-      turf.point(start),
-      turf.point(end)
-    )
+    point.features[0].properties.bearing = turf.bearing(turf.point(start), turf.point(end))
 
     // Update the source with this new data
     map.getSource('point').setData(point)
@@ -2893,25 +3028,15 @@ function flyToCoordinates(coordinates, zoom) {
 
 function showTravelProperties(properties) {
   const date = new Date(properties.date)
-  return `<h2>${properties.destination}, ${
-    properties.state ? properties.state : properties.country
-  }</h2>
-  ${
-    properties.description
-      ? `<p class="description">${properties.description}</p>`
-      : ''
-  }<p>${
+  return `<h2>${properties.destination}, ${properties.state ? properties.state : properties.country}</h2>
+  ${properties.description ? `<p class="description">${properties.description}</p>` : ''}<p>${
     properties.mode === 'driving'
       ? `<i class="fas fa-car"></i>`
       : properties.mode === 'train'
       ? `<i class="fas fa-train"></i>`
       : `<i class="fas fa-plane"></i>`
   } ${properties.distance + ' miles'}</p>
-  ${
-    properties.departure
-      ? `<p><i class="fas fa-location-pin"></i> ${properties.departure}</p>`
-      : ''
-  }
+  ${properties.departure ? `<p><i class="fas fa-location-pin"></i> ${properties.departure}</p>` : ''}
   <p class="date">${date.toLocaleString('en-US', {
     dateStyle: 'long',
   })}</p>`
@@ -2919,14 +3044,8 @@ function showTravelProperties(properties) {
 
 function showRecreationProperties(properties) {
   const date = properties.date ? new Date(properties.date) : null
-  return `<h2>${properties.destination}</h2><p>${properties.city}, ${
-    properties.state
-  }</p>
-  ${
-    properties.description
-      ? `<p class="description">${properties.description}</p>`
-      : ''
-  }
+  return `<h2>${properties.destination}</h2><p>${properties.city}, ${properties.state}</p>
+  ${properties.description ? `<p class="description">${properties.description}</p>` : ''}
   ${
     date !== null
       ? `<p class="date">${date.toLocaleString('en-US', {

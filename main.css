@@ -288,6 +288,13 @@ aside header {
   background-image: url('./marker-icons/mapbox-marker-icon-snow.png');
 }
 
+.marker-camp-site {
+  background-size: cover;
+  width: 35px;
+  height: 40px;
+  background-image: url('./marker-icons/mapbox-marker-icon-camp-site.svg');
+}
+
 .marker-golf-course {
   background-size: cover;
   width: 30px;
