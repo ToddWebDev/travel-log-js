@@ -1329,7 +1329,7 @@ const logs = [
         },
         pan: {
           coordinates: [-122.53082340266808, 44.37389326296227],
-          zoom: calcViewportZoom(7.75),
+          zoom: calcViewportZoom(7.5),
         },
         start: {
           coordinates: [-122.39, 43.2415],
@@ -2490,6 +2490,118 @@ const golf_courses = {
         city: 'Miami Beach',
         state: 'Florida',
         date: '2016-06-13',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-112.0046342492636, 40.571939613329235],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Glenmore Golf Course',
+        city: 'South Jordan',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-112.03362956037084, 40.66062695850211],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'The Ridge Golf Club',
+        city: 'West Valley City',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.90131404689025, 40.32160901000993],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Talons Cove Golf Course',
+        city: 'Saratoga Springs',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.90300352118429, 40.42999458480005],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Thanksgiving Point Golf Club',
+        city: 'Lehi',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.7593290443526, 40.43515978265227],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Cedar Hills Golf Club',
+        city: 'Cedar Hills',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.91641288800655, 40.584743590733396],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'River Oaks Golf Course',
+        city: 'Sandy',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.59742305963967, 40.08760105729933],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'The Oaks at Spanish Fork',
+        city: 'Spanish Fork',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.69975568920364, 40.7505595318616],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Mountain Dell Golf Course',
+        city: 'Salt Lake City',
+        state: 'Utah',
       },
     },
   ],
