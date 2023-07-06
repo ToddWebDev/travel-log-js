@@ -110,7 +110,7 @@ a:hover {
   text-decoration: underline;
 }
 
-buton:hover {
+button:hover {
   cursor: pointer;
 }
 
@@ -120,6 +120,21 @@ button:focus {
 
 button:focus-visible {
   outline: 0;
+}
+
+.input-location-filter {
+  position: absolute;
+  top: var(--grid-md);
+  right: var(--grid-md);
+  border-radius: var(--border-radius);
+  padding: var(--grid-sm);
+  border: 3px solid transparent;
+  outline: none;
+}
+
+.input-location-filter:focus,
+.input-location-filter:active {
+  border: 3px solid var(--primary-two);
 }
 
 /* Layout */
