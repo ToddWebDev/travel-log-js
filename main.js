@@ -365,24 +365,49 @@ const logs = [
         type: 'Feature',
         geometry: {
           type: 'Point',
-          coordinates: origin,
+          coordinates: [-106.1516265, 39.501419],
         },
         pan: {
-          coordinates: [-98.01268789361775, 40.91657654933087],
-          zoom: calcViewportZoom(5.25),
+          coordinates: [-95.15246968270525, 40.04551423560155],
+          zoom: calcViewportZoom(5.5),
         },
         start: {
           coordinates: [-84.2333, 39.5523],
         },
         properties: {
+          type: 'alpine-skiing',
           mode: 'driving',
           month: 'January',
           year: 2019,
-          date: '2019-01-01',
+          date: '2019-01-03',
           departure: 'Springboro',
+          destination: 'Copper Mountain',
+          state: 'Colorado',
+          distance: 1294,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: origin,
+        },
+        pan: {
+          coordinates: [-108.99084293346324, 40.08956281212634],
+          zoom: calcViewportZoom(7.25),
+        },
+        start: {
+          coordinates: [-106.1516265, 39.501419],
+        },
+        properties: {
+          mode: 'driving',
+          month: 'January',
+          year: 2019,
+          date: '2019-01-05',
+          departure: 'Copper Mountain',
           destination: 'Salt Lake City',
           state: 'Utah',
-          distance: 2347,
+          distance: 440,
         },
       },
       {
@@ -1792,21 +1817,6 @@ const ski_resorts = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-106.1516265, 39.501419],
-      },
-      properties: {
-        type: 'alpine-skiing',
-        mode: 'recreation',
-        date: '2019-01-04',
-        destination: 'Copper Mountain',
-        city: 'Copper Mountain',
-        state: 'Colorado',
-      },
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
         coordinates: [-107.8123, 37.9375],
       },
       properties: {
@@ -3027,6 +3037,7 @@ function addHTMLMarkers(features) {
 
     el.addEventListener('click', (e) => {
       resetMap()
+      removeActiveListing()
       /* Fly to the point */
       if (feature.properties.mode !== 'recreation') {
         flyToCoordinates(feature.pan.coordinates, feature.pan.zoom)
@@ -3046,11 +3057,6 @@ function addHTMLMarkers(features) {
       }
       if (feature.properties.mode !== 'recreation') {
         /* Highlight listing in sidebar */
-        const activeItem = document.getElementsByClassName('active')
-        e.stopPropagation()
-        if (activeItem[0]) {
-          activeItem[0].classList.remove('active')
-        }
         const listing = document.getElementById(
           `listing-${feature.properties.id}`
         )
@@ -3313,5 +3319,13 @@ function createPopUp(currentFeature) {
 
   popup.on('close', function (e) {
     resetMap()
+    removeActiveListing()
   })
+}
+
+function removeActiveListing() {
+  const activeItem = document.getElementsByClassName('active')
+  if (activeItem[0]) {
+    activeItem[0].classList.remove('active')
+  }
 }
