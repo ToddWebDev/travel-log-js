@@ -1630,57 +1630,6 @@ const logs = [
         type: 'Feature',
         geometry: {
           type: 'Point',
-          coordinates: [-114.2634, 38.93],
-        },
-        pan: {
-          coordinates: [-113.09135592718418, 39.77990446782528],
-          zoom: calcViewportZoom(8),
-        },
-        start: {
-          coordinates: origin,
-        },
-        properties: {
-          type: 'national-park',
-          mode: 'driving',
-          month: 'July',
-          year: 2023,
-          date: '2023-07-15',
-          departure: 'Salt Lake City',
-          destination: 'Great Basin National Park',
-          description: 'Upcoming Trip',
-          state: 'Nevada',
-          distance: 275,
-        },
-      },
-      {
-        type: 'Feature',
-        geometry: {
-          type: 'Point',
-          coordinates: [-110.5885, 44.428],
-        },
-        pan: {
-          coordinates: [-111.26685427785301, 42.51378310329112],
-          zoom: calcViewportZoom(6.5),
-        },
-        start: {
-          coordinates: origin,
-        },
-        properties: {
-          type: 'national-park',
-          mode: 'driving',
-          month: 'August',
-          date: '2023-08-25',
-          departure: 'Salt Lake City',
-          destination: 'Yellowstone National Park',
-          description: 'Upcoming Trip',
-          state: 'Wyoming',
-          distance: 380,
-        },
-      },
-      {
-        type: 'Feature',
-        geometry: {
-          type: 'Point',
           coordinates: [-117.6126, 33.4274],
         },
         pan: {
@@ -1699,6 +1648,88 @@ const logs = [
           destination: 'San Clemente',
           state: 'California',
           distance: 585,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-111.9926814197322, 37.51798125135472],
+        },
+        pan: {
+          coordinates: [-112.04600053503624, 39.10817424548043],
+          zoom: calcViewportZoom(7),
+        },
+        start: {
+          coordinates: origin,
+        },
+        properties: {
+          type: 'scenic-point',
+          mode: 'driving',
+          month: 'August',
+          year: 2023,
+          date: '2023-07-16',
+          departure: 'Salt Lake City',
+          destination: 'Kodachrome Basin State Park',
+          state: 'Utah',
+          distance: 275,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-114.2634, 38.93],
+        },
+        pan: {
+          coordinates: [-113.09135592718418, 39.77990446782528],
+          zoom: calcViewportZoom(8),
+        },
+        start: {
+          coordinates: origin,
+        },
+        properties: {
+          type: 'national-park',
+          mode: 'driving',
+          month: 'October',
+          year: 2023,
+          date: '2023-10-15',
+          departure: 'Salt Lake City',
+          destination: 'Great Basin National Park',
+          description: 'Upcoming Trip',
+          state: 'Nevada',
+          distance: 275,
+        },
+      },
+    ],
+  },
+  {
+    type: 'FeatureCollection',
+    year: 2024,
+    features: [
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-110.5885, 44.428],
+        },
+        pan: {
+          coordinates: [-111.26685427785301, 42.51378310329112],
+          zoom: calcViewportZoom(6.5),
+        },
+        start: {
+          coordinates: origin,
+        },
+        properties: {
+          type: 'national-park',
+          mode: 'driving',
+          month: 'August',
+          date: '2024-05-25',
+          departure: 'Salt Lake City',
+          destination: 'Yellowstone National Park',
+          description: 'Upcoming Trip',
+          state: 'Wyoming',
+          distance: 380,
         },
       },
     ],
