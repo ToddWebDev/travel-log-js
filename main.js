@@ -2816,20 +2816,6 @@ const camp_sites = {
         state: 'Utah',
       },
     },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [-111.37332104234754, 39.5782348098912],
-      },
-      properties: {
-        type: 'camping',
-        mode: 'recreation',
-        destination: 'Kartchner Family Cabin',
-        city: 'Mt. Pleasant',
-        state: 'Utah',
-      },
-    },
   ],
 }
 
