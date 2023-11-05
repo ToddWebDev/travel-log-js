@@ -910,7 +910,7 @@ const logs = [
           departure: 'Salt Lake City',
           destination: 'Springboro',
           state: 'Ohio',
-          distance: 2347,
+          distance: 1461,
         },
       },
     ],
@@ -1171,7 +1171,7 @@ const logs = [
           destination: 'Eaton',
           description: 'Conrad T. Rizzolo 1938-2022',
           state: 'Ohio',
-          distance: 2308,
+          distance: 1437,
         },
       },
       {
@@ -1675,32 +1675,6 @@ const logs = [
           distance: 275,
         },
       },
-      {
-        type: 'Feature',
-        geometry: {
-          type: 'Point',
-          coordinates: [-114.2634, 38.93],
-        },
-        pan: {
-          coordinates: [-113.09135592718418, 39.77990446782528],
-          zoom: calcViewportZoom(8),
-        },
-        start: {
-          coordinates: origin,
-        },
-        properties: {
-          type: 'national-park',
-          mode: 'driving',
-          month: 'October',
-          year: 2023,
-          date: '2023-10-15',
-          departure: 'Salt Lake City',
-          destination: 'Great Basin National Park',
-          description: 'Upcoming Trip',
-          state: 'Nevada',
-          distance: 275,
-        },
-      },
     ],
   },
   {
@@ -1730,6 +1704,139 @@ const logs = [
           description: 'Upcoming Trip',
           state: 'Wyoming',
           distance: 380,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-111.308, 45.2618],
+        },
+        pan: {
+          coordinates: [-111.61631320982994, 42.9275291487858],
+          zoom: calcViewportZoom(6.75),
+        },
+        start: {
+          coordinates: origin,
+        },
+        properties: {
+          type: 'alpine-skiing',
+          mode: 'driving',
+          month: 'January',
+          year: 2024,
+          date: '2024-01-20',
+          departure: 'Salt Lake City',
+          destination: 'Big Sky',
+          description: 'Upcoming Trip',
+          state: 'Montana',
+          distance: 381,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-106.817535, 39.191097],
+        },
+        pan: {
+          coordinates: [-109.34253441613107, 39.931679796316054],
+          zoom: calcViewportZoom(6.75),
+        },
+        start: {
+          coordinates: origin,
+        },
+        properties: {
+          type: 'alpine-skiing',
+          mode: 'driving',
+          month: 'February',
+          year: 2024,
+          date: '2024-02-28',
+          departure: 'Salt Lake City',
+          destination: 'Aspen',
+          description: 'Upcoming Trip',
+          state: 'Colorado',
+          distance: 400,
+        },
+      },
+      // {
+      //   type: 'Feature',
+      //   geometry: {
+      //     type: 'Point',
+      //     coordinates: [-114.2634, 38.93],
+      //   },
+      //   pan: {
+      //     coordinates: [-113.09135592718418, 39.77990446782528],
+      //     zoom: calcViewportZoom(8),
+      //   },
+      //   start: {
+      //     coordinates: origin,
+      //   },
+      //   properties: {
+      //     type: 'national-park',
+      //     mode: 'driving',
+      //     month: 'October',
+      //     year: 2024,
+      //     date: '2024-10-15',
+      //     departure: 'Salt Lake City',
+      //     destination: 'Great Basin National Park',
+      //     description: 'Upcoming Trip',
+      //     state: 'Nevada',
+      //     distance: 275,
+      //   },
+      // },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-73.935242, 40.73061],
+        },
+        pan: {
+          coordinates: [-93.0124274185363, 42.26005839704545],
+          zoom: calcViewportZoom(4.75),
+        },
+        start: {
+          coordinates: origin,
+        },
+        properties: {
+          mode: 'flight',
+          month: 'December',
+          year: 2024,
+          date: '2024-12-07',
+          departure: 'Salt Lake City',
+          destination: 'New York City',
+          description: 'Upcoming Trip',
+          state: 'New York',
+          distance: 2173,
+        },
+      },
+    ],
+  },
+  {
+    type: 'FeatureCollection',
+    year: 2025,
+    features: [
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-157.8581, 21.3099],
+        },
+        pan: {
+          coordinates: [-137.26456256477525, 33.10526406906161],
+          zoom: calcViewportZoom(4.5),
+        },
+        start: {
+          coordinates: origin,
+        },
+        properties: {
+          mode: 'flight',
+          month: 'June',
+          date: '2025-06-25',
+          departure: 'Salt Lake City',
+          destination: 'Honolulu',
+          description: 'Upcoming Trip',
+          state: 'Hawaii',
+          distance: 2995,
         },
       },
     ],
@@ -2781,7 +2888,7 @@ const camp_sites = {
       properties: {
         type: 'camping',
         mode: 'recreation',
-        date: '2022-08-07',
+        date: '2023-08-07',
         destination: 'Smith & Morehouse Campground',
         city: 'Kamas',
         state: 'Utah',
