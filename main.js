@@ -1685,31 +1685,6 @@ const logs = [
         type: 'Feature',
         geometry: {
           type: 'Point',
-          coordinates: [-110.5885, 44.428],
-        },
-        pan: {
-          coordinates: [-111.26685427785301, 42.51378310329112],
-          zoom: calcViewportZoom(6.5),
-        },
-        start: {
-          coordinates: origin,
-        },
-        properties: {
-          type: 'national-park',
-          mode: 'driving',
-          month: 'August',
-          date: '2024-05-25',
-          departure: 'Salt Lake City',
-          destination: 'Yellowstone National Park',
-          description: 'Upcoming Trip',
-          state: 'Wyoming',
-          distance: 380,
-        },
-      },
-      {
-        type: 'Feature',
-        geometry: {
-          type: 'Point',
           coordinates: [-111.308, 45.2618],
         },
         pan: {
@@ -1727,7 +1702,6 @@ const logs = [
           date: '2024-01-20',
           departure: 'Salt Lake City',
           destination: 'Big Sky',
-          description: 'Upcoming Trip',
           state: 'Montana',
           distance: 381,
         },
@@ -1748,14 +1722,118 @@ const logs = [
         properties: {
           type: 'alpine-skiing',
           mode: 'driving',
-          month: 'February',
+          month: 'April',
           year: 2024,
-          date: '2024-02-28',
+          date: '2024-04-13',
           departure: 'Salt Lake City',
           destination: 'Aspen',
           description: 'Upcoming Trip',
           state: 'Colorado',
           distance: 400,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-117.0794, 36.5054],
+        },
+        pan: {
+          coordinates: [-114.55334318554475, 38.59498280380738],
+          zoom: calcViewportZoom(6.75),
+        },
+        start: {
+          coordinates: origin,
+        },
+        properties: {
+          type: 'national-park',
+          mode: 'driving',
+          month: 'May',
+          year: 2024,
+          date: '2024-05-10',
+          departure: 'Salt Lake City',
+          destination: 'Death Valley National Park',
+          description: 'Upcoming Trip',
+          state: 'California',
+          distance: 641,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-118.9333, 36.8],
+        },
+        pan: {
+          coordinates: [-118.00086875054986, 36.655702007922834],
+          zoom: calcViewportZoom(7.5),
+        },
+        start: {
+          coordinates: [-117.0794, 36.5054],
+        },
+        properties: {
+          type: 'national-park',
+          mode: 'driving',
+          month: 'May',
+          year: 2024,
+          date: '2024-05-11',
+          departure: 'Death Valley National Park',
+          destination: 'Sequoia National Park',
+          description: 'Upcoming Trip',
+          state: 'California',
+          distance: 169,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-119.5383, 37.8651],
+        },
+        pan: {
+          coordinates: [-119.23244560618437, 37.33080481569551],
+          zoom: calcViewportZoom(8),
+        },
+        start: {
+          coordinates: [-118.9333, 36.8],
+        },
+        properties: {
+          type: 'national-park',
+          mode: 'driving',
+          month: 'May',
+          year: 2024,
+          date: '2024-05-13',
+          departure: 'Sequoia National Park',
+          destination: 'Yosemite National Park',
+          description: 'Upcoming Trip',
+          state: 'California',
+          distance: 130,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-120.032349, 39.096848],
+        },
+        pan: {
+          coordinates: [-119.78222578851565, 38.47876985931123],
+          zoom: calcViewportZoom(7.75),
+        },
+        start: {
+          coordinates: [-119.5383, 37.8651],
+        },
+        properties: {
+          type: 'scenic-point',
+          mode: 'driving',
+          month: 'May',
+          year: 2024,
+          date: '2024-05-15',
+          departure: 'Yosemite National Park',
+          destination: 'Lake Tahoe',
+          description: 'Upcoming Trip',
+          state: 'California',
+          distance: 145,
         },
       },
       // {
@@ -1776,7 +1854,7 @@ const logs = [
       //     mode: 'driving',
       //     month: 'October',
       //     year: 2024,
-      //     date: '2024-10-15',
+      //     date: '2024-8-15',
       //     departure: 'Salt Lake City',
       //     destination: 'Great Basin National Park',
       //     description: 'Upcoming Trip',
@@ -1801,7 +1879,7 @@ const logs = [
           mode: 'flight',
           month: 'December',
           year: 2024,
-          date: '2024-12-07',
+          date: '2024-12-13',
           departure: 'Salt Lake City',
           destination: 'New York City',
           description: 'Upcoming Trip',
@@ -1811,36 +1889,61 @@ const logs = [
       },
     ],
   },
-  {
-    type: 'FeatureCollection',
-    year: 2025,
-    features: [
-      {
-        type: 'Feature',
-        geometry: {
-          type: 'Point',
-          coordinates: [-157.8581, 21.3099],
-        },
-        pan: {
-          coordinates: [-137.26456256477525, 33.10526406906161],
-          zoom: calcViewportZoom(4.5),
-        },
-        start: {
-          coordinates: origin,
-        },
-        properties: {
-          mode: 'flight',
-          month: 'June',
-          date: '2025-06-25',
-          departure: 'Salt Lake City',
-          destination: 'Honolulu',
-          description: 'Upcoming Trip',
-          state: 'Hawaii',
-          distance: 2995,
-        },
-      },
-    ],
-  },
+  // {
+  //   type: 'FeatureCollection',
+  //   year: 2025,
+  //   features: [
+  //     {
+  //       type: 'Feature',
+  //       geometry: {
+  //         type: 'Point',
+  //         coordinates: [-157.8581, 21.3099],
+  //       },
+  //       pan: {
+  //         coordinates: [-137.26456256477525, 33.10526406906161],
+  //         zoom: calcViewportZoom(4.5),
+  //       },
+  //       start: {
+  //         coordinates: origin,
+  //       },
+  //       properties: {
+  //         mode: 'flight',
+  //         month: 'June',
+  //         date: '2025-06-25',
+  //         departure: 'Salt Lake City',
+  //         destination: 'Honolulu',
+  //         description: 'Upcoming Trip',
+  //         state: 'Hawaii',
+  //         distance: 2995,
+  //       },
+  //     },
+  //     {
+  //       type: 'Feature',
+  //       geometry: {
+  //         type: 'Point',
+  //         coordinates: [-110.5885, 44.428],
+  //       },
+  //       pan: {
+  //         coordinates: [-111.26685427785301, 42.51378310329112],
+  //         zoom: calcViewportZoom(6.5),
+  //       },
+  //       start: {
+  //         coordinates: origin,
+  //       },
+  //       properties: {
+  //         type: 'national-park',
+  //         mode: 'driving',
+  //         month: 'August',
+  //         date: '2025-08-25',
+  //         departure: 'Salt Lake City',
+  //         destination: 'Yellowstone National Park',
+  //         description: 'Upcoming Trip',
+  //         state: 'Wyoming',
+  //         distance: 380,
+  //       },
+  //     },
+  //   ],
+  // },
 ]
 
 const ski_resorts = {
@@ -1885,7 +1988,7 @@ const ski_resorts = {
       properties: {
         type: 'alpine-skiing',
         mode: 'recreation',
-        description: '10+ days',
+        description: '15+ days',
         destination: 'Brighton Ski Area',
         city: 'Brighton',
         state: 'Utah',
@@ -1900,7 +2003,7 @@ const ski_resorts = {
       properties: {
         type: 'alpine-skiing',
         mode: 'recreation',
-        description: '10+ days',
+        description: '15+ days',
         destination: 'Solitude Ski Area',
         city: 'Solitude',
         state: 'Utah',
@@ -1915,7 +2018,7 @@ const ski_resorts = {
       properties: {
         type: 'alpine-skiing',
         mode: 'recreation',
-        description: '10+ days',
+        description: '15+ days',
         destination: 'Deer Valley Resort',
         city: 'Park City',
         state: 'Utah',
@@ -1945,7 +2048,7 @@ const ski_resorts = {
       properties: {
         type: 'alpine-skiing',
         mode: 'recreation',
-        description: '7 days',
+        description: '15+ days',
         destination: 'Snowbasin Resort',
         city: 'Huntsville',
         state: 'Utah',
@@ -2751,6 +2854,21 @@ const golf_courses = {
         destination: 'Mountain Dell Golf Course',
         city: 'Salt Lake City',
         state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-107.2877778, 39.4705556],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Ironbridge Golf Club',
+        city: 'Glenwood Springs',
+        state: 'Colorado',
+        date: '2024-04-15',
       },
     },
   ],
