@@ -2860,13 +2860,13 @@ const golf_courses = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-107.2877778, 39.4705556],
+        coordinates: [-107.212894, 39.391317],
       },
       properties: {
         type: 'golf-course',
         mode: 'recreation',
-        destination: 'Ironbridge Golf Club',
-        city: 'Glenwood Springs',
+        destination: 'River Valley Ranch Golf Club',
+        city: 'Carbondale',
         state: 'Colorado',
         date: '2024-04-15',
       },
