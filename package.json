@@ -2,8 +2,10 @@
   "name": "travel-log-js",
   "version": "1.0.0",
   "description": "An interactive travel log built with javascript and the Mapbox api",
-  "main": "main.js",
+  "main": "dist/bundle.js",
   "scripts": {
+    "build": "webpack",
+    "serve": "live-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +23,13 @@
   "bugs": {
     "url": "https://github.com/ToddWebDev/travel-log-js/issues"
   },
-  "homepage": "https://github.com/ToddWebDev/travel-log-js#readme"
+  "homepage": "https://github.com/ToddWebDev/travel-log-js#readme",
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "babel-loader": "^9.1.3",
+    "webpack": "^5.92.0",
+    "webpack-cli": "^5.1.4",
+    "live-server": "^1.2.2"
+  }
 }

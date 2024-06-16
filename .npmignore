@@ -1,0 +1,38 @@
+# Exclude development and test files
+/tests/
+/test/
+/docs/
+/.gitignore
+/.git/
+/.vscode/
+/.idea/
+/.babelrc
+/eslint.config.js
+/prettier.config.js
+
+# Exclude build output and temporary files
+/dist/
+/build/
+/.temp/
+/.cache/
+
+# Exclude environment-specific files
+/.env
+/.env.example
+
+# Exclude editor and OS-specific files
+.DS_Store
+Thumbs.db
+*.log
+
+# Exclude npm-related files
+.npmrc
+.npmignore
+
+# Exclude source files not needed for distribution
+/src/
+
+# Exclude any other files or directories specific to your project
+
+# Exclude README.md if you have a separate npm package README
+README.md
