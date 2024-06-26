@@ -1831,6 +1831,31 @@ export const logs = [
         type: 'Feature',
         geometry: {
           type: 'Point',
+          coordinates: [-122.4194, 37.7749],
+        },
+        pan: {
+          coordinates: [-117.24506627776209, 39.317092578787374],
+          zoom: calcViewportZoom(6),
+        },
+        start: {
+          coordinates: origin,
+        },
+        properties: {
+          mode: 'flight',
+          month: 'August',
+          year: 2024,
+          date: '2024-08-17',
+          departure: 'Salt Lake City',
+          destination: 'San Francisco',
+          description: 'Upcoming Trip',
+          state: 'California',
+          distance: 740,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
           coordinates: [-73.935242, 40.73061],
         },
         pan: {
