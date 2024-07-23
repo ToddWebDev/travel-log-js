@@ -1831,6 +1831,31 @@ export const logs = [
         type: 'Feature',
         geometry: {
           type: 'Point',
+          coordinates: [-111.2468, 38.2855],
+        },
+        pan: {
+          coordinates: [-111.56920191031136, 39.45340768705245],
+          zoom: calcViewportZoom(7.5),
+        },
+        start: {
+          coordinates: origin,
+        },
+        properties: {
+          type: 'national-park',
+          mode: 'driving',
+          month: 'July',
+          year: 2024,
+          date: '2024-07-21',
+          departure: 'Salt Lake City',
+          destination: 'Capital Reef National Park',
+          state: 'Utah',
+          distance: 264,
+        },
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
           coordinates: [-122.4194, 37.7749],
         },
         pan: {
@@ -3010,7 +3035,6 @@ export const camp_sites = {
       properties: {
         type: 'camping',
         mode: 'recreation',
-        date: '2022-07-01',
         destination: 'Fruita Campground',
         city: 'Torrey',
         state: 'Utah',
