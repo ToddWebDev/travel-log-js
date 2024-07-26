@@ -2862,6 +2862,20 @@ export const golf_courses = {
       type: 'Feature',
       geometry: {
         type: 'Point',
+        coordinates: [-111.79926856393345, 40.638875192119265],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Old Mill Golf Course',
+        city: 'Holladay',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
         coordinates: [-111.91641288800655, 40.584743590733396],
       },
       properties: {
@@ -2869,6 +2883,20 @@ export const golf_courses = {
         mode: 'recreation',
         destination: 'River Oaks Golf Course',
         city: 'Sandy',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.99506635653178, 40.71741625220875],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Stonebridge Golf Club',
+        city: 'West Valley City',
         state: 'Utah',
       },
     },
@@ -2898,6 +2926,49 @@ export const golf_courses = {
         destination: 'Mountain Dell Golf Course',
         city: 'Salt Lake City',
         state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.49247450256516, 40.541955407272795],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Wasatch Mountain Golf Course',
+        city: 'Midway',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.50011457188137, 40.48211262007657],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Soldier Hollow Golf Course',
+        city: 'Midway',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.66665969827066, 39.209660739954096],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Palisade Golf Course',
+        city: 'Sterling',
+        state: 'Utah',
+        date: '2024-07-21',
       },
     },
     {
