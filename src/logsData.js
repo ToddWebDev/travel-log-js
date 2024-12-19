@@ -1801,32 +1801,6 @@ export const logs = [
           distance: 145,
         },
       },
-      // {
-      //   type: 'Feature',
-      //   geometry: {
-      //     type: 'Point',
-      //     coordinates: [-114.2634, 38.93],
-      //   },
-      //   pan: {
-      //     coordinates: [-113.09135592718418, 39.77990446782528],
-      //     zoom: calcViewportZoom(8),
-      //   },
-      //   start: {
-      //     coordinates: origin,
-      //   },
-      //   properties: {
-      //     type: 'national-park',
-      //     mode: 'driving',
-      //     month: 'October',
-      //     year: 2024,
-      //     date: '2024-8-15',
-      //     departure: 'Salt Lake City',
-      //     destination: 'Great Basin National Park',
-      //     description: 'Upcoming Trip',
-      //     state: 'Nevada',
-      //     distance: 275,
-      //   },
-      // },
       {
         type: 'Feature',
         geometry: {
@@ -1872,7 +1846,6 @@ export const logs = [
           date: '2024-08-17',
           departure: 'Salt Lake City',
           destination: 'San Francisco',
-          description: 'Upcoming Trip',
           state: 'California',
           distance: 740,
         },
@@ -1896,69 +1869,94 @@ export const logs = [
           year: 2024,
           date: '2024-12-13',
           departure: 'Salt Lake City',
-          destination: 'New York City',
-          description: 'Upcoming Trip',
+          destination: 'New York',
           state: 'New York',
           distance: 2173,
         },
       },
     ],
   },
-  // {
-  //   type: 'FeatureCollection',
-  //   year: 2025,
-  //   features: [
-  //     {
-  //       type: 'Feature',
-  //       geometry: {
-  //         type: 'Point',
-  //         coordinates: [-157.8581, 21.3099],
-  //       },
-  //       pan: {
-  //         coordinates: [-137.26456256477525, 33.10526406906161],
-  //         zoom: calcViewportZoom(4.5),
-  //       },
-  //       start: {
-  //         coordinates: origin,
-  //       },
-  //       properties: {
-  //         mode: 'flight',
-  //         month: 'June',
-  //         date: '2025-06-25',
-  //         departure: 'Salt Lake City',
-  //         destination: 'Honolulu',
-  //         description: 'Upcoming Trip',
-  //         state: 'Hawaii',
-  //         distance: 2995,
-  //       },
-  //     },
-  //     {
-  //       type: 'Feature',
-  //       geometry: {
-  //         type: 'Point',
-  //         coordinates: [-110.5885, 44.428],
-  //       },
-  //       pan: {
-  //         coordinates: [-111.26685427785301, 42.51378310329112],
-  //         zoom: calcViewportZoom(6.5),
-  //       },
-  //       start: {
-  //         coordinates: origin,
-  //       },
-  //       properties: {
-  //         type: 'national-park',
-  //         mode: 'driving',
-  //         month: 'August',
-  //         date: '2025-08-25',
-  //         departure: 'Salt Lake City',
-  //         destination: 'Yellowstone National Park',
-  //         description: 'Upcoming Trip',
-  //         state: 'Wyoming',
-  //         distance: 380,
-  //       },
-  //     },
-  //   ],
-  // },
+  {
+    type: 'FeatureCollection',
+    year: 2025,
+    features: [
+      // {
+      //   type: 'Feature',
+      //   geometry: {
+      //     type: 'Point',
+      //     coordinates: [-114.2634, 38.93],
+      //   },
+      //   pan: {
+      //     coordinates: [-113.09135592718418, 39.77990446782528],
+      //     zoom: calcViewportZoom(8),
+      //   },
+      //   start: {
+      //     coordinates: origin,
+      //   },
+      //   properties: {
+      //     type: 'national-park',
+      //     mode: 'driving',
+      //     month: 'October',
+      //     year: 2025,
+      //     date: '2025-8-15',
+      //     departure: 'Salt Lake City',
+      //     destination: 'Great Basin National Park',
+      //     description: 'Upcoming Trip',
+      //     state: 'Nevada',
+      //     distance: 275,
+      //   },
+      // },
+      // {
+      //   type: 'Feature',
+      //   geometry: {
+      //     type: 'Point',
+      //     coordinates: [-157.8581, 21.3099],
+      //   },
+      //   pan: {
+      //     coordinates: [-137.26456256477525, 33.10526406906161],
+      //     zoom: calcViewportZoom(4.5),
+      //   },
+      //   start: {
+      //     coordinates: origin,
+      //   },
+      //   properties: {
+      //     mode: 'flight',
+      //     month: 'June',
+      //     date: '2025-06-25',
+      //     departure: 'Salt Lake City',
+      //     destination: 'Honolulu',
+      //     description: 'Upcoming Trip',
+      //     state: 'Hawaii',
+      //     distance: 2995,
+      //   },
+      // },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-110.5885, 44.428],
+        },
+        pan: {
+          coordinates: [-111.26685427785301, 42.51378310329112],
+          zoom: calcViewportZoom(6.5),
+        },
+        start: {
+          coordinates: origin,
+        },
+        properties: {
+          type: 'national-park',
+          mode: 'driving',
+          month: 'August',
+          date: '2025-08-25',
+          departure: 'Salt Lake City',
+          destination: 'Yellowstone National Park',
+          description: 'Upcoming Trip',
+          state: 'Wyoming',
+          distance: 380,
+        },
+      },
+    ],
+  },
 ]
 
 export const ski_resorts = {
@@ -2890,6 +2888,20 @@ export const golf_courses = {
       type: 'Feature',
       geometry: {
         type: 'Point',
+        coordinates: [-112.0046342492636, 40.571939613329235],
+      },
+      properties: {
+        type: 'golf-course',
+        mode: 'recreation',
+        destination: 'Glenmore Golf Course',
+        city: 'South Jordan',
+        state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
         coordinates: [-111.99506635653178, 40.71741625220875],
       },
       properties: {
@@ -2904,13 +2916,13 @@ export const golf_courses = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-111.59742305963967, 40.08760105729933],
+        coordinates: [-111.921089, 40.517056],
       },
       properties: {
         type: 'golf-course',
         mode: 'recreation',
-        destination: 'The Oaks at Spanish Fork',
-        city: 'Spanish Fork',
+        destination: 'Riverbend Golf Course',
+        city: 'Riverton',
         state: 'Utah',
       },
     },
@@ -3076,8 +3088,8 @@ export const camp_sites = {
       properties: {
         type: 'camping',
         mode: 'recreation',
-        date: '2022-05-20',
         destination: 'Watchman Campground',
+        description: '2022 & 2024',
         city: 'Springdale',
         state: 'Utah',
       },
