@@ -1946,8 +1946,8 @@ export const logs = [
         properties: {
           type: 'national-park',
           mode: 'driving',
-          month: 'August',
-          date: '2025-08-25',
+          month: 'July',
+          date: '2025-07-26',
           departure: 'Salt Lake City',
           destination: 'Yellowstone National Park',
           description: 'Upcoming Trip',
@@ -3151,6 +3151,21 @@ export const camp_sites = {
         destination: 'Strawberry Bay Campground',
         city: 'Heber City',
         state: 'Utah',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-110.4880816, 44.7354251],
+      },
+      properties: {
+        type: 'camping',
+        mode: 'recreation',
+        date: '2025-07-26',
+        destination: 'Canyon Campground',
+        city: 'Yellowstone',
+        state: 'Wyoming',
       },
     },
     {
